@@ -1,18 +1,8 @@
-
-var smiley = document.createElement("img");
-smiley.src = "Smiley.png";
-var sad = document.createElement("img");
-sad.src = "Sad.png";
-var mockup1 = document.createElement("img");
-mockup1.src = "mock1.png";
-var mockup2 = document.createElement("img");
-mockup2.src = "mock2.png";
-var mockup3 = document.createElement("img");
-mockup3.src = "mock3.png";
-
-function setup(){
+function setup() {
 	drawFrowny();
+	showMock1();
 }
+
 function saveWater() {
 	document.getElementById("tap").src = "tap_off.png";
 }
@@ -22,29 +12,31 @@ function dontSaveWater() {
 }
 
 function drawSmiley() {
-	var canvas = document.getElementById("faces");
-	var ctx = canvas.getContext("2d");
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.drawImage(smiley, 10, 10, canvas.width - 20, canvas.height - 20);
+	var img = document.getElementById("faces");
+	img.src = "Smiley.png";
+
 }
 
 function drawFrowny() {
-	var canvas = document.getElementById("faces");
-	var ctx = canvas.getContext("2d");
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.drawImage(sad, 10, 10, canvas.width - 20, canvas.height - 20);
+	var img = document.getElementById("faces");
+	img.src = "Sad.png";
+
 }
 
-function showMock1(){
-	var canvas = document.getElementById("mockupDisplay");
-	var ctx = canvas.getContext("2d");
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.drawImage(mockup1, 10, 10, canvas.width - 20, canvas.height - 20);
+function showMock1() {
+	var img = document.getElementById("mockupDisplay");
+	img.src = "mock1.png";
+
 }
 
-function showMock2(){
-	var canvas = document.getElementById("mockupDisplay");
-	var ctx = canvas.getContext("2d");
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.drawImage(mockup2, 10, 10, canvas.width - 20, canvas.height - 20);
+function showMock2() {
+	var img = document.getElementById("mockupDisplay");
+	img.src = "mock2.png";
+
+}
+
+function showMock3() {
+	var img = document.getElementById("mockupDisplay");
+	img.src = "mock3.png";
+	
 }
