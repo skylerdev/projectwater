@@ -1,0 +1,19 @@
+img {
+	padding: 10px 10px 10px 10px;
+}
+
+#save:hover {
+	background-color: limegreen;
+	color: black;
+}
+
+#dSave:hover {
+	background-color: red;
+	color: black;
+}
+
+canvas {
+	margin: 10 10 10 10;
+	border: solid black 1px;
+}
+
