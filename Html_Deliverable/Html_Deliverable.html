@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<title>The Chronicles of Waterboi</title>
+	<script>
+		function saveWater(){
+			document.getElementById("tap").src = "tap_off.png";
+		}
+		function dontSaveWater(){
+			document.getElementById("tap").src = "tap.png";
+		}
+		function drawMock1(){
+			var canvas = document.getElementById("mockups");
+			var ctx = canvas.getContext("2d");
+			var img = document.createElement("img");
+			img.src = "tap.png";
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			ctx.drawImage(tap, 10, 10, 280, 280);
+		}
+	</script>
+	<style>
+		img {
+			padding: 10px 10px 10px 10px;
+		}
+		#save:hover{
+			background-color:limegreen; 
+			color:black;
+		}
+		#dSave:hover{
+			background-color:red; 
+			color:black;
+		}
+		#mockups{
+			border:solid black 1px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h1>The Chronicles of Waterboi</h1>
+		<div id="container">
+			<div id="Saver">
+				<form>
+					<input id="save" type="button" value="Turn Off" onclick="saveWater()" placeholder="Faucet">
+					<input id="dSave" type="button" value="Turn On" onclick="dontSaveWater(), drawMock1()" placeholder="Faucet">
+				</form>
+			</div>
+		</div>
+		<img id="tap" src="tap.png">
+		<br>
+		<canvas id="mockups" height="400px" width="300px">
+		
+		</canvas>
+	</div>
+</body>
