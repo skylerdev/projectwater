@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 
 <head>
-	<title>The Water Project</title>
+	<title>Project Water</title>
 	<script type="text/javascript" src="Html_Deliverable.js"></script>
 	<link rel="stylesheet" type="text/css" href="Html_Deliverable.css">
 </head>
 
 <body onload="setup()">
 	<div id="main">
-		<h1>The Water Project</h1>
+		<h1>Project Water</h1>
+		
 		<div id="container">
 			<div id="Saver">
+				<!--
 				<input id="save" type="button" value="Turn Off" onclick="saveWater(), drawSmiley()">
 				<input id="dSave" type="button" value="Turn On" onclick="dontSaveWater(), drawFrowny()">
-				<br><br>
-				<img id="tap" src="tap.png" placeholder="Faucet">
-				<img id="faces" src="Sad.png" width="100" height="100px"placeholder="Faces">
-				<!--
-				<canvas id="faces" height="100px" width="100px"></canvas>
 -->
+				<img id="tap" src="tap.png" placeholder="Faucet" onclick="clickFaucet()">
+				<img id="faces" src="Sad.png" width="64" height="64px" placeholder="Faces">
 			</div>
 			<br>
-			<div id="mockups">
-				<input id="mock1" type="button" value="Show Mockup 1" onclick="showMock1()">
-				<input id="mock2" type="button" value="Show Mockup 2" onclick="showMock2()">
-				<input id="mock3" type="button" value="Show Mockup 3" onclick="showMock3()">
-				<br><br>
-				<img id="mockupDisplay" width="300" height="500px">
-				<!--<canvas id="mockupDisplay" width="300px" height="500px"></canvas>-->
+			<div id="mockup">
+				<img src="mainmenu.png" width="300px" height="600px">
+				<canvas id="waterLevelDisplay" width="254px" height="100px"></canvas>
+				<input type="button" id="dailyButton" value="Daily Challenge">
+				<input id="goodScore" type="button" onclick="lowerWaterLevel()" value="Good Score">
+				<input id="badScore" type="button" onclick="raiseWaterLevel()" value="Bad Score">
 			</div>
+			<img id="waves" src="WaveLevelShortTransparent.png" style="display:none">
 		</div>
+		
 	</div>
 	
 </body>
