@@ -1,0 +1,14 @@
+
+#main {
+}
+#gameContainer {
+	text-align: center;
+	width:100%;
+	height: auto;
+}
+#gameDisplay {
+	width: 500px;
+	height: 500px;
+	position: relative;
+	border: solid black 1px;
+}
