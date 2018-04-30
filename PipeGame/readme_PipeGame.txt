@@ -1,1 +1,0 @@
-Put this folder into htdocs and use Xampp to test.
