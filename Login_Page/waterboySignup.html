@@ -13,19 +13,19 @@
     <img src="avatar.png" class="avatar">
       
       <h2> Sign-Up </h2>
-      <form>
+      <form name="myForm" method="post" onsubmit="return makeCookie();">
         
         <p>Username</p>
-        <input type="text" name="username" placeholder="Enter Username">
+        <input type="text" name="username" placeholder="Enter Username" value = "">
 
         <p>Password</p>
-        <input type="password" name="password" placeholder="Enter Password">   
+        <input type="password" name="password" placeholder="Enter Password" value = "">   
         
         <p>Confirm Password</p>
-        <input type="password" name="password" placecholder="Confirm Password">
+        <input type="password" name="password" placecholder="Confirm Password" value = "">
         
         <p>Enter Email </p>
-        <input type="text" name="email" placeholder="Enter Email">
+        <input type="text" name="email" placeholder="Enter Email" value = "">
         
         <input type="submit" name="submit" value="Sign-up">
         
@@ -34,6 +34,15 @@
     </div>
   
   </body>
-
+<script type = "text/javascript">
+        
+      function makeCookie() {
+        var d = new Date();
+        d.setTime(d.getTime() + (1*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = "username" + "=" + myForm.username.value + ";" + expires + ";path=/";
+        document.cookie = "email" + "=" + myForm.email.value + ";" + expires + ";path=/";
+      }
+  </script>
 
 </html>
