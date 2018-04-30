@@ -21,6 +21,8 @@ var canvas = document.getElementById("gameDisplay"),
 
 var timer, time = 0;
 
+var xPos, yPos;
+
 /*
 var event = new MouseEvent( "click", {'view': window, 'bubbles': true, 'cancelable': true});
 document.dispatchEvent(event);
@@ -134,4 +136,15 @@ function logArray() {
 			console.log("Arr: (" + x + ", " + y + ") " + pipeArray[x][y]);
 		}
 	}
+}
+
+function touchPos(event){
+  console.log("touchstart")
+  xPos = event.touches[0].clientX;
+  yPos = event.touches[0].clientY;
+}
+
+function displayPos(event) {
+  ctx.clearRect(64, 448, canvas.width, canvas.height);
+  ctx.fillText("(" + Math.floor(xPos) + ", " + Math.floor(yPos) + ")", 64, 475);
 }

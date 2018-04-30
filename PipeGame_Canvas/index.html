@@ -15,7 +15,7 @@
   <img id="startPipe" src="assets/Start_Pipe.png" style="display:none">
   <img id="endPipe" src="assets/End_Pipe.png" style="display:none">
 	 <div id="gameContainer">
-			<canvas id="gameDisplay" width="384px" height="512px"></canvas>
+			<canvas id="gameDisplay" width="384px" height="512px" ontouchstart="touchPos(event)" ontouchmove="touchPos(event)"  ontouchend="displayPos()"></canvas>
 	 </div>
    
 	<script src="js/main.js"></script>
