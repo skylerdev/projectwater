@@ -4,7 +4,8 @@ body {
   margin: 0;
   padding: 0;
   background: url(reservoir.jpg);
-  background-size: 100%;
+  background-position: 50% 35%;
+  min-width: 2560px;
   font-family: sans-serif;
 }
 
