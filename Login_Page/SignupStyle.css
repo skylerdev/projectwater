@@ -10,7 +10,7 @@ body {
 
 .login-box{
   width: 320px;
-  height: 420px;
+  height: 480px;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   top: 50%;
@@ -19,7 +19,6 @@ body {
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 70px;
-  align-items: center;
 }
 
 .avatar{
@@ -62,7 +61,7 @@ h2{
   border-bottom: 1px solid #fff;
   background: transparent;
   outline: none;
-  height: 40px;
+  height: 25px;
   color: white;
   font-size: 16px;
 }
@@ -84,18 +83,10 @@ h2{
   
 }
 
-.forgot {
+.login-box a{
+  text-decoration: none;
+  font-size: 14px
   color: #fff;
-  margin-left: 28px;
-  text-align: center;
-  font-size: 14px;
-}
-
-.forgot:hover{
-  color: #39dc79;
-  margin-left: 28px;
-  text-align: center;
-  font-size: 14px;
 }
 
 /** media queries */
