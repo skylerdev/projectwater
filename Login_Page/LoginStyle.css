@@ -88,16 +88,16 @@ h2{
 
 .forgot {
   color: #fff;
-  margin-left: 28px;
+  margin-left: 11px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .forgot:hover{
   color: #39dc79;
-  margin-left: 28px;
+  margin-left: 11px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /** media queries */
