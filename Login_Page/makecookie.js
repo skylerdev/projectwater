@@ -6,8 +6,7 @@ function makeCookie() {
         var expires = "expires="+ d.toUTCString();
         document.cookie = "username" + "=" + myForm.username.value + ";" + expires + ";path=/";
         document.cookie = "email" + "=" + myForm.email.value + ";" + expires + ";path=/";
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     }
       }
 
@@ -30,9 +29,4 @@ function validatePassword(){
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
-=======
-      }
->>>>>>> 9a90572b5c23a68a8f28938973aa0507d845d90f
-=======
-      }
->>>>>>> 9a90572b5c23a68a8f28938973aa0507d845d90f
+
