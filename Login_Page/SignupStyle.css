@@ -93,19 +93,38 @@ h2{
 /** media queries */
 
 @media only screen and (max-device-width: 480px) {
-<<<<<<< HEAD
   
   body {
   margin: 0;
   padding: 0;
   background: url(reservoir.jpg) no-repeat;
-=======
->>>>>>> 9a90572b5c23a68a8f28938973aa0507d845d90f
   
+  background-size: cover;
+  min-width: 600px;
+  min-height: 2200px;
+  font-family: sans-serif;
+  }
   
+  .login-box{
+  width: 70%;
+  height: 80%;
+}
+  .avatar{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  top: -180px;
+  left: calc(50% - 150px);
 }
 
-<<<<<<< HEAD
+h1{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 38px;
+}
+
 h2{
   margin: 0;
   padding: 0 0 20px;
@@ -220,8 +239,6 @@ h2{
   font-weight: bold;
   font-size: 40px;
 }
-=======
->>>>>>> 9a90572b5c23a68a8f28938973aa0507d845d90f
 
 .login-box input{
   width: 100%;
