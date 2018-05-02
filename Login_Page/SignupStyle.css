@@ -93,6 +93,7 @@ h2{
 /** media queries */
 
 @media only screen and (max-device-width: 480px) {
+  
   body {
   margin: 0;
   padding: 0;
