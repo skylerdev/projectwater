@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Project Water</title>
+	<script type="text/javascript" src="js/html_deliverable.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/html_deliverable.css">
+</head>
+
+<body onload="setup()">
+	<div id="main">
+		<h1>Project Water</h1>
+		
+		<div id="container">
+			<div id="Saver">
+				<!--
+				<input id="save" type="button" value="Turn Off" onclick="saveWater(), drawSmiley()">
+				<input id="dSave" type="button" value="Turn On" onclick="dontSaveWater(), drawFrowny()">
+-->
+				<img id="tap" src="assets/tap.png" onclick="clickFaucet()">
+				<img id="faces" src="assets/sad.png" width="64" height="64">
+			</div>
+			<br>
+			<div id="mockup">
+				<img src="assets/mainmenu.png" width="300px" height="600px">
+				<canvas id="waterLevelDisplay" width="254px" height="100px"></canvas>
+				<input type="button" id="dailyButton" value="Daily Challenge">
+				<input id="goodScore" type="button" onclick="lowerWaterLevel()" value="Good Score">
+				<input id="badScore" type="button" onclick="raiseWaterLevel()" value="Bad Score">
+			</div>
+			<img id="waves" src="assets/WaveLevelShortTransparent.png" style="display:none">
+		</div>
+		
+	</div>
+	
+</body>
