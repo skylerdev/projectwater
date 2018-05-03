@@ -83,7 +83,7 @@ function drawBoard() {
 function drawPipes() {
 	var toDrawn = vPipe;
 
-	let xPos = 0, yPos = 64;
+ 	xPos = 0, yPos = 64;
 	let x, y;
 	for (y = 0; y < 6; y++) {
 		for (x = 0; x < 6; x++) {
