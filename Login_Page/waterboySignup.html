@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <title>Project Water Sign-up</title>
+    <link rel="stylesheet" type="text/css" href="SignupStyle.css">
+  
+  
+  </head>
+  
+  <body>
+    <div class="login-box">
+    <img src="avatar.png" class="avatar">
+      
+      <h2> Sign-Up </h2>
+      <form name="myForm" method="post" onsubmit="return makeCookie();">
+        
+        <p>Username</p>
+        <input type="text" name="username" placeholder="Enter Username" value = "">
+
+        <p>Password</p>
+        <input type="password" name="password" id="password" placeholder="Enter Password" required>   
+        
+        <p>Confirm Password</p>
+        <input type="password" name="password" id="confirm_password" placecholder="Confirm Password" required>
+        
+        <p>Enter Email </p>
+        <input type="text" name="email" placeholder="Enter Email" value = "">
+        
+        <input type="submit" name="submit" value="Sign-up">
+        
+      </form>
+    
+    </div>
+  
+  </body>
+<script src="makecookie.js">
+
+  </script>
+
+</html>
