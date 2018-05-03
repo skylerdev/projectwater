@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37bae541-09f0-439c-9b53-b99b12ae1cdd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Html_Deliverable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Html_Deliverable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Html_Deliverable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Sad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Smiley.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/WaveLevelShortTransparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/mainmenu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/tap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Html_Deliverable/tap_off.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login_Page/LoginStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login_Page/SignupStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login_Page/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login_Page/makecookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login_Page/reservoir.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login_Page/waterboyLogin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Login_Page/waterboySignup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipe_Game/PlumbingGame.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipe_Game/PlumbingGame.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipe_Game/PlumbingGame.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaverSurvey.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Survey/SaverSurvey.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Survey/SurveyStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Survey/reservoir2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TipPage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TipPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TipPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whack_A_Tap/Wack_a_tap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whack_A_Tap/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whack_A_Tap/libraries/p5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Whack_A_Tap/sketch.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zachtext.txt" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>reservoir.jpg</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Whack_A_Tap/index.html" />
+        <option value="$PROJECT_DIR$/Whack_A_Tap/Wack_a_tap.js" />
+        <option value="$PROJECT_DIR$/html_deliverable.html" />
+        <option value="$PROJECT_DIR$/login.html" />
+        <option value="$PROJECT_DIR$/saver_survey.html" />
+        <option value="$PROJECT_DIR$/signup.html" />
+        <option value="$PROJECT_DIR$/tip_page.html" />
+        <option value="$PROJECT_DIR$/css/signup.css" />
+        <option value="$PROJECT_DIR$/css/login.css" />
+        <option value="$PROJECT_DIR$/plumbing_game.html" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="34" />
+    <option name="y" value="30" />
+    <option name="width" value="1385" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projectwater" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectwater" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.login.html">
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/projectwater/Whack_A_Tap/index.html" />
+    <configuration name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/projectwater/login.html" />
+    <configuration name="Wack_a_tap.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="Wack_a_tap.js" working-dir="$PROJECT_DIR$/Whack_A_Tap" />
+    <list>
+      <item itemvalue="JavaScript Debug.login.html" />
+      <item itemvalue="Node.js.Wack_a_tap.js" />
+      <item itemvalue="JavaScript Debug.index.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.Wack_a_tap.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37bae541-09f0-439c-9b53-b99b12ae1cdd" name="Default" comment="" />
+      <created>1524777890420</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524777890420</updated>
+      <workItem from="1524777892680" duration="630000" />
+      <workItem from="1524963463275" duration="9461000" />
+      <workItem from="1525378335356" duration="112000" />
+      <workItem from="1525380564072" duration="913000" />
+      <workItem from="1525381481449" duration="125000" />
+      <workItem from="1525381618424" duration="128000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="11369000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="272" y="36" width="1385" height="877" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49871793" weight="0.23973607" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32948717" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.31025642" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3125" />
+      <window_info id="Structure" order="1" sideWeight="0.50128204" side_tool="true" weight="0.23973607" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Html_Deliverable/Html_Deliverable.html" />
+    <entry file="file://$PROJECT_DIR$/Html_Deliverable/Html_Deliverable.html" />
+    <entry file="file://$PROJECT_DIR$/p5.play.js" />
+    <entry file="file://$PROJECT_DIR$/Whack_A_Tap/lib/p5.js" />
+    <entry file="file://$PROJECT_DIR$/Whack_A_Tap/index.html" />
+    <entry file="file://$PROJECT_DIR$/Whack_A_Tap/Wack_a_tap.js" />
+    <entry file="file://$PROJECT_DIR$/js/make_cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/signup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4065">
+          <caret line="281" column="18" selection-start-line="281" selection-start-column="18" selection-end-line="281" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="191" column="18" selection-start-line="191" selection-start-column="18" selection-end-line="191" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/html_deliverable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tip_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="72" lean-forward="true" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html_deliverable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plumbing_game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saver_survey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-482">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
