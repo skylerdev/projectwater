@@ -1,10 +1,34 @@
-{ "height":8,
+{ "height":9,
  "infinite":false,
  "layers":[
         {
-         "data":[2, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 6, 5, 2, 5, 6, 5, 3, 1, 7, 1, 2, 7, 6, 5, 7, 2, 7, 4, 2, 1, 4, 6, 2, 4, 6, 5, 4, 2, 4, 2, 3, 0, 0, 0, 0, 0, 0],
-         "height":8,
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 1, 2, 3, 4, 6, 8, 5, 2, 5, 6, 5, 3, 1, 7, 1, 2, 7, 6, 5, 7, 2, 7, 4, 2, 1, 4, 6, 2, 4, 6, 5, 4, 2, 4, 2, 3, 10, 0, 0, 0, 0, 0],
+         "height":9,
          "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":6,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "name":"Tile Layer 2",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":6,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "name":"Tile Layer 3",
+         "offsetx":-32,
+         "offsety":-32,
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
@@ -29,86 +53,32 @@
          "spacing":0,
          "tilecount":7,
          "tileheight":64,
-         "tileproperties":
-            {
-             "0":
-                {
-                 "down":true,
-                 "right":true
-                },
-             "1":
-                {
-                 "left":true,
-                 "right":true
-                },
-             "2":
-                {
-                 "down":true,
-                 "left":true
-                },
-             "3":
-                {
-                 "down":true,
-                 "up":true
-                },
-             "4":
-                {
-                 "right":true,
-                 "up":true
-                },
-             "5":
-                {
-                 "left":true,
-                 "up":true
-                },
-             "6":
-                {
-                 "down":true,
-                 "left":true,
-                 "right":true,
-                 "up":true
-                }
-            },
-         "tilepropertytypes":
-            {
-             "0":
-                {
-                 "down":"bool",
-                 "right":"bool"
-                },
-             "1":
-                {
-                 "left":"bool",
-                 "right":"bool"
-                },
-             "2":
-                {
-                 "down":"bool",
-                 "left":"bool"
-                },
-             "3":
-                {
-                 "down":"bool",
-                 "up":"bool"
-                },
-             "4":
-                {
-                 "right":"bool",
-                 "up":"bool"
-                },
-             "5":
-                {
-                 "left":"bool",
-                 "up":"bool"
-                },
-             "6":
-                {
-                 "down":"bool",
-                 "left":"bool",
-                 "right":"bool",
-                 "up":"bool"
-                }
-            },
+         "tilewidth":64
+        }, 
+        {
+         "columns":2,
+         "firstgid":8,
+         "image":"Hidden_Pipe.png",
+         "imageheight":64,
+         "imagewidth":128,
+         "margin":0,
+         "name":"Hidden_Pipe",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":64,
+         "tilewidth":64
+        }, 
+        {
+         "columns":2,
+         "firstgid":10,
+         "image":"Pipe_Goals.png",
+         "imageheight":64,
+         "imagewidth":128,
+         "margin":0,
+         "name":"Pipe_Goals",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":64,
          "tilewidth":64
         }],
  "tilewidth":64,
