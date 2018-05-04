@@ -44,7 +44,6 @@ function create() {
 	
 	click = game.add.audio('click');
 	click.allowMultiple = true;
-	click.allowMultiple = true;
 	flip = game.add.audio('flip');
 	flip.allowMultiple = true;
 	randomizeBoard();
