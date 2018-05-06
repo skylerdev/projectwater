@@ -57,7 +57,7 @@ h2{
   
 }
 
-.login-box input[type="text"], input[type="password"] {
+.login-box input[type="text"], input[type="password"] , input[type="email"]{
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -90,6 +90,10 @@ h2{
   color: #fff;
 }
 
+error {
+    background-color: rgba(80,80,80,0.5);
+    border: 1px solid red;
+}
 /** media queries */
 
 @media only screen and (max-device-width: 480px) {
@@ -148,7 +152,7 @@ h2{
   
 }
 
-.login-box input[type="text"], input[type="password"] {
+.login-box input[type="text"], input[type="password"] , input[type="email"]{
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -247,7 +251,7 @@ h2{
   
 }
 
-.login-box input[type="text"], input[type="password"] {
+.login-box input[type="text"], input[type="password"], input[type="email"]{
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;

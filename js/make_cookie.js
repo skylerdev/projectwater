@@ -8,7 +8,8 @@ function makeCookie() {
         document.cookie = "email" + "=" + myForm.email.value + ";" + expires + ";path=/";
 
     }
-      }
+    return false;
+}
 
 function checkCookie(){
   if (document.cookie.indexOf("visited=")>= 0){
