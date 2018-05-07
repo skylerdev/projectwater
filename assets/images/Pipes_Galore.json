@@ -2,9 +2,20 @@
  "infinite":false,
  "layers":[
         {
-         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 1, 2, 3, 4, 6, 8, 5, 2, 5, 6, 5, 3, 1, 7, 1, 2, 7, 6, 5, 7, 2, 7, 4, 2, 1, 4, 6, 2, 4, 6, 5, 4, 2, 4, 2, 3, 10, 0, 0, 0, 0, 0],
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 1, 2, 3, 4, 6, 2, 5, 2, 5, 6, 5, 3, 1, 7, 1, 2, 7, 6, 5, 7, 2, 7, 4, 2, 1, 4, 6, 2, 4, 6, 5, 4, 2, 4, 2, 3, 10, 0, 0, 0, 0, 0],
          "height":9,
          "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":false,
+         "width":6,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "name":"Tile Layer 4",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
@@ -18,7 +29,7 @@
          "name":"Tile Layer 2",
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":6,
          "x":0,
          "y":0
@@ -31,7 +42,7 @@
          "offsety":-32,
          "opacity":1,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":6,
          "x":0,
          "y":0
@@ -53,6 +64,70 @@
          "spacing":0,
          "tilecount":7,
          "tileheight":64,
+         "tileproperties":
+            {
+             "0":
+                {
+                 "inFlow":""
+                },
+             "1":
+                {
+                 "inFlow":""
+                },
+             "2":
+                {
+                 "inFlow":""
+                },
+             "3":
+                {
+                 "inFlow":""
+                },
+             "4":
+                {
+                 "inFlow":""
+                },
+             "5":
+                {
+                 "inFlow":""
+                },
+             "6":
+                {
+                 "inFlow":"",
+                 "passed":false
+                }
+            },
+         "tilepropertytypes":
+            {
+             "0":
+                {
+                 "inFlow":"string"
+                },
+             "1":
+                {
+                 "inFlow":"string"
+                },
+             "2":
+                {
+                 "inFlow":"string"
+                },
+             "3":
+                {
+                 "inFlow":"string"
+                },
+             "4":
+                {
+                 "inFlow":"string"
+                },
+             "5":
+                {
+                 "inFlow":"string"
+                },
+             "6":
+                {
+                 "inFlow":"string",
+                 "passed":"bool"
+                }
+            },
          "tilewidth":64
         }, 
         {
@@ -78,6 +153,33 @@
          "name":"Pipe_Goals",
          "spacing":0,
          "tilecount":2,
+         "tileheight":64,
+         "tileproperties":
+            {
+             "1":
+                {
+                 "inFlow":""
+                }
+            },
+         "tilepropertytypes":
+            {
+             "1":
+                {
+                 "inFlow":"string"
+                }
+            },
+         "tilewidth":64
+        }, 
+        {
+         "columns":30,
+         "firstgid":12,
+         "image":"Water_Sheet_Transparent.png",
+         "imageheight":640,
+         "imagewidth":1920,
+         "margin":0,
+         "name":"Water_Sheet_Transparent",
+         "spacing":0,
+         "tilecount":300,
          "tileheight":64,
          "tilewidth":64
         }],
