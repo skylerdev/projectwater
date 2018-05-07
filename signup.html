@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/signup.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/make_cookie.js" async></script>
   
   
   </head>
@@ -15,7 +16,7 @@
     <img src="assets/avatar.png" class="avatar">
       
       <h2> Sign-Up </h2>
-      <form name="myForm" method="post" onsubmit="return makeCookie();" action="submit.php" target="_self">
+      <form id="signup" name="myForm" method="post" onsubmit="makeCookie()" action="submit.php" >
         
         <p>Username</p>
         <input id="username" type="text" name="username" placeholder="Enter Username" value = "" required="required">
@@ -24,22 +25,19 @@
         <input id="email" type="email" name="email" placeholder="Enter Email" value = "" required="required">
           
         <p>Password</p>
-        <input id="password" type="password" name="password" id="password" pattern="[A-Za-z0-9=]{8,20}" placeholder="Enter Password" required="required">   
+        <input type="password" name="password" id="password" pattern="[A-Za-z0-9=]{8,20}" placeholder="Enter Password" required="required">   
         
         <p>Confirm Password</p>
         <input type="password" name="password" id="confirm_password" placeholder="Confirm Password" required="required">
         
         <span id="errorMsg"></span>
         
-        <input id="submit" type="submit" name="submit" value="Sign-up">
+        <input type="submit" value="Sign-up">
         
       </form>
     
     </div>
   
   </body>
-<script src="js/make_cookie.js">
-
-  </script>
 
 </html>

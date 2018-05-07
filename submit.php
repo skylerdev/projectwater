@@ -28,4 +28,6 @@ $stmt->execute();
 //mysqli_query($conn,$sql);
 $stmt->close();
 $conn->close();
+
+echo "<script> window.location=\"index.html\";</script>"
 ?>
