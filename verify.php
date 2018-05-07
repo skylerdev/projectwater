@@ -43,6 +43,26 @@ if(isset($_POST['email']) && !empty($_POST['email'])){
         echo 'false';
     } 
 }
+if(isset($_POST['username']) && isset($_POST['password']) && !empty($_POST['password'])){
+    //Sanitizes input
+    $username = mysqli_real_escape_string($conn,$_POST['username']);
+    $password = mysqli_real_escape_string($conn,$_POST['password']);
+    
+    //SQL statement
+    $sql = "SELECT * FROM users WHERE username ='$username'";
+    
+    //Fetch assoc
+    $result = mysqli_query($conn,$sql);
+    $row = $result->fetch_assoc();
+    
+    //
+    $valid = password_verify($password,$row['password']);
+    if ($valid){
+        echo "yep";
+    } else {
+        echo "nope";
+    }
+}
 
 
 $conn->close();

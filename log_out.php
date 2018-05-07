@@ -1,0 +1,7 @@
+<?php
+session_start();
+if(isset($_SESSION['logged_in'])){
+    $_SESSION['logged_in'] = false;
+}
+echo "<script>window.location=\"login.html\"</script>";
+?>
