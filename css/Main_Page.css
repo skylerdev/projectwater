@@ -1,0 +1,179 @@
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "ads article"
+    "nav article"
+    "nav footer";
+  grid-template-rows: 180px 200px 1fr 200px;  
+  grid-template-columns: 40% 1fr;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+  }  
+
+header, footer, article, nav, div {
+  padding: 1.2em;
+  background: yellowgreen;
+  }
+
+#pageHeader {
+  grid-area: header;
+  background: url(../assets/reservoir4.jpg) no-repeat;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-position: 60%;
+  }
+#pageHeader h1{
+  display: inline-block;
+}
+
+.button {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #1c8adb;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  float: right;
+  width: 120px;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+.button:hover{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #39dc79;
+  color: #000;
+  font-size: 18px;
+  border-radius: 20px;
+  float: right;
+  width: 120px;
+  padding-right: 10px;
+}
+
+#pageFooter {
+  grid-area: footer;
+  background: rgb(85, 191, 224);
+  text-align: center;
+  }
+
+#pageFooter p {
+  transform: translate(0%, 350%)
+}
+
+#mainArticle { 
+  grid-area: article; 
+  background: rgb(180, 187, 198);
+  
+  background-position: 50%;
+  text-align: center;
+  
+  }
+
+#mainArticle p{
+  transform: translate(0%, 650%);
+}
+
+#mainNav { 
+  grid-area: nav; 
+  background: rgb(180, 187, 198);
+  text-align: center;
+  }
+
+#mainNav p {
+  transform: translate(0%, 650%);
+  
+}
+
+#siteAds { 
+  grid-area: ads; 
+  background: rgb(85, 191, 224);
+  text-align: center;
+  } 
+
+#siteAds p {
+  transform: translate(0%, 350%);
+}
+
+/* Stack the layout on small devices/viewports. */
+@media only screen and (max-device-width: 480px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 19% 19% 19% 19% 19.5%;  
+    grid-template-columns: 1fr;
+    padding: 2%;
+    padding-bottom: 1%;
+ }
+  
+#pageHeader {
+  grid-area: header;
+  background: url(../assets/reservoir4.jpg) no-repeat;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background-position: 60%;
+  }
+  
+#pageHeader h1{
+    display: inline-block;
+  }
+
+#links {
+    display: inline-block;
+    margin-right: 10px;
+    float: right;
+    padding-top: 85px;
+}
+  
+
+#pageFooter {
+  grid-area: footer;
+  background: rgb(85, 191, 224);
+  
+  }
+
+#mainArticle { 
+  grid-area: article; 
+  background: rgb(180, 187, 198);
+  
+  background-position: 50%;
+  }
+
+#mainNav { 
+  grid-area: nav; 
+  background: rgb(180, 187, 198);
+  }
+
+#siteAds { 
+  grid-area: ads; 
+  background: rgb(85, 191, 224);
+  } 
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width: 1024px) {
+  
+    body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 20% 20% 19% 19% 19%;  
+    grid-template-columns: 1fr;
+    padding-top: 1%;
+    padding-bottom: 1%;
+ }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Project Water</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/pixi.min.js"></script>
+    <script src="js/index.js?v=1.1" async></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/chart.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" id="navbarBtn" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="logo" class="navbar-brand" href="#"><img src="images/Logo.png" width="auto" height="70px"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Teams</a></li>
+                <li><a href="#">Score</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="TESTING/shootergame.html">Shooter</a></li>
+                <li><a href="TESTING/PipeGame/">PipeGame</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="waterboySignup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="waterboyLogin.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+<div class="row">
+    <div id="housePane" class="col-sm-12 center-block">
+    </div>
+</div>
+<div class="row">
+    <div id="chart_div" style="width: 256px; height: 128px;"class="col-sm-6 center-block ">
+    </div>
+    <div class="col-sm-6 mt-5">
+        <img class="img-responsive center-block " src="images/facts.png">
+    </div>
+</div>
+<div class="row">
+    <button type="button" class="btn btn-primary center-block btn-lg" 
+    onclick="randGame()" >PLAY GAME</button>
+</div>
+</body>
+</html>

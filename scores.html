@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Water Home</title>
+    <!-- Bootstrap CSS and JS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/score.css">
+    
+    <!-- Scores GET-->
+    <script src="js/score.js" async></script>
+    
+</head>
+  
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Project Water</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="/index.html">Home</a></li>
+        <li><a href="/scores.html">HighScores</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+    <div class="row">
+            <ul class="nav nav-tabs" id="myTabs">
+              <li class="active"><a href="#home" data-toggle="tab" >Global Highscores</a></li>
+              <li><a href="#personal" data-toggle="tab" >Personal Highscores</a></li>
+              <li><a href="#team" data-toggle="tab" >Team Highscores</a></li>
+            </ul>
+            
+            <div class="tab-content">
+                
+                <!-- Global Highscores pane content-->
+                <div class="tab-pane active" id="home">
+                    <div class="row">
+                        <h1>Pipe Highscore</h1>
+                        <div id="pipe-score" class="col-sm-12 center-block">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h1>Shooter Highscore</h1>
+                        <div id="shooter-score" class="col-sm-12 center-block">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h1>Tap Highscore</h1>
+                        <div id="tap-score" class="col-sm-12 center-block">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Personal Highscores pane content-->
+                <div class="tab-pane" id="personal" >
+                    <div class="row">
+                        <h1>Pipe Highscore</h1>
+                        <div id="pipe-score" class="col-sm-12 center-block">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h1>Shooter Highscore</h1>
+                        <div id="shooter-score" class="col-sm-12 center-block">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h1>Tap Highscore</h1>
+                        <div id="tap-score" class="col-sm-12 center-block">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Highscores pane content-->
+                <div class="tab-pane" id="team" >
+                    <p>Team</p>
+                </div>
+            </div>
+    </div>
+</div>
+  </body>
