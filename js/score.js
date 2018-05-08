@@ -1,4 +1,5 @@
 $('document').ready(function(){
+    var username = getCookie('username');
           $('#global').ready(function(){
                 var tab = "global";
                 $.ajax ({
@@ -8,26 +9,44 @@ $('document').ready(function(){
                     dataType: "text",
                     success:function(data){
                         var scores = jQuery.parseJSON(data);
+
                         $('#pipe-score').html(scores['pipe']);
-                        
                         $('#shooter-score').html(scores['shooter']);
                     }
                 });
             });
     
-            $('#password').change(function(){
+            $('#personal').ready(function(){
+                var tab = "personal";
                 $.ajax ({
-                    url : "login.php",
-                    method : "POST",
-                    data :  $('form').serialize(),
+                    url : "score.php",
+                    method : "GET",
+                    data :  {tab : tab,
+                             username : username},
                     dataType: "text",
-                    success:function(response){
-                        $('#errorMsg').html(response);
-                    },
-                    error:function(error){
-                         $('#errorMsg').html('Password is incorrect');
+                    success:function(data){
+                        console.log(data);
+                        var scores = jQuery.parseJSON(data);
+
+                        $('#pipe-score-personal').html(scores['pipe']);
+                        $('#shooter-score-personal').html(scores['shooter']);
                     }
                 });
             });
             
    });
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}

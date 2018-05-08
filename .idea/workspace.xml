@@ -2,76 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37bae541-09f0-439c-9b53-b99b12ae1cdd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Html_Deliverable.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Html_Deliverable.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Html_Deliverable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Sad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/Smiley.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/WaveLevelShortTransparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/mainmenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/tap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Html_Deliverable/tap_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Page/LoginStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Page/SignupStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Page/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Page/makecookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Page/reservoir.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Page/waterboyLogin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Page/waterboySignup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/All_Pipe.pixil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/All_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Horizontal_Pipe.pixil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Horizontal_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Left_Down_Pipe.pixil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Left_Down_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Left_Up_Pipe.pixil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Left_Up_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Pipe_Sheet.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Pipe_Sheet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Pipe_Sheet_Transparent.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Pipe_Sheet_Transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Pipe_Sheet_Transparent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Pipe_Template.pixil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Pipes_Galore.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Pipes_Galore.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Right_Down_Pipe.pixil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Right_Down_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Right_Up_Pipe.pixil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Right_Up_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Vertical_Pipe.pixil" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/Vertical_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/blank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/pipeboard..json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/pipeboard.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/pipeboard.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/assets/pipes.tmx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PhaserTest/js/phaser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/All_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/End_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/Horizontal_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/Left_Down_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/Left_Up_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/Right_Down_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/Right_Up_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/Start_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/assets/Vertical_Pipe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PipeGame_Canvas/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaverSurvey.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Survey/SaverSurvey.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Survey/SurveyStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Survey/reservoir2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TipPage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TipPage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TipPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Whack_A_Tap/Wack_a_tap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Whack_A_Tap/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Whack_A_Tap/libraries/p5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Whack_A_Tap/sketch.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/score.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/score.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score.php" beforeDir="false" afterPath="$PROJECT_DIR$/score.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scores.html" beforeDir="false" afterPath="$PROJECT_DIR$/scores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,48 +19,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="phaser_test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/phaser_test.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="score.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/score.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="53" column="47" lean-forward="true" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.html">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="-255">
+              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="14" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plumbing_game.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plumbing_game.html">
+      <file leaf-file-name="chart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chart.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="scores.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scores.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state relative-caret-position="232">
+              <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saver_survey.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saver_survey.html">
+      <file leaf-file-name="score.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/score.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="153">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pipegame.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pipegame.html">
+      <file leaf-file-name="score.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/score.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+            <state relative-caret-position="527">
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -148,7 +88,6 @@
         <option value="$PROJECT_DIR$/html_deliverable.html" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/saver_survey.html" />
-        <option value="$PROJECT_DIR$/signup.html" />
         <option value="$PROJECT_DIR$/tip_page.html" />
         <option value="$PROJECT_DIR$/css/signup.css" />
         <option value="$PROJECT_DIR$/css/login.css" />
@@ -156,6 +95,12 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/phaser_test.html" />
         <option value="$PROJECT_DIR$/pipegame.html" />
+        <option value="$PROJECT_DIR$/js/make_cookie.js" />
+        <option value="$PROJECT_DIR$/signup.html" />
+        <option value="$PROJECT_DIR$/css/score.css" />
+        <option value="$PROJECT_DIR$/scores.html" />
+        <option value="$PROJECT_DIR$/score.php" />
+        <option value="$PROJECT_DIR$/js/score.js" />
       </list>
     </option>
   </component>
@@ -175,10 +120,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
-    <option name="y" value="23" />
-    <option name="width" value="1385" />
-    <option name="height" value="877" />
+    <option name="x" value="975" />
+    <option name="width" value="953" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -194,6 +138,16 @@
               <item name="projectwater" type="b2602c69:ProjectViewProjectNode" />
               <item name="projectwater" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="projectwater" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectwater" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectwater" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectwater" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -202,6 +156,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -255,11 +210,12 @@
       <workItem from="1525381481449" duration="125000" />
       <workItem from="1525381618424" duration="128000" />
       <workItem from="1525384580170" duration="136000" />
+      <workItem from="1525796173486" duration="3817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11505000" />
+    <option name="totallyTimeSpent" value="15322000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -271,14 +227,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="23" width="1385" height="877" extended-state="6" />
-    <editor active="true" />
+    <frame x="780" y="0" width="762" height="830" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871793" visible="true" weight="0.23973607" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871793" visible="true" weight="0.2606952" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32948717" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.31025642" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.25383544" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3125" />
       <window_info id="Structure" order="1" sideWeight="0.50128204" side_tool="true" weight="0.23973607" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -286,11 +243,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,6 +283,41 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/phaser_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plumbing_game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saver_survey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pipegame.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -340,13 +332,6 @@
     <entry file="file://$PROJECT_DIR$/Whack_A_Tap/lib/p5.js" />
     <entry file="file://$PROJECT_DIR$/Whack_A_Tap/index.html" />
     <entry file="file://$PROJECT_DIR$/Whack_A_Tap/Wack_a_tap.js" />
-    <entry file="file://$PROJECT_DIR$/js/make_cookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/signup.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4065">
@@ -385,7 +370,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/phaser_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="119">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
         </state>
       </provider>
@@ -397,32 +382,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zachtext.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="425">
           <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plumbing_game.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="187">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hydropull.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/html_deliverable.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -433,15 +405,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/saver_survey.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="136">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pipegame.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="51">
           <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/signup.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/make_cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="89" lean-forward="true" selection-start-line="7" selection-start-column="89" selection-end-line="7" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="14" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scores.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/score.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/score.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="53" column="47" lean-forward="true" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
         </state>
       </provider>
     </entry>
