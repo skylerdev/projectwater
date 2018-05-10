@@ -4,7 +4,7 @@ $('document').ready(function () {
     var username = getCookie('username');
 
 
-    $('#global').ready(function () {
+    $('#global-at').ready(function () {
         var tab = "global";
         $.ajax({
             url: "score.php",
@@ -12,15 +12,16 @@ $('document').ready(function () {
             data: {tab: tab},
             dataType: "text",
             success: function (data) {
+
                 var scores = jQuery.parseJSON(data);
 
-                $('#pipe-score').html(scores['pipe']);
-                $('#shooter-score').html(scores['shooter']);
+                $('#pipe-score-at').html(scores['pipe']);
+                $('#shooter-score-at').html(scores['shooter']);
             }
         });
     });
 
-    $('#personal').ready(function () {
+    $('#personal-at').ready(function () {
         var tab = "personal";
         $.ajax({
             url: "score.php",
@@ -34,8 +35,8 @@ $('document').ready(function () {
 
                 var scores = jQuery.parseJSON(data);
 
-                $('#pipe-score-personal').html(scores['pipe']);
-                $('#shooter-score-personal').html(scores['shooter']);
+                $('#pipe-score-personal-at').html(scores['pipe']);
+                $('#shooter-score-personal-at').html(scores['shooter']);
             }
         });
     });

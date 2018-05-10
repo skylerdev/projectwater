@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37bae541-09f0-439c-9b53-b99b12ae1cdd" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Demo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/score.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/score.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/score.php" beforeDir="false" afterPath="$PROJECT_DIR$/score.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scores.html" beforeDir="false" afterPath="$PROJECT_DIR$/scores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +23,8 @@
       <file leaf-file-name="score.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/score.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="459">
+              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -31,8 +32,17 @@
       <file leaf-file-name="Score_creation_temp3.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Score_creation_temp3.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="17">
+              <caret line="1" column="22" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signup.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/signup.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -40,12 +50,8 @@
       <file leaf-file-name="scores.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scores.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
-              <folding>
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="248">
+              <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -53,26 +59,26 @@
       <file leaf-file-name="score.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/score.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="make_cookie.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/make_cookie.js">
+      <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/signup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <state relative-caret-position="119">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Score_creation_temp2.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Score_creation_temp2.txt">
+      <file leaf-file-name="Demo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3655">
-              <caret line="215" selection-start-line="215" selection-end-line="216" selection-end-column="213" />
+            <state relative-caret-position="204">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -80,13 +86,20 @@
       <file leaf-file-name="submit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/submit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+            <state relative-caret-position="136">
+              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -113,10 +126,12 @@
         <option value="$PROJECT_DIR$/pipegame.html" />
         <option value="$PROJECT_DIR$/css/score.css" />
         <option value="$PROJECT_DIR$/Score_creation_temp2.txt" />
-        <option value="$PROJECT_DIR$/signup.html" />
         <option value="$PROJECT_DIR$/js/make_cookie.js" />
         <option value="$PROJECT_DIR$/score.php" />
         <option value="$PROJECT_DIR$/Score_creation_temp3.txt" />
+        <option value="$PROJECT_DIR$/signup.html" />
+        <option value="$PROJECT_DIR$/Demo.js" />
+        <option value="$PROJECT_DIR$/Demo.php" />
         <option value="$PROJECT_DIR$/js/score.js" />
         <option value="$PROJECT_DIR$/scores.html" />
       </list>
@@ -143,9 +158,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2.4" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="457" />
-    <option name="width" value="1470" />
-    <option name="height" value="1047" />
+    <option name="x" value="941" />
+    <option name="width" value="985" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -160,11 +175,6 @@
             <path>
               <item name="projectwater" type="b2602c69:ProjectViewProjectNode" />
               <item name="projectwater" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projectwater" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projectwater" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="projectwater" type="b2602c69:ProjectViewProjectNode" />
@@ -205,7 +215,7 @@
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/projectwater/Whack_A_Tap/index.html" />
     <configuration name="login.html" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/projectwater/login.html" />
     <configuration name="Wack_a_tap.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="Wack_a_tap.js" working-dir="$PROJECT_DIR$/Whack_A_Tap" />
-    <configuration name="score.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/score.php" />
+    <configuration name="score.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/score.php" scriptParameters="Username: &quot;Albert&quot;, Score: 555" />
     <list>
       <item itemvalue="JavaScript Debug.login.html" />
       <item itemvalue="Node.js.Wack_a_tap.js" />
@@ -244,11 +254,12 @@
       <workItem from="1525839802621" duration="5754000" />
       <workItem from="1525910295934" duration="28000" />
       <workItem from="1525910422335" duration="7242000" />
+      <workItem from="1525979649501" duration="229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33780000" />
+    <option name="totallyTimeSpent" value="38622000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -260,10 +271,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="457" y="0" width="1470" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="753" y="0" width="788" height="831" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871793" visible="true" weight="0.1471802" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871793" visible="true" weight="0.14599483" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32948717" />
@@ -317,27 +327,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/submit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scores.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="30" lean-forward="true" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/score.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/make_cookie.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -500,17 +489,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="105">
             <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -570,13 +559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="46" lean-forward="true" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/score.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -612,42 +594,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/submit.php">
+    <entry file="file://$PROJECT_DIR$/Score_creation_temp3.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Score_creation_temp3.txt">
+    <entry file="file://$PROJECT_DIR$/Demo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        <state relative-caret-position="153">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/score.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="459">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/score.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scores.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="120" column="46" selection-start-line="120" selection-start-column="46" selection-end-line="120" selection-end-column="46" />
-          <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="248">
+          <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
         </state>
       </provider>
     </entry>
