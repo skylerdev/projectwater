@@ -1,5 +1,9 @@
 $('document').ready(function () {
+
+    //Gets username from Cookie
     var username = getCookie('username');
+
+
     $('#global').ready(function () {
         var tab = "global";
         $.ajax({
@@ -27,6 +31,7 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
+
                 var scores = jQuery.parseJSON(data);
 
                 $('#pipe-score-personal').html(scores['pipe']);
@@ -47,6 +52,7 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
+                //console.log(data);
                 var scores = jQuery.parseJSON(data);
 
                 $('#pipe-score-team').html(scores['pipe']);

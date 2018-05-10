@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/score.css">
     
     <!-- Scores GET-->
-    <script src="js/score.js?v=1" async></script>
+    <script src="js/score.js?v=5" async></script>
     
 </head>
   
@@ -33,73 +33,233 @@
     </div>
   </div>
 </nav>
+
 <div class="container">
     <div class="row">
-            <ul class="nav nav-tabs" id="myTabs">
-              <li class="active"><a href="#home" data-toggle="tab" >Global</a></li>
-              <li><a href="#personal" data-toggle="tab" >Personal</a></li>
-              <li><a href="#team" data-toggle="tab" >Team</a></li>
-            </ul>
-            
-            <div class="tab-content">
-                
-                <!-- Global Highscores pane content-->
-                <div class="tab-pane active" id="home">
+        <ul class="nav nav-tabs" id="time">
+            <li class="active"><a href="#alltime" data-toggle="tab" >All-Time</a></li>
+            <li><a href="#daily" data-toggle="tab" >Daily</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!-- Global Highscores pane content-->
+            <div class="tab-pane active" id="allTime">
+
+                <div class="container">
                     <div class="row">
-                        <h1 class="text-center">Pipe Highscore</h1>
-                        <div id="pipe-score" class="col-sm-12 center-block">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h1 class="text-center">Shooter Highscore</h1>
-                        <div id="shooter-score" class="col-sm-12 center-block">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h1 class="text-center">Tap Highscore</h1>
-                        <div id="tap-score" class="col-sm-12 center-block">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Personal Highscores pane content-->
-                <div class="tab-pane" id="personal" >
-                    <div class="row">
-                        <h1 class="text-center">Pipe Highscore</h1>
-                        <div id="pipe-score-personal" class="col-sm-12 center-block">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h1 class="text-center">Shooter Highscore</h1>
-                        <div id="shooter-score-personal" class="col-sm-12 center-block">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h1 class="text-center">Tap Highscore</h1>
-                        <div id="tap-score-personal" class="col-sm-12 center-block">
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Team Highscores pane content-->
-                <div class="tab-pane" id="team" >
-                    <div class="row">
-                        <h1 class="text-center">Pipe Highscore</h1>
-                        <div id="pipe-score-team" class="col-sm-12 center-block">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h1 class="text-center">Shooter Highscore</h1>
-                        <div id="shooter-score-team" class="col-sm-12 center-block">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h1 class="text-center">Tap Highscore</h1>
-                        <div id="tap-score-team" class="col-sm-12 center-block">
+                        <ul class="nav nav-tabs" id="myTabs">
+                            <li class="active"><a href="#home" data-toggle="tab" >Global</a></li>
+                            <li><a href="#personal" data-toggle="tab" >Personal</a></li>
+                            <li><a href="#team" data-toggle="tab" >Team</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+
+                            <!-- Global Highscores pane content-->
+                            <div class="tab-pane active" id="home">
+                                <div class="row">
+                                    <h1 class="text-center">Pipe Highscore</h1>
+                                    <div id="pipe-score" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Shooter Highscore</h1>
+                                    <div id="shooter-score" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Tap Highscore</h1>
+                                    <div id="tap-score" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Personal Highscores pane content-->
+                            <div class="tab-pane" id="personal" >
+                                <div class="row">
+                                    <h1 class="text-center">Pipe Highscore</h1>
+                                    <div id="pipe-score-personal" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Shooter Highscore</h1>
+                                    <div id="shooter-score-personal" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Tap Highscore</h1>
+                                    <div id="tap-score-personal" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team Highscores pane content-->
+                            <div class="tab-pane" id="team" >
+                                <div class="row">
+                                    <h1 class="text-center">Pipe Highscore</h1>
+                                    <div id="pipe-score-team" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Shooter Highscore</h1>
+                                    <div id="shooter-score-team" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Tap Highscore</h1>
+                                    <div id="tap-score-team" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Personal Highscores pane content-->
+            <div class="tab-pane" id="daily" >
+                <div class="container">
+                    <div class="row">
+                        <ul class="nav nav-tabs" id="myTabs">
+                            <li class="active"><a href="#home" data-toggle="tab" >Global</a></li>
+                            <li><a href="#personal" data-toggle="tab" >Personal</a></li>
+                            <li><a href="#team" data-toggle="tab" >Team</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+
+                            <!-- Global Highscores pane content-->
+                            <div class="tab-pane active" id="home">
+                                <div class="row">
+                                    <h1 class="text-center">Pipe Highscore</h1>
+                                    <div id="pipe-score" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Shooter Highscore</h1>
+                                    <div id="shooter-score" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Tap Highscore</h1>
+                                    <div id="tap-score" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Personal Highscores pane content-->
+                            <div class="tab-pane" id="personal" >
+                                <div class="row">
+                                    <h1 class="text-center">Pipe Highscore</h1>
+                                    <div id="pipe-score-personal" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Shooter Highscore</h1>
+                                    <div id="shooter-score-personal" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Tap Highscore</h1>
+                                    <div id="tap-score-personal" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team Highscores pane content-->
+                            <div class="tab-pane" id="team" >
+                                <div class="row">
+                                    <h1 class="text-center">Pipe Highscore</h1>
+                                    <div id="pipe-score-team" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Shooter Highscore</h1>
+                                    <div id="shooter-score-team" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-center">Tap Highscore</h1>
+                                    <div id="tap-score-team" class="col-sm-12 center-block">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="active"><a href="#home" data-toggle="tab" >Global</a></li>
+            <li><a href="#personal" data-toggle="tab" >Personal</a></li>
+            <li><a href="#team" data-toggle="tab" >Team</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!-- Global Highscores pane content-->
+            <div class="tab-pane active" id="home">
+                <div class="row">
+                    <h1 class="text-center">Pipe Highscore</h1>
+                    <div id="pipe-score" class="col-sm-12 center-block">
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="text-center">Shooter Highscore</h1>
+                    <div id="shooter-score" class="col-sm-12 center-block">
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="text-center">Tap Highscore</h1>
+                    <div id="tap-score" class="col-sm-12 center-block">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Personal Highscores pane content-->
+            <div class="tab-pane" id="personal" >
+                <div class="row">
+                    <h1 class="text-center">Pipe Highscore</h1>
+                    <div id="pipe-score-personal" class="col-sm-12 center-block">
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="text-center">Shooter Highscore</h1>
+                    <div id="shooter-score-personal" class="col-sm-12 center-block">
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="text-center">Tap Highscore</h1>
+                    <div id="tap-score-personal" class="col-sm-12 center-block">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Highscores pane content-->
+            <div class="tab-pane" id="team" >
+                <div class="row">
+                    <h1 class="text-center">Pipe Highscore</h1>
+                    <div id="pipe-score-team" class="col-sm-12 center-block">
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="text-center">Shooter Highscore</h1>
+                    <div id="shooter-score-team" class="col-sm-12 center-block">
+                    </div>
+                </div>
+                <div class="row">
+                    <h1 class="text-center">Tap Highscore</h1>
+                    <div id="tap-score-team" class="col-sm-12 center-block">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
   </body>
