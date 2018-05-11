@@ -12,6 +12,7 @@ $conn = new mysqli($servername, $user, $password, $dbname);
 $username = $_POST['username'];
 $password = $_POST['password'];
 $email = $_POST['email'];
+
 //Hashes password
 $hash = password_hash($password,PASSWORD_DEFAULT);
 

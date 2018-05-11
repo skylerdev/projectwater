@@ -20,7 +20,7 @@ if (isset($_GET['tab'])) {
 }
 
 /************************
- * Global score screen
+ * Global All Time score screen
  *************************/
 
 if (isset($_GET['tab']) && ($_GET['tab'] == 'global')) {

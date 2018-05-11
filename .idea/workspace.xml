@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37bae541-09f0-439c-9b53-b99b12ae1cdd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Demo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/score.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/score.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scores.html" beforeDir="false" afterPath="$PROJECT_DIR$/scores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/score.php" beforeDir="false" afterPath="$PROJECT_DIR$/score.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submit.php" beforeDir="false" afterPath="$PROJECT_DIR$/submit.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,44 +22,35 @@
       <file leaf-file-name="score.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/score.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            <state relative-caret-position="119">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Score_creation_temp3.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Score_creation_temp3.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="22" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signup.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/signup.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scores.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scores.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scores.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
+            <state relative-caret-position="153">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="score.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="score.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/score.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="-25">
+              <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -74,20 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Demo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="submit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/submit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -127,13 +108,14 @@
         <option value="$PROJECT_DIR$/css/score.css" />
         <option value="$PROJECT_DIR$/Score_creation_temp2.txt" />
         <option value="$PROJECT_DIR$/js/make_cookie.js" />
-        <option value="$PROJECT_DIR$/score.php" />
         <option value="$PROJECT_DIR$/Score_creation_temp3.txt" />
         <option value="$PROJECT_DIR$/signup.html" />
         <option value="$PROJECT_DIR$/Demo.js" />
         <option value="$PROJECT_DIR$/Demo.php" />
-        <option value="$PROJECT_DIR$/js/score.js" />
+        <option value="$PROJECT_DIR$/submit.php" />
+        <option value="$PROJECT_DIR$/score.php" />
         <option value="$PROJECT_DIR$/scores.html" />
+        <option value="$PROJECT_DIR$/js/score.js" />
       </list>
     </option>
   </component>
@@ -168,7 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,6 +166,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,11 +237,12 @@
       <workItem from="1525910295934" duration="28000" />
       <workItem from="1525910422335" duration="7242000" />
       <workItem from="1525979649501" duration="229000" />
+      <workItem from="1525993343856" duration="3364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38622000" />
+    <option name="totallyTimeSpent" value="41986000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -271,9 +254,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="753" y="0" width="788" height="831" extended-state="0" />
+    <frame x="941" y="0" width="985" height="1039" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871793" visible="true" weight="0.14599483" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49871793" visible="true" weight="0.14551084" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32948717" />
@@ -327,13 +311,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/make_cookie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Score_creation_temp2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3655">
@@ -594,45 +571,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Score_creation_temp3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo.js" />
+    <entry file="file://$PROJECT_DIR$/Demo.php" />
     <entry file="file://$PROJECT_DIR$/submit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/score.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -643,17 +587,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/score.js">
+    <entry file="file://$PROJECT_DIR$/Score_creation_temp3.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/score.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scores.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="172" column="36" selection-start-line="172" selection-start-column="36" selection-end-line="172" selection-end-column="36" />
+        <state relative-caret-position="153">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/score.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="68" column="26" lean-forward="true" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
         </state>
       </provider>
     </entry>
