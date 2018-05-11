@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(Login_Page/reservoir.jpg);
+  background: url(../assets/reservoir.jpg);
   background-position: 50% 35%;
   min-width: 2560px;
   background-repeat: no-repeat;
