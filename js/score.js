@@ -6,10 +6,12 @@ $('document').ready(function () {
 
     $('#global-at').ready(function () {
         var tab = "global";
+        var score= "allTime";
         $.ajax({
             url: "score.php",
             method: "GET",
-            data: {tab: tab},
+            data: {tab: tab,
+                   score:score},
             dataType: "text",
             success: function (data) {
 
@@ -23,12 +25,14 @@ $('document').ready(function () {
 
     $('#personal-at').ready(function () {
         var tab = "personal";
+        var score= "allTime";
         $.ajax({
             url: "score.php",
             method: "GET",
             data: {
                 tab: tab,
-                username: username
+                username: username,
+                score:score
             },
             dataType: "text",
             success: function (data) {
@@ -44,12 +48,14 @@ $('document').ready(function () {
     $('#team-at').ready(function () {
         var tab = "team";
         var team = "Werter";
+        var score = "allTime";
         $.ajax({
             url: "score.php",
             method: "GET",
             data: {
                 tab: tab,
                 team: team,
+                score:score
             },
             dataType: "text",
             success: function (data) {
@@ -64,6 +70,7 @@ $('document').ready(function () {
 
     $('#global-daily').ready(function () {
         var tab = "global";
+        var score =
         $.ajax({
             url: "score.php",
             method: "GET",
