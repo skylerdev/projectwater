@@ -14,13 +14,14 @@ var loadState = {
 			, fill: '#ffff00'
 		});
 		game.load.tilemap('map', 'assets/images/Pipes_Galore.json', null, Phaser.Tilemap.TILED_JSON);
-		game.load.image('Pipe_Sheet_Transparent', 'assets/images/Pipe_Sheet_Transparent.png');
+		game.load.image('Pipe_Sheet_Transparent', 'assets/images/Pipe_Sheet_Transparent_v2.png');
 		game.load.image('Hidden_Pipe', 'assets/images/Hidden_Pipe.png');
 		game.load.image('Pipe_Goals', 'assets/images/Pipe_Goals.png');
 		game.load.image('Water_Sheet_Transparent', 'assets/images/Water_Sheet_Transparent.png');
 		game.load.image('button', 'assets/images/Fast_Flow.png');
 		game.load.image('start', 'assets/images/Start.png');
-		game.load.image('board', 'assets/images/Game_Board_v2.png');
+    game.load.image('Bad_Pipe', 'assets/images/Bad_Pipe.png');
+		game.load.image('board', 'assets/images/Game_Board_v4.png');
 		game.load.audio('click', 'assets/sounds/click.mp3');
 		game.load.audio('flip', 'assets/sounds/flip_trim.mp3');
 		game.load.audio('click_voice', 'assets/sounds/click_voice.mp3');
@@ -52,8 +53,8 @@ var menuState = {
 		game.state.start('play');
 	}
 };
-var map, layer1, layer2, layer3, layer4, marker, swapGraphics;
-var swapSlot, tempPipe, startPipe, endPipe, curPipe;
+var map, layer1, layer2, layer3, layer4, layer5, marker, swapGraphics;
+var swapSlot, tempPipe, startPipe, endPipe, curPipe, flowStarted;
 var playCounter = 0
 	, winCount = 0
 	, loseCount = 0
@@ -73,16 +74,17 @@ var thisTileData;
 var animateSpeed, flowSpeed;
 var playState = {
 	create: function () {
-		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		//game.stage.backgroundColor = "#4488AA";
+		
 		game.add.tileSprite(0, 0, 384, 576, 'board');
 		map = game.add.tilemap('map');
 		map.addTilesetImage('Pipe_Sheet_Transparent');
 		map.addTilesetImage('Hidden_Pipe');
 		map.addTilesetImage('Pipe_Goals');
 		map.addTilesetImage('Water_Sheet_Transparent');
+    map.addTilesetImage('Bad_Pipe');
+    layer4 = map.createLayer('Tile Layer 4');
 		layer1 = map.createLayer('Tile Layer 1');
-		layer4 = map.createLayer('Tile Layer 4');
+		layer5 = map.createLayer('Tile Layer 5');
 		layer2 = map.createLayer('Tile Layer 2');
 		layer3 = map.createLayer('Tile Layer 3');
 		layer1.resizeWorld();
@@ -107,13 +109,14 @@ var playState = {
 		clickV.allowMultiple = true;
 		swoosh = game.add.audio('swoosh');
 		swoosh.allowMultiple = true;
-		
 		coveredTileCount = 36;
 		randomizeBoard();
-		game.canvas.style.margin = "10px";
+		game.canvas.margin = "0px";
 		timeIncrementer = game.time.events.loop(Phaser.Timer.SECOND, function () {
 			time++;
 		}, this);
+    flowStarted = false;
+    map.putTile(10, layer1.getTileX((Math.floor(Math.random() * 3)) * 64), layer1.getTileY(8 * 64), 'Tile Layer 1');
 		game.time.events.add(Phaser.Timer.SECOND * 7, startFlow, this);
 		game.add.button(192, 512, 'button', fastFlow, this);
 		findEnd();
@@ -122,9 +125,9 @@ var playState = {
 		updateMarker();
 		if (game.input.keyboard.isDown(Phaser.Keyboard.SHIFT)) {
 			getTileProperties();
-			console.log(map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y)).index);
+			console.log(map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y)).index, 'Tile Layer 1');
 		}
-		if (endPipe != null && endPipe.properties.inFlow == "down") {
+		if (endPipe.properties.inFlow == "down") {
 			gameWin();
 		}
 	}
@@ -240,7 +243,7 @@ function updateEgg() {
 function getTemp() {
 	updateMarker();
 	if (game.input.activePointer.worldY > 128 && game.input.activePointer.worldY < 512) {
-		tempPipe = map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y)).index;
+		tempPipe = map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y), 'Tile Layer 1').index;
 	}
 }
 
@@ -257,9 +260,9 @@ function swapTilesNow() {
 			}
 		}
 		else {
-			if (swapSlot != tempPipe && map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y)).index == tempPipe && map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y)).properties.inFlow == "") {
+			if (swapSlot != tempPipe && map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y), 'Tile Layer 1').index == tempPipe && map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y), 'Tile Layer 1').properties.inFlow == "") {
 				map.putTile(tempPipe, layer3.getTileX((1 * 64)), layer3.getTileY((1 * 64)), 'Tile Layer 3');
-				map.putTile(swapSlot, layer1.getTileX(marker.x), layer1.getTileY(marker.y));
+				map.putTile(swapSlot, layer1.getTileX(marker.x), layer1.getTileY(marker.y), 'Tile Layer 1');
 				swapSlot = map.getTile(layer3.getTileX((1 * 64)), layer3.getTileY((1 * 64)), 'Tile Layer 3').index;
 				moves++;
 				if (eggActive) {
@@ -298,26 +301,40 @@ function render() {
 function randomizeBoard() {
 	for (xCo = 0; xCo < 6; xCo++) {
 		for (yCo = 2; yCo < 8; yCo++) {
-			map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64)).index = Math.floor(Math.random() * 7) + 1;
+			map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index = Math.floor(Math.random() * 7) + 1;
 		}
 	}
+  //genBadPipes();
+}
+function genBadPipes() {
+  var xPos = Math.floor(Math.random() * 5);
+  var yPos = Math.floor(Math.random() * 5) + 2;
+  map.putTile(312, layer5.getTileX(xCo * 64), layer5.getTileY(yCo * 64), 'Tile Layer 5');
 }
 //Finds the end 
 function findEnd() {
-	endPipe = map.getTile(layer1.getTileX(5 * 64), layer1.getTileY(1 * 64));
+  yCo = 1;
+  map.putTile(11, layer1.getTileX((Math.floor(Math.random() * 4) + 2) * 64), layer1.getTileY(1 * 64), 'Tile Layer 1');
+  for (xCo = 0; xCo < 6; xCo++) {
+		if (map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1') != null && map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index == 11) {
+      endPipe = map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1');
+    }
+  }
 }
 //Finds the start pipe and send an inflow signal to the next pipe.
 function startFlow() {
 	yCo = 8;
+  
 	for (xCo = 0; xCo < 6; xCo++) {
-		if (map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64)) != null && map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64)).index == 10) {
-			map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY((yCo - 1) * 64)).properties.inFlow = "down";
-			curPipe = map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY((yCo - 1) * 64));
+		if (map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1') != null && map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index == 10) {
+			map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY((yCo - 1) * 64), 'Tile Layer 1').properties.inFlow = "down";
+			curPipe = map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY((yCo - 1) * 64), 'Tile Layer 1');
 			animateFlow(curPipe);
 			checkIfFlowable(curPipe);
 			flowTimer = game.time.events.loop(Phaser.Timer.SECOND * flowSpeed, runFlow, this);
 		}
 	}
+  flowStarted = true;
 }
 
 function runFlow() {
@@ -333,18 +350,18 @@ function flow(inTile) {
 	switch (inTile.index) {
 	case 1:
 		if (inTile.properties.inFlow == "right") {
-			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64)).properties.inFlow = "up";
-			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1').properties.inFlow = "up";
+			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "down") {
-			if(map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64)).properties.inFlow = "left";
-			curPipe = map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1').properties.inFlow = "left";
+			curPipe = map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
@@ -353,18 +370,18 @@ function flow(inTile) {
 		break;
 	case 2:
 		if (inTile.properties.inFlow == "right") {
-			if(map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64)).properties.inFlow = "right";
-			curPipe = map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1').properties.inFlow = "right";
+			curPipe = map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "left") {
-			if(map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64)).properties.inFlow = "left";
-			curPipe = map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1').properties.inFlow = "left";
+			curPipe = map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
@@ -373,18 +390,18 @@ function flow(inTile) {
 		break;
 	case 3:
 		if (inTile.properties.inFlow == "left") {
-			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64)).properties.inFlow = "up";
-			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1').properties.inFlow = "up";
+			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "down") {
-			if(map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64)).properties.inFlow = "right";
-			curPipe = map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1').properties.inFlow = "right";
+			curPipe = map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
@@ -393,18 +410,18 @@ function flow(inTile) {
 		break;
 	case 4:
 		if (inTile.properties.inFlow == "up") {
-			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64)).properties.inFlow = "up";
-			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1').properties.inFlow = "up";
+			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "down") {
-			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64)).properties.inFlow = "down";
-			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1').properties.inFlow = "down";
+			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
@@ -413,18 +430,18 @@ function flow(inTile) {
 		break;
 	case 5:
 		if (inTile.properties.inFlow == "up") {
-			if(map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64)).properties.inFlow = "left";
-			curPipe = map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1').properties.inFlow = "left";
+			curPipe = map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "right") {
-			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64)).properties.inFlow = "down";
-			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1').properties.inFlow = "down";
+			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
@@ -433,18 +450,18 @@ function flow(inTile) {
 		break;
 	case 6:
 		if (inTile.properties.inFlow == "up") {
-			if(map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64)).properties.inFlow = "right";
-			curPipe = map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1').properties.inFlow = "right";
+			curPipe = map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "left") {
-			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64)).properties.inFlow = "down";
-			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1').properties.inFlow = "down";
+			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
@@ -453,36 +470,36 @@ function flow(inTile) {
 		break;
 	case 7:
 		if (inTile.properties.inFlow == "left") {
-			if(map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64)).properties.inFlow += "left";
-			curPipe = map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1').properties.inFlow += "left";
+			curPipe = map.getTile(layer1.getTileX((inTile.x + 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "right") {
-			if(map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64)).properties.inFlow += "right";
-			curPipe = map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1').properties.inFlow += "right";
+			curPipe = map.getTile(layer1.getTileX((inTile.x - 1) * 64), layer1.getTileY((inTile.y) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "up") {
-			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64)).properties.inFlow += "up";
-			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1').properties.inFlow += "up";
+			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y + 1) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
 			
 		}
 		else if (inTile.properties.inFlow == "down") {
-			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64)) != null){
-				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64)).properties.inFlow += "down";
-			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64));
+			if(map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1') != null){
+				map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1').properties.inFlow += "down";
+			curPipe = map.getTile(layer1.getTileX((inTile.x) * 64), layer1.getTileY((inTile.y - 1) * 64), 'Tile Layer 1');
 			}else {
 				gameLose();
 			}
@@ -616,7 +633,7 @@ function animateFlow(inTile) {
 		}
 	}
 	animateTimer = game.time.events.repeat(Phaser.Timer.SECOND * animateSpeed, 15, function () {
-		map.putTile(animFrame, layer4.getTileX(inTile.x * 64), layer4.getTileY(inTile.y * 64), 'Tile Layer 4');
+		map.putTile(animFrame, layer4.getTileX(inTile.x * 64), layer4.getTileY(inTile.y * 64));
 		animFrame++;
 	}, this);
 }
@@ -650,21 +667,23 @@ function calculateScore() {
 }
 
 function fastFlow() {
+  if(flowTimer != null && flowStarted){
+    game.time.events.remove(flowTimer);
 	animateSpeed = 0.01;
-	flowSpeed = 0.17;
+	flowSpeed = 0.19;
 	try {
 		animateTimer.delay = Phaser.Timer.SECOND * animateSpeed;
 	}
 	catch {
 		console.log("Animation not started");
 	}
-	try {
-		flowTimer.delay = Phaser.Timer.SECOND * flowSpeed;
-	}
-	catch {
-		console.log("Flow not started");
-	}
-	game.time.events.remove(timeIncrementer);
+    game.time.events.add(Phaser.Timer.SECOND * 0.5, function () {flowTimer = game.time.events.loop(Phaser.Timer.SECOND * flowSpeed, runFlow, this);}, this);
+    
+		//flowTimer.delay = Phaser.Timer.SECOND * flowSpeed;
+	
+  game.time.events.remove(timeIncrementer);
+}
+	
 }
 
 function resize() {
