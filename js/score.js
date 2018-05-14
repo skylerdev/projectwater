@@ -5,89 +5,81 @@ $('document').ready(function () {
     var team = getCookie('team');
 
     $('#global-at').ready(function () {
-        var tab = "global";
-        var score= "allTime";
-        $.ajax({
-            url: "score.php",
-            method: "GET",
-            data: {tab: tab,
-                   score:score},
-            dataType: "text",
-            success: function (data) {
-
-                var scores = jQuery.parseJSON(data);
-
-                $('#pipe-score-at').html(scores['pipe']);
-                $('#shooter-score-at').html(scores['shooter']);
-            }
-        });
-    });
-
-    $('#personal-at').ready(function () {
-        var tab = "personal";
-        var score= "allTime";
-        $.ajax({
-            url: "score.php",
-            method: "GET",
-            data: {
-                tab: tab,
-                username: username,
-                score:score
-            },
-            dataType: "text",
-            success: function (data) {
-
-                var scores = jQuery.parseJSON(data);
-
-                $('#pipe-score-personal-at').html(scores['pipe']);
-                $('#shooter-score-personal-at').html(scores['shooter']);
-            }
-        });
-    });
-
-    $('#team-at').ready(function () {
-        var tab = "team";
-        var team = "Werter";
-        var score = "allTime";
-        $.ajax({
-            url: "score.php",
-            method: "GET",
-            data: {
-                tab: tab,
-                team: team,
-                score:score
-            },
-            dataType: "text",
-            success: function (data) {
-                //console.log(data);
-                var scores = jQuery.parseJSON(data);
-
-                $('#pipe-score-team').html(scores['pipe']);
-                $('#shooter-score-team').html(scores['shooter']);
-            }
-        });
-    });
-
-    $('#global-daily').ready(function () {
-        var tab = "global";
-        var score =
+        var tab = "global-at";
         $.ajax({
             url: "score.php",
             method: "GET",
             data: {tab: tab},
             dataType: "text",
             success: function (data) {
-
                 var scores = jQuery.parseJSON(data);
 
                 $('#pipe-score-at').html(scores['pipe']);
                 $('#shooter-score-at').html(scores['shooter']);
+                $('#tap-score-at').html(scores['tap']);
+            }
+        });
+    });
+
+    $('#personal-at').ready(function () {
+        var tab = "personal-at";
+        $.ajax({
+            url: "score.php",
+            method: "GET",
+            data: {
+                tab: tab,
+                username: username
+            },
+            dataType: "text",
+            success: function (data) {
+                var scores = jQuery.parseJSON(data);
+
+                $('#pipe-score-personal-at').html(scores['pipe']);
+                $('#shooter-score-personal-at').html(scores['shooter']);
+                $('#tap-score-personal-at').html(scores['tap']);
+            }
+        });
+    });
+
+    $('#team-at').ready(function () {
+        var tab = "team-at";
+        $.ajax({
+            url: "score.php",
+            method: "GET",
+            data: {
+                tab: tab,
+                team: team
+            },
+            dataType: "text",
+            success: function (data) {
+                var scores = jQuery.parseJSON(data);
+
+                $('#pipe-score-team-at').html(scores['pipe']);
+                $('#shooter-score-team-at').html(scores['shooter']);
+                $('#tap-score-team-at').html(scores['tap']);
+            }
+        });
+    });
+
+    $('#global-daily').ready(function () {
+        var tab = "global-daily";
+        $.ajax({
+            url: "score.php",
+            method: "GET",
+            data: {tab: tab},
+            dataType: "text",
+            success: function (data) {
+                var scores = jQuery.parseJSON(data);
+
+                $('#pipe-score-daily').html(scores['pipe']);
+                $('#shooter-score-daily').html(scores['shooter']);
+                $('#tap-score-daily').html(scores['tap']);
             }
         });
     });
 
     $('#personal-daily').ready(function () {
-        var tab = "personal";
+        var tab = "personal-daily";
         $.ajax({
             url: "score.php",
             method: "GET",
@@ -100,14 +92,16 @@ $('document').ready(function () {
 
                 var scores = jQuery.parseJSON(data);
 
-                $('#pipe-score-personal-at').html(scores['pipe']);
-                $('#shooter-score-personal-at').html(scores['shooter']);
+                $('#pipe-score-personal-daily').html(scores['pipe']);
+                $('#shooter-score-personal-daily').html(scores['shooter']);
+                $('#tap-score-personal-daily').html(scores['tap']);
+
             }
         });
     });
 
     $('#team-daily').ready(function () {
-        var tab = "team";
+        var tab = "team-daily";
         var team = "Werter";
         $.ajax({
             url: "score.php",
@@ -118,11 +112,12 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
-                //console.log(data);
+                console.log(data);
                 var scores = jQuery.parseJSON(data);
 
-                $('#pipe-score-team').html(scores['pipe']);
-                $('#shooter-score-team').html(scores['shooter']);
+                $('#pipe-score-team-daily').html(scores['pipe']);
+                $('#shooter-score-team-daily').html(scores['shooter']);
+                $('#tap-score-team-daily').html(scores['tap']);
             }
         });
     });

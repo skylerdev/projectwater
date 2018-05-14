@@ -8,7 +8,6 @@ $('document').ready(function () {
         data: {Username: username,
                Score: score},
         success: function(data){
-            console.log(data);
         }
     });
 });
