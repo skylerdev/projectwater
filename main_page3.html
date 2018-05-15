@@ -7,6 +7,7 @@
    
     <link rel="stylesheet" href="../css/main_page3.css">
     
+    
   </head>
   
   <body>
@@ -25,7 +26,8 @@
               <span class="icon-bar"></span> 
             </button>
             
-          <a class="navbar-brand" href="/index.html" style="color:white; font-weight:bolder"><p>Welcome to Project Water</p></a>
+          <a class="navbar-brand" href="/index.html" style="color:white; font-weight:bolder"><p>Welcome to Project Water</p>
+          </a>
           
         </div>
         
@@ -121,24 +123,64 @@
 
     </div>
     
+    <!-- the modal for changing teams -->
+    
+    <div class="modal fade" id="changeteam" role="dialog">
+      
+      <div class="modal-dialog">
+        
+        <div class="modal-content">
+        
+          <form class="form-horizontal">
+            
+            <div class="modal-header">
+              <h4> Enter the new team you wish to join!</h4>
+            </div>
+            
+            <div class="modal-body">
+              
+              <div class="form-group">
+                <label for="contact-name" class="col-lg-2 control-label">Team:</label>
+                
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="contact-name" placeholder="Enter team name">
+                </div>
+                
+              </div>
+              <button class="btn btn-primary" type="submit"> Change Teams </button>
+              <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+              
+            </div>
+          </form>
+        
+        </div>
+        
+      </div>
+
+    </div>
+    
     <!-- the content -->
     
     <div class="container">
       
       <div class="row mh1">
         
+        <!-- Statistics -->
+        
         <div class="col-sm-12 col-lg-5 blue" style="text-align:center; display:table">
           
           <div style="vertical-align: middle; display: table-cell">
-          <p>Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum...Lorem ipsum..</p>
+          <p>Household and team </p>
           </div>
             
         </div>
         
+        <!-- Reservoir info -->
+        
         <div class="col-sm-12 col-lg-5 grey" style="text-align:center; display:table">
           
           <div style="vertical-align: middle; display: table-cell">
-          <p>bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas bananas in pajamas </p>
+          <p>reservoir information here. </p>
           </div>
           
         </div>
@@ -151,18 +193,25 @@
       
       <div class="row mh1">
         
+        <!-- Daily Games -->
+        
         <div class="col-sm-12 col-lg-5 blue" style="text-align:center; display:table;">
           
-          <div style="vertical-align: middle; display: table-cell;">
-          <a href="http://project-water.ca/waterboyLogin.html" style="text-decoration: none"><p>Play Daily Games!</p></a>
+          <div style="vertical-align: middle; display: table-cell; ">
+            <h3> Todays Daily Games: </h3>
+            <p> 1. Whack-a-faucet </p>
+            <p> 2. Water Day Dash </p>
+          <input type="button" name="button" value="Play Daily Games">
           </div>
           
         </div>
         
+        <!-- Water Saver Tips -->
+        
         <div class="col-sm-12 col-lg-5 grey" style="text-align:center; display:table">
           <div style="vertical-align: middle; display: table-cell">
-          <p>Water Saver Tip!</p>
-          <p id="quotation"></p>
+          <p style="font-weight: bold">Water Saver Tip!</p>
+          <p id="quotation" style="font-weight: bold"></p>
           </div>
         </div>
 
