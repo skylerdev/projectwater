@@ -18,7 +18,7 @@ if (isset($_GET['team'])) {
 if (isset($_GET['tab'])) {
     $tab = $_GET['tab'];
 }
-//date_default_timezone_set('America/Vancouver');
+date_default_timezone_set('America/Vancouver');
 $date = date('Y-m-d');
 
 /************************
