@@ -19,9 +19,14 @@ var loadState = {
 		game.load.image('Pipe_Goals', 'assets/images/Pipe_Goals.png');
 		game.load.image('Water_Sheet_Transparent', 'assets/images/Water_Sheet_Transparent.png');
 		game.load.image('button', 'assets/images/Fast_Flow.png');
+    game.load.image('Start_Page', 'assets/images/Start_Page.png');
 		game.load.image('start', 'assets/images/Start.png');
+    game.load.image('howtopage', 'assets/images/How_To.png');
+    game.load.image('howto', 'assets/images/How_To_Button.png');
     game.load.image('Bad_Pipe', 'assets/images/Bad_Pipe.png');
+    game.load.image('Start_Pipe', 'assets/images/Start_Pipe.png');
 		game.load.image('board', 'assets/images/Game_Board_v4.png');
+    game.load.image('Round_Complete', 'assets/images/Round_Complete.png');
 		game.load.audio('click', 'assets/sounds/click.mp3');
 		game.load.audio('flip', 'assets/sounds/flip_trim.mp3');
 		game.load.audio('click_voice', 'assets/sounds/click_voice.mp3');
@@ -35,24 +40,60 @@ var loadState = {
 var menuState = {
 	create: function () {
 		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		game.stage.backgroundColor = "#84a7e0";
+		game.add.tileSprite(0,0,384,576,'Start_Page');
 		eEgg = game.add.audio('eEgg');
-		game.add.text(game.world.centerX - 110, 150, 'Swapping Pipes', {
+		/*game.add.text(game.world.centerX - 110, 150, 'Swapping Pipes', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
-		});
-		game.add.button(game.world.centerX - 100, 200, 'start', this.start, this);
+		});*/
+		game.add.button(97, 290, 'start', this.start, this);
+    game.add.button(97, 365, 'howto', this.howto, this);
 		game.input.onDown.add(function () {
 			tapCounter++;
-			if (tapCounter > 5) {
+			if (tapCounter == 5) {
 			updateEgg();
 			eEgg.play();
 		}}, this);
 	},
 	start: function () {
 		game.state.start('play');
+	},
+	howto: function () {
+		game.state.start('howTo');
+    
 	}
 };
+var howToState = {
+  create: function () {
+    game.add.tileSprite(0,0,384,576,'howtopage');
+    var howToCounter = 0;
+    var image;
+    var text = "Swap tiles on the board\nwith the tile in your swap\nslot to create a path to\nthe end.The STARTING\nPIPE will always be on the\nbottom and the ENDING\nPIPE will always be on\nthe top.";
+    var howToText = game.add.text(75, 150, text, {
+			font: '20px Comic Sans MS'
+			, fill: '#ffff00'
+		});
+    game.add.text(80, 450, "Tap to continue", {
+			font: '30px Comic Sans MS'
+			, fill: '#ffff00'
+		});
+    game.input.onDown.add(function () { 
+      howToCounter ++; 
+      if(howToCounter == 1){
+        howToText.setText("Points are earned by: \nCompleting the path\nBeing quick\nSwapping as few times as\npossible\nUncovering as few pipes\nas possible");
+      }else if(howToCounter == 2){
+        howToText.setText("Watch out for stuck\npipes! You won't be\nable to swap them out.");
+        image = game.add.image(game.world.centerX -32, 250, 'Bad_Pipe');
+      }else if(howToCounter == 3){
+        image.destroy();
+        image = game.add.image(game.world.centerX -32, 325, 'Start_Pipe');
+        howToText.setText("Act fast! The water\nflows shortly after\nstarting a round. Be sure\nto put a pipe at\nthe STARTING PIPE.");
+      }else if(howToCounter == 4){
+        game.state.start('menu');
+      }
+    });
+  }
+}
 var map, layer1, layer2, layer3, layer4, layer5, marker, swapGraphics;
 var swapSlot, tempPipe, startPipe, endPipe, curPipe, flowStarted;
 var playCounter = 0
@@ -147,11 +188,12 @@ var playState = {
 }
 var winState = {
 	create: function () {
-		game.add.text(game.world.centerX - 75, 150, 'You Win', {
+    game.add.tileSprite(0,0,384,576,'Round_Complete');
+		game.add.text(game.world.centerX - 65, 150, 'You Win', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-		game.add.text(game.world.centerX - 125, 200, 'Tap The Screen\n    To Restart', {
+		game.add.text(game.world.centerX - 110, 200, 'Tap The Screen\n   To Continue', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
@@ -164,11 +206,12 @@ var winState = {
 }
 var loseState = {
 	create: function () {
-		game.add.text(game.world.centerX - 75, 150, 'You Lose', {
+    game.add.tileSprite(0,0,384,576,'Round_Complete');
+		game.add.text(game.world.centerX - 65, 150, 'You Lose', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-		game.add.text(game.world.centerX - 125, 200, 'Tap The Screen\n    To Restart', {
+		game.add.text(game.world.centerX - 110, 200, 'Tap The Screen\n   To Continue', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
@@ -181,6 +224,7 @@ var loseState = {
 }
 var completeState = {
 	create: function () {
+    game.add.tileSprite(0,0,384,576,'Round_Complete');
 		calculateScore();
 		var username = "Adam";
 		$.ajax({
@@ -189,44 +233,25 @@ var completeState = {
       data: {username: username, score: score},
       dataType: "text",
     });
-		game.add.text(game.world.centerX - 125, 100, 'Game Complete', {
+		game.add.text(game.world.centerX - 110, 100, 'Game Complete', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-		game.add.text(game.world.centerX - 150, 125, 'Score', {
+    game.add.text(game.world.centerX - 110, 130, 'Score', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-		game.add.text(game.world.centerX - 150, 160, 'Win: ' + winCount + " x 100 = " + (winCount * 100), {
+		game.add.text(game.world.centerX - 110, 170, 'Win: ' + winCount + ' x 100 = ' + (winCount * 100)+'\nLoss: ' + loseCount + " x -50 = " + (loseCount * -50)+'\nTime: 100 - ' + time + " = " + (100 - time)+'\nMoves: 50 - ' + moves + " x 2 = " + (50 - moves) * 2 + '\nBonus: ' + coveredTileCount + " x 2 = " + (coveredTileCount * 2)+'\nTotal: ' + score, {
 			font: '20px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-		game.add.text(game.world.centerX - 150, 185, 'Loss: ' + loseCount + " x -50 = " + (loseCount * -50), {
-			font: '20px Comic Sans MS'
-			, fill: '#ffff00'
-		});
-		game.add.text(game.world.centerX - 150, 210, 'Time: 100 - ' + time + " = " + (100 - time), {
-			font: '20px Comic Sans MS'
-			, fill: '#ffff00'
-		});
-		game.add.text(game.world.centerX - 150, 235, 'Moves: 50 - ' + moves + " x 2 = " + (50 - moves) * 2, {
-			font: '20px Comic Sans MS'
-			, fill: '#ffff00'
-		});
-		game.add.text(game.world.centerX - 150, 260, 'Bonus: ' + coveredTileCount + " x 2 = " + (coveredTileCount * 2), {
-			font: '20px Comic Sans MS'
-			, fill: '#ffff00'
-		});
-		game.add.text(game.world.centerX - 150, 285, 'Total: ' + score, {
-			font: '20px Comic Sans MS'
-			, fill: '#ffff00'
-		});
-		game.add.text(game.world.centerX - 150, 310, 'Tap The Screen', {
+    
+		game.add.text(game.world.centerX - 115, 360, 'Tap The Screen', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-		game.add.text(game.world.centerX - 150, 335, 'To Return to Main Page', {
-			font: '30px Comic Sans MS'
+		game.add.text(game.world.centerX - 115, 400, 'To Return to Main Page', {
+			font: '20px Comic Sans MS'
 			, fill: '#ffff00'
 		});
 		game.input.onDown.add(this.return, this);
@@ -710,6 +735,7 @@ function resize() {
 game.state.add('boot', bootState);
 game.state.add('load', loadState);
 game.state.add('menu', menuState);
+game.state.add('howTo', howToState);
 game.state.add('play', playState);
 game.state.add('win', winState);
 game.state.add('lose', loseState);
