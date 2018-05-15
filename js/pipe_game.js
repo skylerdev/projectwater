@@ -85,6 +85,7 @@ var playState = {
     layer4 = map.createLayer('Tile Layer 4');
 		layer1 = map.createLayer('Tile Layer 1');
 		layer5 = map.createLayer('Tile Layer 5');
+		layer5.alpha = 0.5;
 		layer2 = map.createLayer('Tile Layer 2');
 		layer3 = map.createLayer('Tile Layer 3');
 		layer1.resizeWorld();
@@ -127,9 +128,9 @@ var playState = {
 			getTileProperties();
 			console.log(map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y)).index, 'Tile Layer 1');
 		}
-		if (endPipe.properties.inFlow == "down") {
-			gameWin();
-		}
+		if (map.getTile(layer1.getTileX(endPipe.x * 64), layer1.getTileY(endPipe.y * 64), 'Tile Layer 1').properties.inFlow == "down") {
+		gameWin();
+	}
 	}
 	, Win: function () {
 		game.state.start('win');
@@ -258,8 +259,9 @@ function swapTilesNow() {
 			else {
 				flip.play();
 			}
-		}
-		else {
+		}else if(map.getTile(layer5.getTileX(marker.x), layer5.getTileY(marker.y), 'Tile Layer 5') != null && map.getTile(layer5.getTileX(marker.x), layer5.getTileY(marker.y), 'Tile Layer 5').index == 312) {
+			console.log("Hello");
+		}else {
 			if (swapSlot != tempPipe && map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y), 'Tile Layer 1').index == tempPipe && map.getTile(layer1.getTileX(marker.x), layer1.getTileY(marker.y), 'Tile Layer 1').properties.inFlow == "") {
 				map.putTile(tempPipe, layer3.getTileX((1 * 64)), layer3.getTileY((1 * 64)), 'Tile Layer 3');
 				map.putTile(swapSlot, layer1.getTileX(marker.x), layer1.getTileY(marker.y), 'Tile Layer 1');
@@ -304,12 +306,15 @@ function randomizeBoard() {
 			map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index = Math.floor(Math.random() * 7) + 1;
 		}
 	}
-  //genBadPipes();
+	for(let i = 0; i <= playCounter; i++){
+  genBadPipes();
+	}
 }
 function genBadPipes() {
   var xPos = Math.floor(Math.random() * 5);
-  var yPos = Math.floor(Math.random() * 5) + 2;
-  map.putTile(312, layer5.getTileX(xCo * 64), layer5.getTileY(yCo * 64), 'Tile Layer 5');
+  var yPos = Math.floor(Math.random() * 4) + 3;
+  map.putTile(312, layer5.getTileX(xPos * 64), layer5.getTileY(yPos * 64), 'Tile Layer 5');
+	console.log("bad pipe: " + xPos +", "+ yPos);
 }
 //Finds the end 
 function findEnd() {
@@ -318,6 +323,7 @@ function findEnd() {
   for (xCo = 0; xCo < 6; xCo++) {
 		if (map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1') != null && map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index == 11) {
       endPipe = map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1');
+			endPipe.properties.inFlow = "";
     }
   }
 }
@@ -338,7 +344,7 @@ function startFlow() {
 }
 
 function runFlow() {
-	if (endPipe.properties.inFlow == "down") {
+	if (map.getTile(layer1.getTileX(endPipe.x * 64), layer1.getTileY(endPipe.y * 64), 'Tile Layer 1').properties.inFlow == "down") {
 		gameWin();
 	}
 	else {
@@ -671,12 +677,11 @@ function fastFlow() {
     game.time.events.remove(flowTimer);
 	animateSpeed = 0.01;
 	flowSpeed = 0.19;
-	try {
-		animateTimer.delay = Phaser.Timer.SECOND * animateSpeed;
-	}
-	catch {
-		console.log("Animation not started");
-	}
+	try {animateTimer.delay = Phaser.Timer.SECOND * animateSpeed;}
+		
+	catch (error) {console.log("Animation not started. " + error);}
+		
+	
     game.time.events.add(Phaser.Timer.SECOND * 0.5, function () {flowTimer = game.time.events.loop(Phaser.Timer.SECOND * flowSpeed, runFlow, this);}, this);
     
 		//flowTimer.delay = Phaser.Timer.SECOND * flowSpeed;
