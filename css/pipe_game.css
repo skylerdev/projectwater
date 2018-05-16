@@ -1,9 +1,4 @@
-canvas {
-   border: solid black 1px;
-  background-color: lightblue;
-}
-#gameContainer {
-	 display: block;
-	 margin: 0 auto;
-	 width: 400px;
+body {
+  margin: 0px;
+	background-color: dodgerblue;
 }
