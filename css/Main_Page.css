@@ -21,7 +21,7 @@ header, footer, article, nav, div {
 
 #pageHeader {
   grid-area: header;
-  background: url(reservoir4.jpg) no-repeat;
+  background: url(../assets/reservoir4.jpg) no-repeat;
   font-size: 24px;
   font-weight: bold;
   color: white;
@@ -119,7 +119,7 @@ header, footer, article, nav, div {
   
 #pageHeader {
   grid-area: header;
-  background: url(reservoir4.jpg) no-repeat;
+  background: url(../assets/reservoir4.jpg) no-repeat;
   font-size: 24px;
   font-weight: bold;
   color: white;

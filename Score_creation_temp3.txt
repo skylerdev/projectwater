@@ -1,0 +1,303 @@
+Date format
+$date = date('Y-m-d');
+    $sql = 'INSERT INTO pipe_score (Score,Date,UserID) VALUES (666,$date,2)';
+    $data = mysqli_query($conn, $sql);
+    echo $date;
+
+
+
+
+
+
+
+MariaDB [projectwater]> Show tables;
++------------------------+
+| Tables_in_projectwater |
++------------------------+
+| capilano_reservoir     |
+| users                  |
++------------------------+
+2 rows in set (0.00 sec)
+
+MariaDB [projectwater]> SELECT * FROM users;
++--------+----------+----------+
+| UserID | Username | Teamname |
++--------+----------+----------+
+|      1 | Albert   | NULL     |
+|      2 | Alby     | NULL     |
+|      3 | Alfred   | Werter   |
+|      5 | Albutt   | Wahta    |
+|      6 | Alberta  | Werter   |
++--------+----------+----------+
+5 rows in set (0.00 sec)
+
+MariaDB [projectwater]> SELECT * FROM Users;
++--------+----------+----------+
+| UserID | Username | Teamname |
++--------+----------+----------+
+|      1 | Albert   | NULL     |
+|      2 | Alby     | NULL     |
+|      3 | Alfred   | Werter   |
+|      5 | Albutt   | Wahta    |
+|      6 | Alberta  | Werter   |
++--------+----------+----------+
+5 rows in set (0.00 sec)
+
+MariaDB [projectwater]> SELECT username FROM Users;
++----------+
+| username |
++----------+
+| Albert   |
+| Alberta  |
+| Albutt   |
+| Alby     |
+| Alfred   |
++----------+
+5 rows in set (0.00 sec)
+
+MariaDB [projectwater]> SELECT UsErname FROM Users;
++----------+
+| UsErname |
++----------+
+| Albert   |
+| Alberta  |
+| Albutt   |
+| Alby     |
+| Alfred   |
++----------+
+5 rows in set (0.00 sec)
+
+MariaDB [projectwater]> SELECT Username FROM Users;
++----------+
+| Username |
++----------+
+| Albert   |
+| Alberta  |
+| Albutt   |
+| Alby     |
+| Alfred   |
++----------+
+5 rows in set (0.00 sec)
+
+MariaDB [projectwater]> SELECT * FROM Users;
++--------+----------+----------+
+| UserID | Username | Teamname |
++--------+----------+----------+
+|      1 | Albert   | NULL     |
+|      2 | Alby     | NULL     |
+|      3 | Alfred   | Werter   |
+|      5 | Albutt   | Wahta    |
+|      6 | Alberta  | Werter   |
++--------+----------+----------+
+5 rows in set (0.00 sec)
+
+MariaDB [projectwater]> CREATE TABLE shooter_score(
+    -> SCORE_ID int NOT NULL AUTO_INCREMENT,
+    -> Score int NOT NULL,
+    -> UserID int NOT NULL,
+    -> PRIMARY KEY (SCORE_ID),
+    -> FOREIGN KEY (UserID) REFERENCES Users(UserID));
+Query OK, 0 rows affected (0.07 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (142,2);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (142,2DROP);
+ERROR 1054 (42S22): Unknown column '2DROP' in 'field list'
+MariaDB [projectwater]> DROP TABLE Users;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails
+MariaDB [projectwater]> DROP TABLE shooter_score;
+Query OK, 0 rows affected (0.23 sec)
+
+MariaDB [projectwater]> DROP TABLE Users;
+Query OK, 0 rows affected (0.02 sec)
+
+MariaDB [projectwater]> CREATE TABLE Users;
+ERROR 1113 (42000): A table must have at least 1 column
+MariaDB [projectwater]> CREATE TABLE Users(
+    -> Username VARCHAR(255) NOT NULL UNIQUE,
+    -> Teamname VARCHAR(255) NOT NULL,
+    -> PRIMARY KEY(Username));
+Query OK, 0 rows affected (0.07 sec)
+
+MariaDB [projectwater]> Drop table Users;
+Query OK, 0 rows affected (0.04 sec)
+
+MariaDB [projectwater]> CREATE TABLE Users(
+    -> UserID int NOT NULL AUTO_INCREMENT,
+    -> Username VARCHAR(255) NOT NULL UNIQUE,
+    -> Teamname VARCHAR(255),
+    -> PRIMARY KEY (UserID));
+Query OK, 0 rows affected (0.18 sec)
+
+MariaDB [projectwater]> INSERT INTO Users(Username,Teamname) VALUES ('Albert',null);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO Users(Username,Teamname) VALUES ('Alby',null);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO Users(Username,Teamname) VALUES ('Alfred','Werter');
+Query OK, 1 row affected (0.02 sec)
+
+MariaDB [projectwater]> INSERT INTO Users(Username,Teamname) VALUES ('Alfred','Wahta');
+ERROR 1062 (23000): Duplicate entry 'Alfred' for key 'Username'
+MariaDB [projectwater]> INSERT INTO Users(Username,Teamname) VALUES ('Alberta','Werter');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO Users(Username,Teamname) VALUES ('Albutt','Wahta');
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> SELECT * FROM Users;
++--------+----------+----------+
+| UserID | Username | Teamname |
++--------+----------+----------+
+|      1 | Albert   | NULL     |
+|      2 | Alby     | NULL     |
+|      3 | Alfred   | Werter   |
+|      5 | Alberta  | Werter   |
+|      6 | Albutt   | Wahta    |
++--------+----------+----------+
+5 rows in set (0.00 sec)
+
+MariaDB [projectwater]> CREATE TABLE shooter_score(
+    -> SCORE_ID int NOT NULL AUTO_INCREMENT,
+    -> Score int NOT NULL,
+    -> UserID int NOT NULL,
+    -> PRIMARY KEY (SCORE_ID),
+    -> FOREIGN KEY (UserID) REFERENCES Users(UserID));
+Query OK, 0 rows affected (0.08 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (142,2);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (432,1);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (33,4);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`projectwater`.`shooter_score`, CONSTRAINT `shooter_score_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`))
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (33,6);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (98,5);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (777,6);
+Query OK, 1 row affected (0.19 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (222,3);
+Query OK, 1 row affected (0.19 sec)
+
+MariaDB [projectwater]> SELECT * FROM Shooter_score
+    -> ;
++----------+-------+--------+
+| SCORE_ID | Score | UserID |
++----------+-------+--------+
+|        1 |   142 |      2 |
+|        2 |   432 |      1 |
+|        4 |    33 |      6 |
+|        5 |    98 |      5 |
+|        6 |   777 |      6 |
+|        7 |   222 |      3 |
++----------+-------+--------+
+6 rows in set (0.00 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (10,2);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,UserID) VALUES (587,1);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> DROP TABLE Shooter_score;
+Query OK, 0 rows affected (0.04 sec)
+
+MariaDB [projectwater]> CREATE TABLE shooter_score(
+    -> SCORE_ID int NOT NULL AUTO_INCREMENT,
+    -> Score int NOT NULL,
+    -> DATE date,
+    -> UserID int;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 5
+MariaDB [projectwater]> CREATE TABLE shooter_score(
+    -> SCORE_ID int NOT NULL AUTO_INCREMENT,
+    -> Score int NOT NULL,
+    -> DATE date NOT NULL,
+    -> UserID int NOT NULL,
+    -> PRIMARY KEY(SCORE_ID;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6
+MariaDB [projectwater]> CREATE TABLE shooter_score(
+    -> ScoreID int NOT NULL AUTO_INCREMENT,
+    -> Score int NOT NULL,
+    -> Date date NOT NULL,
+    -> UserID int NOT NULL,
+    -> PRIMARY KEY(ScoreID),
+    -> FOREIGN KEY (UserID) REFERENCES Users(UserID));
+Query OK, 0 rows affected (0.07 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,Date,UserID) VALUES (1234,'2018-05-09',3);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,Date,UserID) VALUES (324,'2018-05-07',4);
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`projectwater`.`shooter_score`, CONSTRAINT `shooter_score_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`))
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,Date,UserID) VALUES (324,'2018-05-07',5);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,Date,UserID) VALUES (22,'2018-05-09',1);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,Date,UserID) VALUES (555,'2018-05-09',2);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,Date,UserID) VALUES (999,'2018-05-08',6);
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [projectwater]> INSERT INTO shooter_score (Score,Date,UserID) VALUES (998,'2018-05-09',2);
+Query OK, 1 row affected (0.20 sec)
+
+MariaDB [projectwater]> SELECT Username,Score,Team,Date From Users INNER JOIN shooter_score ON shooter_score.UserID = users.UserID;
+ERROR 1054 (42S22): Unknown column 'Team' in 'field list'
+MariaDB [projectwater]> SELECT Username,Score,Teamname,Date From Users INNER JOIN shooter_score ON shooter_score.UserID = users.UserID;
++----------+-------+----------+------------+
+| Username | Score | Teamname | Date       |
++----------+-------+----------+------------+
+| Alfred   |  1234 | Werter   | 2018-05-09 |
+| Alberta  |   324 | Werter   | 2018-05-07 |
+| Albert   |    22 | NULL     | 2018-05-09 |
+| Alby     |   555 | NULL     | 2018-05-09 |
+| Albutt   |   999 | Wahta    | 2018-05-08 |
+| Alby     |   998 | NULL     | 2018-05-09 |
++----------+-------+----------+------------+
+6 rows in set (0.01 sec)
+
+MariaDB [projectwater]> SELECT Username,Score,Teamname,Date From Users INNER JOIN shooter_score ON shooter_score.UserID = users.UserID WHERE date = '2018-05-09';
++----------+-------+----------+------------+
+| Username | Score | Teamname | Date       |
++----------+-------+----------+------------+
+| Alfred   |  1234 | Werter   | 2018-05-09 |
+| Albert   |    22 | NULL     | 2018-05-09 |
+| Alby     |   555 | NULL     | 2018-05-09 |
+| Alby     |   998 | NULL     | 2018-05-09 |
++----------+-------+----------+------------+
+4 rows in set (0.01 sec)
+
+MariaDB [projectwater]> SELECT Username,Score,Teamname,Date From Users INNER JOIN shooter_score ON shooter_score.UserID = users.UserID WHERE date = '2018-05-09' ORDER BY Score Desc;
++----------+-------+----------+------------+
+| Username | Score | Teamname | Date       |
++----------+-------+----------+------------+
+| Alfred   |  1234 | Werter   | 2018-05-09 |
+| Alby     |   998 | NULL     | 2018-05-09 |
+| Alby     |   555 | NULL     | 2018-05-09 |
+| Albert   |    22 | NULL     | 2018-05-09 |
++----------+-------+----------+------------+
+4 rows in set (0.00 sec)
+
+MariaDB [projectwater]> SELECT Username,Score,Teamname,Date From Users INNER JOIN shooter_score ON shooter_score.UserID = users.UserID WHERE date = '2018-05-09' ORDER BY Score Desc;
++----------+-------+----------+------------+
+| Username | Score | Teamname | Date       |
++----------+-------+----------+------------+
+| Alfred   |  1234 | Werter   | 2018-05-09 |
+| Alby     |   998 | NULL     | 2018-05-09 |
+| Alby     |   555 | NULL     | 2018-05-09 |
+| Albert   |    22 | NULL     | 2018-05-09 |
++----------+-------+----------+------------+
+4 rows in set (0.00 sec)
+
+MariaDB [projectwater]>

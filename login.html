@@ -4,7 +4,8 @@
   
     <title>Project Water Login</title>
     <link rel="stylesheet" type="text/css" href="css/login.css">
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/login.js?v=1.1"></script>
   
   </head>
   
@@ -13,20 +14,22 @@
     <img src="assets/avatar.png" class="avatar">
       <h1> Project Water </h1>
       
-      <form>
+      <form method="post" action="login.php">
         
         <p>Username</p>
-        <input type="text" name="username" placeholder="Enter Username">
+        <input type="text" name="username" id="username" placeholder="Enter Username">
 
         <p>Password</p>
-        <input type="password" name="password" placeholder="Enter Password">       
-
+        <input type="password" name="password" id="password" placeholder="Enter Password">       
+        
+        <span id="errorMsg"></span>
         <input type="submit" name="submit" value="Login">
         
         <a class="forgot" href="#"> Forgot Password? </a>
-        
       </form>
-    
+      <form action="log_out.php" id="log_out">
+      </form>
+      <button type="submit" form="log_out">Log out</button>
     </div>
   
   </body>
