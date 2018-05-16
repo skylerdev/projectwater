@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" href="../css/main_page3.css">
+    
+    
+  </head>
+  
+  <body>
+    
+    <!-- the nav bar -->
+    
+    <nav class="navbar navbar-default" style="background-color:rgba(0, 0, 0, 0.5); border-width: 0px" >
+      
+      <div class="container-fluid">
+         
+        <div class="navbar-header">
+            
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> 
+            </button>
+            
+          <a class="navbar-brand" href="/index.html" style="color:white; font-weight:bolder"><p>Welcome to Project Water</p>
+          </a>
+          
+        </div>
+        
+        <div class="collapse navbar-collapse" id="myNavbar">
+        
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li><a data-toggle="modal" href="#contact" style="color:white; font-weight:bold">Login</a></li>
+            <li><a data-toggle="modal" href="#jointeam" style="color:white; font-weight:bold">Team</a></li>
+            <li><a data-toggle="modal" href="#contact" style="color:white; font-weight:bold">HighScores</a></li>
+          </ul>
+        
+        </div>
+        
+      </div>
+      
+    </nav>
+    
+  <!-- the modal for login -->
+        
+    <div class="modal fade" id="contact" role="dialog">
+      
+      <div class="modal-dialog">
+        
+        <div class="modal-content">
+        
+          <form class="form-horizontal">
+            
+            <div class="modal-header">
+              <h4> Welcome to Project Water, choose a username! </h4>
+            </div>
+            
+            <div class="modal-body">
+              
+              <div class="form-group">
+                
+                <label for="contact-name" class="col-lg-2 control-label"> Username: </label>
+                
+                <div class="col-lg-10">
+                  
+                  <input type="text" class="form-control" id="contact-name" placeholder="Enter username">
+                  
+                </div>
+                
+              </div>
+              
+              <button class="btn btn-primary" type="submit"> Log in </button>
+              <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+              
+            </div>
+            
+          </form>
+        
+        </div>
+        
+      </div>
+
+    </div>
+    
+    <!-- the modal for joining team -->
+    
+     <div class="modal fade" id="jointeam" role="dialog">
+      
+      <div class="modal-dialog">
+        
+        <div class="modal-content">
+        
+          <form class="form-horizontal">
+            
+            <div class="modal-header">
+              <h4> Enter the name of the team you wish to join! </h4>
+            </div>
+            
+            <div class="modal-body">
+              
+              <div class="form-group">
+                <label for="contact-name" class="col-lg-2 control-label">Team:</label>
+                
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="contact-name" placeholder="Enter team name">
+                </div>
+                
+              </div>
+              <button class="btn btn-primary" type="submit"> Join Team </button>
+              <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+              
+            </div>
+          </form>
+        
+        </div>
+        
+      </div>
+
+    </div>
+    
+    <!-- the modal for changing teams -->
+    
+    <div class="modal fade" id="changeteam" role="dialog">
+      
+      <div class="modal-dialog">
+        
+        <div class="modal-content">
+        
+          <form class="form-horizontal">
+            
+            <div class="modal-header">
+              <h4> Enter the new team you wish to join!</h4>
+            </div>
+            
+            <div class="modal-body">
+              
+              <div class="form-group">
+                <label for="contact-name" class="col-lg-2 control-label">Team:</label>
+                
+                <div class="col-lg-10">
+                  <input type="text" class="form-control" id="contact-name" placeholder="Enter team name">
+                </div>
+                
+              </div>
+              <button class="btn btn-primary" type="submit"> Change Teams </button>
+              <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+              
+            </div>
+          </form>
+        
+        </div>
+        
+      </div>
+
+    </div>
+    
+    <!-- the content -->
+    
+    <div class="container">
+      
+      <div class="row mh1">
+        
+        <!-- Statistics -->
+        
+        <div class="col-sm-12 col-lg-5 blue" style="text-align:center; display:table">
+          
+          <div style="vertical-align: middle; display: table-cell">
+          <p>Household and team </p>
+          </div>
+            
+        </div>
+        
+        <!-- Reservoir info -->
+        
+        <div class="col-sm-12 col-lg-5 grey" style="text-align:center; display:table">
+          
+          <div style="vertical-align: middle; display: table-cell">
+          <p>reservoir information here. </p>
+          </div>
+          
+        </div>
+
+      </div>
+      
+    </div>
+    
+    <div class="container">
+      
+      <div class="row mh1">
+        
+        <!-- Daily Games -->
+        
+        <div class="col-sm-12 col-lg-5 blue" style="text-align:center; display:table;">
+          
+          <div style="vertical-align: middle; display: table-cell; ">
+            <h3> Todays Daily Games: </h3>
+            <p> 1. Whack-a-faucet </p>
+            <p> 2. Water Day Dash </p>
+          <input type="button" name="button" value="Play Daily Games">
+          </div>
+          
+        </div>
+        
+        <!-- Water Saver Tips -->
+        
+        <div class="col-sm-12 col-lg-5 grey" style="text-align:center; display:table">
+          <div style="vertical-align: middle; display: table-cell">
+          <p style="font-weight: bold">Water Saver Tip!</p>
+          <p id="quotation" style="font-weight: bold"></p>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+    
+  <script src="js/main_page3.js"></script>
+  </body>
+  
+</html>
