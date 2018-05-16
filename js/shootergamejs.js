@@ -54,7 +54,13 @@ var hose;
 var cattrail;
 var nyanmy;
 var nyansong;
-    
+var endButton;
+var watertrail;    
+var brownGrassCount=0;
+var waterR;
+var bulletTrail;
+var accuracy;
+var patchMiss;
 //    $.ajax({
 //      method: "POST",
 //      url: "php.php",
@@ -81,11 +87,27 @@ var bootState = {
   
 }
 
-//var loadState = {
-//  
-//  preload: function()
-//  
-//  
+//var scoreState = {
+//  create:function () {
+//$('#global-at').ready(function () {
+//        var tab = "global-at";
+//        $.ajax({
+//            url: "score.php",
+//            method: "GET",
+//            data: {tab: tab},
+//            dataType: "text",
+//            success: function (data) {
+//                var scores = jQuery.parseJSON(data);
+//        var scoreLabel = game.add.text(70,200, scores['shooter'], { font: '50px Arial', fill: '#ffffff'});
+//
+//                //$('#pipe-score-at').html(scores['pipe']);
+//                //$('#shooter-score-at').html(scores['shooter']);
+//                //$('#tap-score-at').html(scores['tap']);
+//            }
+//        });
+//    });
+//    
+//}
 //}
 
 var menuState = {
@@ -99,7 +121,10 @@ var menuState = {
 //    game.load.image('start', 'assets/start.png');
     resize();
     
-    var nameLabel = game.add.text(70,400, 'Water the Lawn', { font: '50px Arial', fill: '#ffffff'});
+    var nameLabel = game.add.text(70,200, 'Water the Lawn', { font: '50px Arial', fill: '#ffffff'});
+    
+    var tipLabel = game.add.text(20,300, 'Mobile : Use one hand to move (drag or tap) and one \n hand to hit the spray button', { font: '20px Arial', fill: '#ffffff'});
+    var tipLabel2 = game.add.text(20,400, 'Keyboard : Left and Right arrow keys \n to move and Space to Shoot', { font: '25px Arial', fill: '#ffffff'});
     
     var startLabel = game.add.text(0, game.world.height - 80, 'Hit the start button or press the spacebar key to start' ,{ font: '25px Arial', fill: '#ffffff'});
     
@@ -118,15 +143,28 @@ var menuState = {
 };
 
 var winState = {
+  preload: function (){
+  game.load.image('hsbutton', 'assets/hsbutton.png');
+  },
   create:function () {
-    
+    accuracy = goodShot/shotCount;
+    //accuracy.toPrecision(4);
+    accuracy = accuracy.toPrecision(4)*100;
+    patchMiss = brownGrassCount - goodShot;
+    var scoreButton = game.add.button(-30, 500, 'hsbutton', this.score);
+    var tweetButton = game.add.button(-30, 600, 'tweet', this.tweetMe);
+    nyansong.destroy();
     calcScore();
-    
+//      var spacekey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+//  spacekey.onDown.addOnce(this.score, this);
 //    var username = "testing";
     var username = "John";
     var winLabel = game.add.text(70,200, 'Times up', { font: '50px Arial', fill: '#ffffff'});
     
     var startLabel = game.add.text(200, game.world.height/2, 'Your final score ' + score ,{ font: '25px Arial', fill: '#ffffff'});
+            var accLabel = game.add.text(200, 300, 'Patches missed ' + patchMiss ,{ font: '25px Arial', fill: '#ffffff'});
+    
+        var accLabel = game.add.text(200, 350, 'Accuracy ' + accuracy + '%' ,{ font: '25px Arial', fill: '#ffffff'});
     
     console.log("dsfdsfdsfds");
         $.ajax({
@@ -141,6 +179,19 @@ var winState = {
       
     });
   },
+  
+  //score:function () { game.state.start('score')},
+    score: function (){
+   //window.open('index.html');
+      window.location.href = "Highscore.html";
+  },
+  
+  tweetMe: function () {
+	var twittertext = 'My Watering lawn score today was ' + score + '! Try to beat me at '+ window.location.href + '.';
+	var outTweet = 'http://twitter.com/home?status=' + twittertext;
+	window.open(outTweet, '_blank');
+},
+  
   
 }
 
@@ -168,6 +219,8 @@ preload: function () {
   game.load.image('nyancattrail2', 'assets/nyancattrailh.png');
   game.load.image('nyancat2', 'assets/nyancath.png');
   game.load.image('starfield', 'assets/starfield.jpeg');
+  game.load.image('waterR', 'assets/waterR.png');
+  game.load.image('tweet', 'assets/twitter.png')
 
 
 
@@ -224,11 +277,24 @@ create: function () {
   water = game.add.group();
   water.enableBody = true;
   water.physicsBodyType = Phaser.Physics.ARCADE;
-  water.createMultiple(30, 'water');
+  water.createMultiple(20, 'water');
   water.setAll('anchor.x', 0.5);
   water.setAll('anchor.y', 1);
   water.setAll('outOfBoundsKill', true);
   water.setAll('checkWorldBounds', true);
+  
+  waterR = game.add.group();
+  waterR.enableBody = true;
+  waterR.physicsBodyType = Phaser.Physics.ARCADE;
+  waterR.createMultiple(20, 'waterR');
+  waterR.setAll('anchor.x', 0.5);
+  waterR.setAll('anchor.y', 1);
+  waterR.setAll('outOfBoundsKill', true);
+  waterR.setAll('checkWorldBounds', true);
+  
+  
+  
+  
 
   grassPatch = game.add.group();
   grassPatch.enableBody = true;
@@ -283,6 +349,8 @@ create: function () {
       enemy.trail.kill();
     })
   });
+  
+  
   //launchNyan();
 
 
@@ -291,12 +359,13 @@ create: function () {
     fill: "#ff0044",
     align: "center"
   });
-  text2 = game.add.text(0, 50, "Score " + goodShot, {
-    font: "35px Arial",
+  text2 = game.add.text(0, 50, 'Dry patches hit ' + goodShot, {
+    font: "20px Arial",
     fill: "#ff0044",
     align: "center"
   });
   sprayButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+  endButton = game.input.keyboard.addKey(Phaser.Keyboard.M);
 
 
   gcat = game.add.group();
@@ -326,7 +395,7 @@ create: function () {
 update: function () {
 //function update() {
   text.setText("" + shotCount + " Litres used")
-  text2.setText("Score " + goodShot)
+  text2.setText("Dry patches hit " + goodShot)
   game.input.scale;
 
 
@@ -351,15 +420,15 @@ update: function () {
   }
   if (xpos > player.x && ypos < 685) {
     player.body.velocity.x = 1.5 * (xpos - player.x);
-    if (xpos - player.x < 150) {
-      player.body.velocity.x = 225;
+    if (xpos - player.x < 200) {
+      player.body.velocity.x = 300;
     }
 
   }
   if (xpos < player.x && ypos < 685) {
     player.body.velocity.x = 1.5 * (xpos - player.x);
-    if (player.x - xpos < 150) {
-      player.body.velocity.x = -225;
+    if (player.x - xpos < 200) {
+      player.body.velocity.x = -300;
     }
 
   }
@@ -373,11 +442,14 @@ update: function () {
   // COllISSION TYPES
   game.physics.arcade.overlap(grassPatch, water, hitGrass, null, this);
   game.physics.arcade.overlap(bgrassPatch, water, hitEnemy, null, this);
+  game.physics.arcade.overlap(grassPatch, waterR, hitGrass, null, this);
+  game.physics.arcade.overlap(bgrassPatch, waterR, hitEnemy, null, this);
   game.physics.arcade.overlap(dog, water, hitDog, null, this);
   game.physics.arcade.overlap(gcat, water, hitCat, null, this);
   game.physics.arcade.overlap(nyanmy, water, hitNyan, null, this);
+  game.physics.arcade.overlap(nyanmy, waterR, hitNyan, null, this);
 
-  if(total >= 5){
+  if(total >= 45 || endButton.isDown){
     game.state.start('win');
     
   }
@@ -415,6 +487,7 @@ game.state.add('boot', bootState);
 game.state.add('menu', menuState);
 game.state.add("play", playState);
 game.state.add('win' , winState);
+//game.state.add('score' , scoreState);
 
 game.state.start('boot');
 
@@ -443,7 +516,11 @@ function spray() {
   }
   sprayDelay = 250;
   if (game.time.now > sprayTimer) {
-    var bullet = water.getFirstExists(false);
+    if (gamemode == 2){
+      var bullet = waterR.getFirstExists(false);
+    } else {var bullet = water.getFirstExists(false);}
+    
+  
     if (bullet) {
       bullet.reset(player.x, player.y + 8);
       bullet.body.velocity.y = -400;
@@ -454,6 +531,7 @@ function spray() {
 
     }
   }
+  
 }
 
 
@@ -468,7 +546,11 @@ function actionOnClick() {
     launchNyan();
   }
   if (game.time.now > sprayTimer) {
-    var bullet = water.getFirstExists(false);
+    if (gamemode==2){
+      var bullet = waterR.getFirstExists(false);
+    } else {var bullet = water.getFirstExists(false);}
+    
+  
     if (bullet) {
       bullet.reset(player.x, player.y + 8);
       bullet.body.velocity.y = -400;
@@ -479,6 +561,7 @@ function actionOnClick() {
     }
   }
 }
+
 
 function launchGrassPatch() {
   var MIN_ENEMY_SPACING = 600;
@@ -494,8 +577,10 @@ function launchGrassPatch() {
 }
 
 function launchbGrassPatch() {
-  var MIN_ENEMY_SPACING = 600;
-  var MAX_ENEMY_SPACING = 3000;
+  brownGrassCount++;
+  console.log(brownGrassCount);
+  var MIN_ENEMY_SPACING = 1500;
+  var MAX_ENEMY_SPACING = 1500;
   var ENEMY_SPEED = 150;
   var enemy = bgrassPatch.getFirstExists(false);
   //console.log(enemy);
@@ -535,7 +620,10 @@ function actionOnClick2() {
 
 function hitGrass(enemy, bullet) {
   sprayTrail = game.add.emitter(bullet.x, bullet.y + 20, 10);
-  sprayTrail.makeParticles('water');
+  //sprayTrail.makeParticles('water');
+  if (gamemode == 2){
+    sprayTrail.makeParticles('waterR');
+  } else {sprayTrail.makeParticles('water');}
   sprayTrail.setXSpeed(100);
   sprayTrail.setYSpeed(200, 180);
   sprayTrail.setRotation(50, -50);
@@ -614,6 +702,7 @@ function modeChange() {
     hoseTrail.setRotation(50, -50);
     hoseTrail.setAlpha(0.4, 0, 400);
     hoseTrail.start(false, 5000, 10);
+    water.createMultiple(30, 'waterR');
 
     gamemode++;
 
@@ -667,6 +756,13 @@ function updateCounter() {
 function calcScore (){
   
   score = goodShot*4 - shotCount;
+  if (score < 0){
+    score = 0;
+    
+  }
+  score = score * accuracy/100;
+  score = Math.round(score);
+  // perfect score is a 90
 }
 
 
