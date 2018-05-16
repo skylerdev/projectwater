@@ -3,7 +3,6 @@ $('document').ready(function () {
     //Gets username from Cookie
     var username = getCookie('username');
     var team = getCookie('team');
-
     $('#global-at').ready(function () {
         var tab = "global-at";
         $.ajax({
@@ -23,6 +22,7 @@ $('document').ready(function () {
 
     $('#personal-at').ready(function () {
         var tab = "personal-at";
+
         $.ajax({
             url: "score.php",
             method: "GET",
@@ -32,9 +32,8 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
-                //var scores = jQuery.parseJSON(data);
+                var scores = jQuery.parseJSON(data);
 
-                console.log(data);
                 $('#pipe-score-personal-at').html(scores['pipe']);
                 $('#shooter-score-personal-at').html(scores['shooter']);
                 $('#tap-score-personal-at').html(scores['tap']);
@@ -53,9 +52,8 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
-                //var scores = jQuery.parseJSON(data);
+                var scores = jQuery.parseJSON(data);
 
-                console.log(data);
                 $('#pipe-score-team-at').html(scores['pipe']);
                 $('#shooter-score-team-at').html(scores['shooter']);
                 $('#tap-score-team-at').html(scores['tap']);
@@ -74,8 +72,8 @@ $('document').ready(function () {
                 var scores = jQuery.parseJSON(data);
 
                 $('#pipe-score-daily').html(scores['pipe']);
-                //$('#shooter-score-daily').html(scores['shooter']);
-                //$('#tap-score-daily').html(scores['tap']);
+                $('#shooter-score-daily').html(scores['shooter']);
+                $('#tap-score-daily').html(scores['tap']);
             }
         });
     });
@@ -91,6 +89,7 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
+                console.log(data);
 
                 //var scores = jQuery.parseJSON(data);
 
@@ -114,11 +113,11 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
-                var scores = jQuery.parseJSON(data);
+                //var scores = jQuery.parseJSON(data);
 
-                $('#pipe-score-team-daily').html(scores['pipe']);
-                $('#shooter-score-team-daily').html(scores['shooter']);
-                $('#tap-score-team-daily').html(scores['tap']);
+                //$('#pipe-score-team-daily').html(scores['pipe']);
+                //$('#shooter-score-team-daily').html(scores['shooter']);
+                //$('#tap-score-team-daily').html(scores['tap']);
             }
         });
     });
