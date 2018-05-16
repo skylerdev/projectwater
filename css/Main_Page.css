@@ -15,13 +15,13 @@ body {
   }  
 
 header, footer, article, nav, div {
-  padding: 1.2em;
+  padding: .8em;
   background: yellowgreen;
   }
 
 #pageHeader {
   grid-area: header;
-  background: url(../assets/reservoir4.jpg) no-repeat;
+  background: url(../assets/reservoir.jpg) no-repeat;
   font-size: 24px;
   font-weight: bold;
   color: white;
@@ -65,7 +65,8 @@ header, footer, article, nav, div {
   }
 
 #pageFooter p {
-  transform: translate(0%, 350%)
+  transform: translate(0%, 150%);
+    font-size: 18px;
 }
 
 #mainArticle { 
@@ -81,15 +82,50 @@ header, footer, article, nav, div {
   transform: translate(0%, 650%);
 }
 
-#mainNav { 
+.mainNav { 
   grid-area: nav; 
   background: rgb(180, 187, 198);
   text-align: center;
+  text-decoration: none;
   }
 
-#mainNav p {
+.mainNav p {
   transform: translate(0%, 650%);
-  
+  text-decoration: none;
+}
+
+div.mainNav {
+    position: relative;
+    background: rgb(180, 187, 198);
+    color: #000;
+    padding: 20px; 
+    text-decoration: none;
+}
+
+div.mainNav:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+   text-decoration: none;
+
+}
+
+a.divLink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    /* Makes sure the link doesn't get underlined */
+    z-index: 10;
+    /* raises anchor tag above everything else in div */
+    background-color: white;
+    /*workaround to make clickable in IE */
+    opacity: 0;
+    /*workaround to make clickable in IE */
+    filter: alpha(opacity=0);
+    /*workaround to make clickable in IE */
 }
 
 #siteAds { 
@@ -119,7 +155,7 @@ header, footer, article, nav, div {
   
 #pageHeader {
   grid-area: header;
-  background: url(../assets/reservoir4.jpg) no-repeat;
+  background: url(../assets/reservoir.jpg) no-repeat;
   font-size: 24px;
   font-weight: bold;
   color: white;
@@ -147,7 +183,6 @@ header, footer, article, nav, div {
 #mainArticle { 
   grid-area: article; 
   background: rgb(180, 187, 198);
-  
   background-position: 50%;
   }
 
