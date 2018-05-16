@@ -32,8 +32,9 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
-                var scores = jQuery.parseJSON(data);
+                //var scores = jQuery.parseJSON(data);
 
+                console.log(data);
                 $('#pipe-score-personal-at').html(scores['pipe']);
                 $('#shooter-score-personal-at').html(scores['shooter']);
                 $('#tap-score-personal-at').html(scores['tap']);
@@ -52,8 +53,9 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
-                var scores = jQuery.parseJSON(data);
+                //var scores = jQuery.parseJSON(data);
 
+                console.log(data);
                 $('#pipe-score-team-at').html(scores['pipe']);
                 $('#shooter-score-team-at').html(scores['shooter']);
                 $('#tap-score-team-at').html(scores['tap']);
@@ -72,8 +74,8 @@ $('document').ready(function () {
                 var scores = jQuery.parseJSON(data);
 
                 $('#pipe-score-daily').html(scores['pipe']);
-                $('#shooter-score-daily').html(scores['shooter']);
-                $('#tap-score-daily').html(scores['tap']);
+                //$('#shooter-score-daily').html(scores['shooter']);
+                //$('#tap-score-daily').html(scores['tap']);
             }
         });
     });
@@ -90,11 +92,11 @@ $('document').ready(function () {
             dataType: "text",
             success: function (data) {
 
-                var scores = jQuery.parseJSON(data);
+                //var scores = jQuery.parseJSON(data);
 
-                $('#pipe-score-personal-daily').html(scores['pipe']);
-                $('#shooter-score-personal-daily').html(scores['shooter']);
-                $('#tap-score-personal-daily').html(scores['tap']);
+                //$('#pipe-score-personal-daily').html(scores['pipe']);
+                //$('#shooter-score-personal-daily').html(scores['shooter']);
+                //$('#tap-score-personal-daily').html(scores['tap']);
 
             }
         });
@@ -112,7 +114,6 @@ $('document').ready(function () {
             },
             dataType: "text",
             success: function (data) {
-                console.log(data);
                 var scores = jQuery.parseJSON(data);
 
                 $('#pipe-score-team-daily').html(scores['pipe']);
