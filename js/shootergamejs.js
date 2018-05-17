@@ -59,8 +59,9 @@ var watertrail;
 var brownGrassCount=0;
 var waterR;
 var bulletTrail;
-var accuracy;
+var accuracy = 0 ;
 var patchMiss;
+var bgm;
 //    $.ajax({
 //      method: "POST",
 //      url: "php.php",
@@ -147,8 +148,13 @@ var winState = {
   game.load.image('hsbutton', 'assets/hsbutton.png');
   },
   create:function () {
+    if (shotCount != 0){
     accuracy = goodShot/shotCount;
+      console.log('RAN ACCURACY');
+    } else {accuracy = 0;
+           console.log('RAN ACCURACY2')}
     //accuracy.toPrecision(4);
+    console.log('RAN ACCURACY3')
     accuracy = accuracy.toPrecision(4)*100;
     patchMiss = brownGrassCount - goodShot;
     var scoreButton = game.add.button(-30, 500, 'hsbutton', this.score);
@@ -214,6 +220,7 @@ preload: function () {
   game.load.audio('boop', 'assets/boop.mp3');
   game.load.audio('drink', 'assets/drink.mp3');
   game.load.audio('nyansong', 'assets/nyan_cat.mp3');
+  game.load.audio('bgm', 'assets/bgm.mp3');
   game.load.image('nyancat', 'assets/nyancat.png');
   game.load.image('nyancattrail', 'assets/nyancattrail.png');
   game.load.image('nyancattrail2', 'assets/nyancattrailh.png');
@@ -262,6 +269,9 @@ create: function () {
   drink.allowMultiple = true;
   nyansong = game.add.audio('nyansong');
   nyansong.allowMultiple = false;
+  bgm = game.add.audio('nyansong');
+  bgm.allowMultiple = false;
+  bgm.loopFull();
 
 
   cursors = game.input.keyboard.createCursorKeys();
@@ -685,6 +695,7 @@ function hitCat(enemy, bullet) {
 function modeChange() {
 
   if (gamemode == 1) {
+    bgm.destroy();
     nyansong.loopFull();
     //player.kill();
     catplayer.alpha = 1;
