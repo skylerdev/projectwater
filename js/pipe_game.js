@@ -23,15 +23,20 @@ var loadState = {
 		game.load.image('start', 'assets/images/Start.png');
     game.load.image('howtopage', 'assets/images/How_To.png');
     game.load.image('howto', 'assets/images/How_To_Button.png');
-    game.load.image('Bad_Pipe', 'assets/images/Bad_Pipe.png');
+		game.load.image('Bad_Pipe', 'assets/images/Bad_Pipe.png');
+		game.load.image('Bonus_Pipe', 'assets/images/Bonus_Pipe.png');
+    game.load.image('Mod_Pipes', 'assets/images/Mod_Pipes.png');
     game.load.image('Start_Pipe', 'assets/images/Start_Pipe.png');
 		game.load.image('board', 'assets/images/Game_Board_v4.png');
     game.load.image('Round_Complete', 'assets/images/Round_Complete.png');
+		game.load.image('Tweet', 'assets/images/Twitter_Bird_v2.png');
+		game.load.image('Continue', 'assets/images/Continue.png');
 		game.load.audio('click', 'assets/sounds/click.mp3');
 		game.load.audio('flip', 'assets/sounds/flip_trim.mp3');
 		game.load.audio('click_voice', 'assets/sounds/click_voice.mp3');
 		game.load.audio('swoosh', 'assets/sounds/swoosh.mp3');
 		game.load.audio('eEgg', 'assets/sounds/egg_active.mp3');
+		game.load.audio('bgMusic', 'assets/sounds/bensound-scifi.mp3');
 	}
 	, create: function () {
 		game.state.start('menu');
@@ -40,6 +45,7 @@ var loadState = {
 var menuState = {
 	create: function () {
 		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+		game.add.audio('bgMusic').play();
 		game.add.tileSprite(0,0,384,576,'Start_Page');
 		eEgg = game.add.audio('eEgg');
 		/*game.add.text(game.world.centerX - 110, 150, 'Swapping Pipes', {
@@ -85,10 +91,14 @@ var howToState = {
         howToText.setText("Watch out for stuck\npipes! You won't be\nable to swap them out.");
         image = game.add.image(game.world.centerX -32, 250, 'Bad_Pipe');
       }else if(howToCounter == 3){
+				image.destroy();
+        howToText.setText("Try to divert the flow\nover the bonus tiles for\nbonus points!");
+        image = game.add.image(game.world.centerX -32, 250, 'Bonus_Pipe');
+      }else if(howToCounter == 4){
         image.destroy();
         image = game.add.image(game.world.centerX -32, 325, 'Start_Pipe');
         howToText.setText("Act fast! The water\nflows shortly after\nstarting a round. Be sure\nto put a pipe at\nthe STARTING PIPE.");
-      }else if(howToCounter == 4){
+      }else if(howToCounter == 5){
         game.state.start('menu');
       }
     });
@@ -101,7 +111,8 @@ var playCounter = 0
 	, loseCount = 0
 	, score = 0
 	, coveredTileCount = 0
-	, moves = 0;
+	, moves = 0
+	, bonus = 0;
 var time = 0;
 var animateTimer, flowTimer, timeIncrementer;
 //For loop variables
@@ -122,7 +133,7 @@ var playState = {
 		map.addTilesetImage('Hidden_Pipe');
 		map.addTilesetImage('Pipe_Goals');
 		map.addTilesetImage('Water_Sheet_Transparent');
-    map.addTilesetImage('Bad_Pipe');
+    map.addTilesetImage('Mod_Pipes');
     layer4 = map.createLayer('Tile Layer 4');
 		layer1 = map.createLayer('Tile Layer 1');
 		layer5 = map.createLayer('Tile Layer 5');
@@ -189,7 +200,7 @@ var playState = {
 var winState = {
 	create: function () {
     game.add.tileSprite(0,0,384,576,'Round_Complete');
-		game.add.text(game.world.centerX - 65, 150, 'You Win', {
+		game.add.text(game.world.centerX - 60, 150, 'You Win', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
@@ -207,7 +218,7 @@ var winState = {
 var loseState = {
 	create: function () {
     game.add.tileSprite(0,0,384,576,'Round_Complete');
-		game.add.text(game.world.centerX - 65, 150, 'You Lose', {
+		game.add.text(game.world.centerX - 60, 150, 'You Lose', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
@@ -226,7 +237,7 @@ var completeState = {
 	create: function () {
     game.add.tileSprite(0,0,384,576,'Round_Complete');
 		calculateScore();
-		var username = "Adam";
+		var username = getCookie("username");
 		$.ajax({
       method: "POST",
       url: "PipePHP.php",
@@ -241,11 +252,11 @@ var completeState = {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-		game.add.text(game.world.centerX - 110, 170, 'Win: ' + winCount + ' x 100 = ' + (winCount * 100)+'\nLoss: ' + loseCount + " x -50 = " + (loseCount * -50)+'\nTime: 100 - ' + time + " = " + (100 - time)+'\nMoves: 50 - ' + moves + " x 2 = " + (50 - moves) * 2 + '\nBonus: ' + coveredTileCount + " x 2 = " + (coveredTileCount * 2)+'\nTotal: ' + score, {
+		game.add.text(game.world.centerX - 110, 170, 'Win: ' + winCount + ' x 100 = ' + (winCount * 100)+'\nLoss: ' + loseCount + " x -50 = " + (loseCount * -50)+'\nTime: 100 - ' + time + " = " + (100 - time)+'\nMoves: 50 - ' + moves + " x 2 = " + (50 - moves) * 2 + '\nEfficiency: ' + coveredTileCount + " x 2 = " + (coveredTileCount * 2)+'\nBonus: ' + bonus + " x 15 = " + (bonus * 15)+'\nTotal: ' + score, {
 			font: '20px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-    
+    /*
 		game.add.text(game.world.centerX - 115, 360, 'Tap The Screen', {
 			font: '30px Comic Sans MS'
 			, fill: '#ffff00'
@@ -254,11 +265,13 @@ var completeState = {
 			font: '20px Comic Sans MS'
 			, fill: '#ffff00'
 		});
-		game.input.onDown.add(this.return, this);
-		console.log("Complete! " + coveredTileCount);
-	}
-	, return: function () {
-		document.location.href = "/";
+		*/
+		
+		game.add.button(256, 448, 'Tweet', tweetMe, this)/*.scale.setTo(0.205, 0.205)*/;
+		game.add.button(64, 448, 'Continue' ,this.return , this);
+	},
+	return: function () {
+		window.location.href = 'http://project-water.ca/TESTING/ShooterGame/scores.html';
 	}
 }
 
@@ -328,17 +341,28 @@ function render() {
 function randomizeBoard() {
 	for (xCo = 0; xCo < 6; xCo++) {
 		for (yCo = 2; yCo < 8; yCo++) {
-			map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index = Math.floor(Math.random() * 7) + 1;
+			if(playCounter == 0){
+				map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index = Math.floor(Math.random() * 7) + 1;
+			}else {
+				map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index = Math.floor(Math.random() * 6) + 1;
+			}
 		}
 	}
 	for(let i = 0; i <= playCounter; i++){
-  genBadPipes();
+  	genBadPipes();
 	}
+	genBonusPipes();
 }
 function genBadPipes() {
   var xPos = Math.floor(Math.random() * 5);
   var yPos = Math.floor(Math.random() * 4) + 3;
   map.putTile(312, layer5.getTileX(xPos * 64), layer5.getTileY(yPos * 64), 'Tile Layer 5');
+	console.log("bad pipe: " + xPos +", "+ yPos);
+}
+function genBonusPipes() {
+	var xPos = Math.floor(Math.random() * 5);
+  var yPos = Math.floor(Math.random() * 4) + 3;
+  map.putTile(313, layer5.getTileX(xPos * 64), layer5.getTileY(yPos * 64), 'Tile Layer 5');
 	console.log("bad pipe: " + xPos +", "+ yPos);
 }
 //Finds the end 
@@ -537,6 +561,9 @@ function flow(inTile) {
 			
 		}
 	}
+	if(map.getTile(layer5.getTileX(curPipe.x * 64), layer5.getTileY(curPipe.y * 64), 'Tile Layer 5') != null && map.getTile(layer5.getTileX(curPipe.x * 64), layer5.getTileY(curPipe.y * 64), 'Tile Layer 5').index == 313){
+		bonus++;
+	}
 	checkIfFlowable(curPipe);
 	animateFlow(curPipe);
 }
@@ -713,9 +740,28 @@ function fastFlow() {
 	
   game.time.events.remove(timeIncrementer);
 }
-	
 }
 
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+	return "";
+}
+function tweetMe() {
+	var twittertext = 'My Piping Paths score today was ' + score + '! Try to beat me at www.project-water.ca.';
+	var outTweet = 'http://twitter.com/home?status=' + twittertext;
+	window.open(outTweet, '_blank');
+}
 function resize() {
 	var canvas = game.canvas
 		, width = window.innerWidth
