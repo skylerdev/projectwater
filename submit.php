@@ -1,34 +1,26 @@
 <?php
 
-$servername = 'localhost';
-$user= 'root';
-$password = '';
-$dbname = 'projectwater';
+$servername = "localhost";
+$user = "projectw";
+$password = "9s4F1HWkgjqxpMnQ";
+$dbname = "projectw_test";
 
 //Create connection
 $conn = new mysqli($servername, $user, $password, $dbname);
 
-//Gets post from form and creates variable
-$username = $_POST['username'];
-$password = $_POST['password'];
-$email = $_POST['email'];
+if(isset($_POST['username']) && !empty($_POST['username'])){
 
-//Hashes password
-$hash = password_hash($password,PASSWORD_DEFAULT);
+    $username = $_POST['username'];
 
-//Prepared Statement
-$sql = 'INSERT INTO users (username,password,email) VALUES (?,?,?)';
+    //Sql statement
+    $stmt = "INSERT INTO users (Username,Teamname) VAlUES(?,null )";
+    $stmt = $conn->prepare($stmt);
 
-//Prepares and binds parameters
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("sss",$username,$hash,$email);
+    $stmt->bind_param('s', $username);
+    $stmt->execute();
 
-//Execute statement
-$stmt->execute();
 
-//mysqli_query($conn,$sql);
-$stmt->close();
+}
+
 $conn->close();
-
-echo "<script> window.location=\"index.html\";</script>"
 ?>

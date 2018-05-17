@@ -238,7 +238,11 @@ if (isset($_GET['tab']) && ($_GET['tab'] == 'global-daily')) {
     $stmt->execute();
 
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
     $max = (sizeof($data)< 5) ? sizeof($data) : 5;
+
+
     $pipe = '<table class="table"><tr><th>Rank</th><th>Username</th><th>Score</th><th>Team</th><th>Date</th></tr>';
     for($count =0; $count < $max; $count++){
         $pipe .= '<tr><td>' . ($count + 1) . '</td><td>' . $data[$count]['Username'] . '</td><td>' . $data[$count]['Score'] . '</td><td>'
@@ -403,7 +407,7 @@ if (isset($_GET['tab']) && ($_GET['tab'] == 'team-daily')) {
             . $data[$count]['Teamname']  . '</td><td>' . $data[$count]['Date'] . '</td></tr>';
 
     }
-    if($max ==0){
+    if($max == 0){
         $pipe .= '<tr><td colspan="5" style="text-align: center">No Highscores have been place today! Be the First</td></tr>';
     }
     unset($stmt);
