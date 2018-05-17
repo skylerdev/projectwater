@@ -16,7 +16,7 @@ $username = $_POST['username'];
 $score = (int) $_POST['score'];
 $date = date('Y-m-d');
 
-$sql = 'INSERT INTO ShooterScore (Score,Date,UserID) VALUES (?,?,(SELECT UserID FROM Users WHERE username=?))';
+$sql = 'INSERT INTO Shooter_Score (Score,Date,UserID) VALUES (?,?,(SELECT UserID FROM Users WHERE username=?))';
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("iss",$score,$date,$username);

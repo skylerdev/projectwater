@@ -1,22 +1,8 @@
-//var RunRun = window.RunRun || (window.RunRun = {});
-//window.onload = function() {
+
 var game = new Phaser.Game(500, 800, Phaser.AUTO, 'lawn-water'
-  //, {
-  //  preload: preload,
-  //  create: create,
-  //  update: update,
-  //  render: render
-  //}
+
 );
 
-//game.state.add('boot', bootState);
-//game.state.add('load', loadState);
-//game.state.add('menu', menuState);
-//game.state.add("play", game.playState);
-//game.state.add('win' , winState);
-
-//game.state.start("play");
-//}
 var player;
 var catplayer;
 var soil;
@@ -60,21 +46,14 @@ var bulletTrail;
 var accuracy = 0;
 var patchMiss;
 var bgm;
-//    $.ajax({
-//      method: "POST",
-//      url: "php.php",
-//      data: {score: score},
-//      dataType: "int",
-//      
-//    })
+var threshold;
+
 
 var bootState = {
 
   create: function () {
-
-    //game.physics.startSystem(Phaser.Physics.ARCADE);
+    // menu state and also prevents it from resizing
     game.state.start('menu');
-    //console.log("DFSFSDFSFS");
     resize();
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 
@@ -86,29 +65,6 @@ var bootState = {
 
 }
 
-//var scoreState = {
-//  create:function () {
-//$('#global-at').ready(function () {
-//        var tab = "global-at";
-//        $.ajax({
-//            url: "score.php",
-//            method: "GET",
-//            data: {tab: tab},
-//            dataType: "text",
-//            success: function (data) {
-//                var scores = jQuery.parseJSON(data);
-//        var scoreLabel = game.add.text(70,200, scores['shooter'], { font: '50px Arial', fill: '#ffffff'});
-//
-//                //$('#pipe-score-at').html(scores['pipe']);
-//                //$('#shooter-score-at').html(scores['shooter']);
-//                //$('#tap-score-at').html(scores['tap']);
-//            }
-//        });
-//    });
-//    
-//}
-//}
-
 var menuState = {
 
   preload: function () {
@@ -118,8 +74,9 @@ var menuState = {
     resize();
   },
   create: function () {
-    //    game.load.image('start', 'assets/start.png');
     resize();
+    
+    // adds the starting background and additional labels
     var background = game.add.tileSprite(0, 0, 1024, 900, 'soil');
 
     var nameLabel = game.add.text(70, 200, 'Water Day Dash', {
@@ -165,19 +122,28 @@ var winState = {
     } else {
       accuracy = 0;
     }
-    //accuracy.toPrecision(4);
-    accuracy = accuracy;
     patchMiss = brownGrassCount - goodShot;
     var scoreButton = game.add.button(-30, 500, 'hsbutton', this.score);
     var tweetButton = game.add.button(-30, 600, 'tweet', this.tweetMe);
+    
+    
+    // ends the background music 
     nyansong.destroy();
     bgm.destroy();
+    
     calcScore();
-    //      var spacekey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-    //  spacekey.onDown.addOnce(this.score, this);
-    //    var username = "testing";
-    //var username = "John";
+    //makeCookie3("score",score);
+    //console.log(getCookie("score"));
+    
+    if (score > 60){threshold = 2};
+    if (score > 40 && score < 60) { threshold = 1};
+    if (score < 40) { threshold = 0};
+    console.log(threshold);
+    makeCookie3("threshold", threshold);
+    
     var username = getCookie("username");
+    
+    //labels for the end screen telling score 
     var winLabel = game.add.text(70, 200, 'Times up', {
       font: '50px Arial',
       fill: '#ffffff'
@@ -197,7 +163,6 @@ var winState = {
       fill: '#ffffff'
     });
 
-    console.log("dsfdsfdsfds");
     $.ajax({
       method: "POST",
       url: "shooterphp.php",
@@ -208,18 +173,18 @@ var winState = {
       dataType: "text",
       success: function (data) {
         console.log(data);
-        console.log('dsfdsfsd');
+
       }
 
     });
   },
 
-  //score:function () { game.state.start('score')},
   score: function () {
-    //window.open('index.html');
     window.location.href = "scores.html#personal-at";
   },
 
+  
+  // twitter api function
   tweetMe: function () {
     var twittertext = 'My Watering lawn score today was ' + score + '! Try to beat me at ' + 'www.project-water.ca' + '. ' + '%23projectwaterapp';
     var outTweet = 'http://twitter.com/home?status=' + twittertext;
@@ -232,8 +197,8 @@ var winState = {
 }
 
 var playState = {
+  // preloading all the game stuff
   preload: function () {
-    //function preload() {
     game.load.image('soil', 'assets/soil.png');
     game.load.image('hose', 'assets/hose.png');
     game.load.image('trail', 'assets/hosetrail.png');
@@ -263,25 +228,33 @@ var playState = {
 
   },
   create: function () {
-    //function create() {
-
+    // prevents game from being zoomed in
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     canvas_width = window.innerWidth * window.devicePixelRatio;
     canvas_height = window.innerHeight * window.devicePixelRatio;
+    
+    // timer for the game 
+    
     timer = game.time.create(false);
     timer.loop(1000, updateCounter, this);
     timer.start();
-
+    
     game.input.addPointer();
     game.input.addPointer();
+    
+    //backgrounds
     soil = game.add.tileSprite(0, 0, 1024, 900, 'soil');
     starfield = game.add.tileSprite(0, 0, 1024, 900, 'starfield');
+    //easteregg background intially turned off
     starfield.alpha = 0;
+    
+    // player sprite 
     hose = game.add.sprite(250, 650, 'hose');
     player = hose;
     catplayer = game.add.sprite(250, 650, 'nyancat');
     player.anchor.setTo(0.5, 0.5);
     catplayer.anchor.setTo(0.5, 0.5);
+    // easter egg player sprite turned off 
     catplayer.alpha = 0;
     game.physics.enable(player, Phaser.Physics.ARCADE);
 
@@ -303,7 +276,8 @@ var playState = {
     bgm.allowMultiple = false;
     bgm.loopFull();
 
-
+    
+    // emitter for the player 
     cursors = game.input.keyboard.createCursorKeys();
     hoseTrail = game.add.emitter(player.x, player.y + 20, 400);
     hoseTrail.makeParticles('trail');
@@ -313,7 +287,7 @@ var playState = {
     hoseTrail.start(false, 5000, 10);
 
 
-
+    // water projectile
     water = game.add.group();
     water.enableBody = true;
     water.physicsBodyType = Phaser.Physics.ARCADE;
@@ -322,7 +296,8 @@ var playState = {
     water.setAll('anchor.y', 1);
     water.setAll('outOfBoundsKill', true);
     water.setAll('checkWorldBounds', true);
-
+    // Easter egg projectile
+    
     waterR = game.add.group();
     waterR.enableBody = true;
     waterR.physicsBodyType = Phaser.Physics.ARCADE;
@@ -334,7 +309,7 @@ var playState = {
 
 
 
-
+    // enemies aka grass patches 
 
     grassPatch = game.add.group();
     grassPatch.enableBody = true;
@@ -348,6 +323,8 @@ var playState = {
     grassPatch.setAll('checkWorldBounds', true);
     launchGrassPatch();
 
+    // brown grass patches 
+    
     bgrassPatch = game.add.group();
     bgrassPatch.enableBody = true;
     bgrassPatch.physicsBodyType = Phaser.Physics.ARCADE;
@@ -360,6 +337,8 @@ var playState = {
     bgrassPatch.setAll('checkWorldBounds', true);
     launchbGrassPatch();
 
+    
+    // creating the dogs 
     dog = game.add.group();
     dog.enableBody = true;
     dog.physicsBodyType = Phaser.Physics.ARCADE;
@@ -372,7 +351,7 @@ var playState = {
     dog.setAll('checkWorldBounds', true);
     launchDog();
 
-
+    // easter egg enemies 
     nyanmy = game.add.group();
     nyanmy.enableBody = true;
     nyanmy.physicsBodyType = Phaser.Physics.ARCADE;
@@ -382,7 +361,7 @@ var playState = {
     nyanmy.setAll('scale.x', 1.0);
     nyanmy.setAll('scale.y', 1.0);
     nyanmy.setAll('outOfBoundsKill', true);
-
+    // adds an emitter trail to each cat
     nyanmy.forEach(function (enemy) {
       addEnemyEmitterTrail(enemy);
       enemy.events.onKilled.add(function () {
@@ -407,7 +386,7 @@ var playState = {
     sprayButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
     endButton = game.input.keyboard.addKey(Phaser.Keyboard.M);
 
-
+    // grumpy cat creating 
     gcat = game.add.group();
     gcat.enableBody = true;
     gcat.physicsBodyType = Phaser.Physics.ARCADE;
@@ -420,6 +399,7 @@ var playState = {
     gcat.setAll('checkWorldBounds', true);
     launchCat();
 
+    // animation for the grumpy catt
     slashes = game.add.group();
     slashes.enableBody = true;
     slashes.physicsBodyType = Phaser.Physics.ARCADE;
@@ -458,12 +438,15 @@ var playState = {
       ypos1 = 0;
       ypos = 0;
     }
+    
+    // if the cursor press is right of the player then move right and accelerates more the further the press is 
     if (xpos > player.x && ypos < 685) {
       player.body.velocity.x = 1.5 * (xpos - player.x);
       if (xpos - player.x < 200) {
         player.body.velocity.x = 300;
       }
 
+          // if the cursor press is left of the player then move right and accelerates more the further the press is 
     }
     if (xpos < player.x && ypos < 685) {
       player.body.velocity.x = 1.5 * (xpos - player.x);
@@ -515,19 +498,15 @@ var playState = {
 
 
   render: function () {
-    //function render() {
     game.debug.text("time:" + (45 - total) , 400, 63);
-    //game.debug.text(gamemode, 400, 50);
   }
 }
 
 
 game.state.add('boot', bootState);
-//game.state.add('load', loadState);
 game.state.add('menu', menuState);
 game.state.add("play", playState);
 game.state.add('win', winState);
-//game.state.add('score' , scoreState);
 
 game.state.start('boot');
 
@@ -547,6 +526,8 @@ CONTROLS GAME MODE RIGHT HERE
 ******************************************************
 
 */
+
+// the function to shoot a projectile
 function spray() {
   if (total > 5 && shotCount == 0) {
     gamemode = 1;
@@ -577,7 +558,7 @@ function spray() {
 }
 
 
-
+//shooting on mobile device 
 function actionOnClick() {
 
   if (total > 5 && shotCount == 0) {
@@ -606,7 +587,7 @@ function actionOnClick() {
   }
 }
 
-
+// launches a grass patch 
 function launchGrassPatch() {
   var MIN_ENEMY_SPACING = 600;
   var MAX_ENEMY_SPACING = 3000;
@@ -658,15 +639,10 @@ function launchDog() {
 
 
 
-function actionOnClick2() {
-  player.body.velocity.x = +800;
-}
 
-
-
+// what happens when you hit a grass patch
 function hitGrass(enemy, bullet) {
   sprayTrail = game.add.emitter(bullet.x, bullet.y + 20, 10);
-  //sprayTrail.makeParticles('water');
   if (gamemode == 2) {
     sprayTrail.makeParticles('waterR');
   } else {
@@ -729,7 +705,7 @@ function hitCat(enemy, bullet) {
 
 
 }
-
+//switches into easter egg mode
 function modeChange() {
 
   if (gamemode == 1) {
@@ -758,7 +734,7 @@ function modeChange() {
   }
 }
 
-
+// adds an enemy emitter trail 
 function addEnemyEmitterTrail(enemy) {
   var nctrail = game.add.emitter(enemy.x - 500, enemy.y, 50);
   //hoseTrail.makeParticles('trail');
@@ -801,7 +777,7 @@ function updateCounter() {
   total++;
 
 }
-
+// calculates the score 
 function calcScore() {
 
   score = goodShot * 4 - shotCount;
@@ -814,7 +790,7 @@ function calcScore() {
   // perfect score is a 84
 }
 
-
+// the get cookie function to get username. 
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -831,7 +807,7 @@ function getCookie(cname) {
   return "";
 }
 
-
+// resizes the canvas to the proper size
 function resize() {
   var canvas = game.canvas,
     width = window.innerWidth,
@@ -846,4 +822,14 @@ function resize() {
     canvas.style.width = (height * ratio) + "px";
     canvas.style.height = height + "px";
   }
+}
+
+
+function makeCookie3(name,content) {
+    
+    var d = new Date();
+    d.setTime(d.getTime() + (5*24*60*60*1000));
+    
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + content + ";" + expires + ";path=/";
 }
