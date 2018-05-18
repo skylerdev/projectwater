@@ -1,4 +1,3 @@
-
 var game = new Phaser.Game(500, 800, Phaser.AUTO, 'lawn-water'
 
 );
@@ -47,6 +46,7 @@ var accuracy = 0;
 var patchMiss;
 var bgm;
 var threshold;
+var cookiecheck = false;
 
 
 var bootState = {
@@ -56,7 +56,7 @@ var bootState = {
     game.state.start('menu');
     resize();
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-
+    
   }
 
 
@@ -75,7 +75,7 @@ var menuState = {
   },
   create: function () {
     resize();
-    
+
     // adds the starting background and additional labels
     var background = game.add.tileSprite(0, 0, 1024, 900, 'soil');
 
@@ -83,6 +83,13 @@ var menuState = {
       font: '50px Arial',
       fill: '#ffffff'
     });
+    
+    if(!getCookie("username")){
+      var cookieLabel = game.add.text(10,600, 'You are not logged in, your score will not be saved', {font: '20px Arial', fill: "#ff0044"})
+      
+      //alert("You are not logged in, your score will not be saved");
+    }
+    console.log(getCookie("username"));
 
     var tipLabel = game.add.text(20, 300, 'Mobile : Use one hand to move (drag or tap) and one \n hand to hit the spray button', {
       font: '20px Arial',
@@ -90,7 +97,7 @@ var menuState = {
     });
     var tipLabel2 = game.add.text(20, 400, 'Keyboard : Left and Right arrow keys \n to move and Space to Shoot', {
       font: '25px Arial',
-      fill: '#ffffff'
+      fill: '#ffffff' 
     });
 
     var startLabel = game.add.text(0, game.world.height - 80, 'Hit the start button or press the spacebar key to start', {
@@ -109,6 +116,7 @@ var menuState = {
   start: function () {
     game.state.start('play');
   },
+  
 
 };
 
@@ -125,24 +133,39 @@ var winState = {
     patchMiss = brownGrassCount - goodShot;
     var scoreButton = game.add.button(-30, 500, 'hsbutton', this.score);
     var tweetButton = game.add.button(-30, 600, 'tweet', this.tweetMe);
-    
-    
+
+
     // ends the background music 
     nyansong.destroy();
     bgm.destroy();
-    
+
     calcScore();
     //makeCookie3("score",score);
     //console.log(getCookie("score"));
+//
+//    if (score > 60) {
+//      threshold = 2
+//    };
+//    if (score > 40 && score < 60) {
+//      threshold = 1
+//    };
+//    if (score < 40) {
+//      threshold = 0
+//    };
     
-    if (score > 60){threshold = 2};
-    if (score > 40 && score < 60) { threshold = 1};
-    if (score < 40) { threshold = 0};
+    if (score > 70){threshold = 5}
+    else if(score > 60){threshold = 4}
+    else if (score > 50){threshold = 3}
+    else if ( score > 40) {threshold = 2}
+    else if ( score > 30) {threshold = 1}
+    else {threshold = 0}
     console.log(threshold);
+    //if (cookiecheck){
     makeCookie3("threshold", threshold);
-    
+    //}
+
     var username = getCookie("username");
-    
+
     //labels for the end screen telling score 
     var winLabel = game.add.text(70, 200, 'Times up', {
       font: '50px Arial',
@@ -168,7 +191,8 @@ var winState = {
       url: "shooterphp.php",
       data: {
         username: username,
-        score: score
+        score: score,
+        tier: threshold
       },
       dataType: "text",
       success: function (data) {
@@ -183,15 +207,15 @@ var winState = {
     window.location.href = "scores.html#personal-at";
   },
 
-  
+
   // twitter api function
   tweetMe: function () {
     var twittertext = 'My Watering lawn score today was ' + score + '! Try to beat me at ' + 'www.project-water.ca' + '. ' + '%23projectwaterapp';
     var outTweet = 'http://twitter.com/home?status=' + twittertext;
     window.open(outTweet, '_blank');
   },
-  
-  
+
+
 
 
 }
@@ -232,22 +256,22 @@ var playState = {
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     canvas_width = window.innerWidth * window.devicePixelRatio;
     canvas_height = window.innerHeight * window.devicePixelRatio;
-    
+
     // timer for the game 
-    
+
     timer = game.time.create(false);
     timer.loop(1000, updateCounter, this);
     timer.start();
-    
+
     game.input.addPointer();
     game.input.addPointer();
-    
+
     //backgrounds
     soil = game.add.tileSprite(0, 0, 1024, 900, 'soil');
     starfield = game.add.tileSprite(0, 0, 1024, 900, 'starfield');
     //easteregg background intially turned off
     starfield.alpha = 0;
-    
+
     // player sprite 
     hose = game.add.sprite(250, 650, 'hose');
     player = hose;
@@ -276,7 +300,7 @@ var playState = {
     bgm.allowMultiple = false;
     bgm.loopFull();
 
-    
+
     // emitter for the player 
     cursors = game.input.keyboard.createCursorKeys();
     hoseTrail = game.add.emitter(player.x, player.y + 20, 400);
@@ -297,7 +321,7 @@ var playState = {
     water.setAll('outOfBoundsKill', true);
     water.setAll('checkWorldBounds', true);
     // Easter egg projectile
-    
+
     waterR = game.add.group();
     waterR.enableBody = true;
     waterR.physicsBodyType = Phaser.Physics.ARCADE;
@@ -324,7 +348,7 @@ var playState = {
     launchGrassPatch();
 
     // brown grass patches 
-    
+
     bgrassPatch = game.add.group();
     bgrassPatch.enableBody = true;
     bgrassPatch.physicsBodyType = Phaser.Physics.ARCADE;
@@ -337,7 +361,7 @@ var playState = {
     bgrassPatch.setAll('checkWorldBounds', true);
     launchbGrassPatch();
 
-    
+
     // creating the dogs 
     dog = game.add.group();
     dog.enableBody = true;
@@ -438,7 +462,7 @@ var playState = {
       ypos1 = 0;
       ypos = 0;
     }
-    
+
     // if the cursor press is right of the player then move right and accelerates more the further the press is 
     if (xpos > player.x && ypos < 685) {
       player.body.velocity.x = 1.5 * (xpos - player.x);
@@ -446,7 +470,7 @@ var playState = {
         player.body.velocity.x = 300;
       }
 
-          // if the cursor press is left of the player then move right and accelerates more the further the press is 
+      // if the cursor press is left of the player then move right and accelerates more the further the press is 
     }
     if (xpos < player.x && ypos < 685) {
       player.body.velocity.x = 1.5 * (xpos - player.x);
@@ -498,7 +522,7 @@ var playState = {
 
 
   render: function () {
-    game.debug.text("time:" + (45 - total) , 400, 63);
+    game.debug.text("time:" + (45 - total), 400, 63);
   }
 }
 
@@ -610,7 +634,7 @@ function launchbGrassPatch() {
   var enemy = bgrassPatch.getFirstExists(false);
   //console.log(enemy);
   if (enemy) {
-    enemy.reset(game.rnd.integerInRange(0, game.width), -20);
+    enemy.reset(game.rnd.integerInRange(20, game.width-20), -20);
     enemy.body.velocity.y = ENEMY_SPEED;
 
   }
@@ -717,7 +741,7 @@ function modeChange() {
     player = catplayer;
     game.physics.enable(player, Phaser.Physics.ARCADE);
     //hose.setAlpha = 0;
-    hose.kill();
+    hose.destroy();
     hoseTrail.destroy();
 
     hoseTrail = game.add.emitter(player.x, player.y + 50, 400);
@@ -825,11 +849,29 @@ function resize() {
 }
 
 
-function makeCookie3(name,content) {
-    
-    var d = new Date();
-    d.setTime(d.getTime() + (5*24*60*60*1000));
-    
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = name + "=" + content + ";" + expires + ";path=/";
+function makeCookie3(name, content) {
+
+  var d = new Date();
+  d.setTime(d.getTime() + (5 * 24 * 60 * 60 * 1000));
+
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = name + "=" + content + ";" + expires + ";path=/";
 }
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return false;
+}
+
+

@@ -12,14 +12,17 @@ $dbname = 'projectwater';
 
 $conn = new mysqli($servername, $user, $password, $dbname);
 
-$username = $_POST['username'];
+$user = $_POST['username'];
 $score = (int) $_POST['score'];
 $date = date('Y-m-d');
+$tier = (int) $_POST['tier'];
 
-$sql = 'INSERT INTO Shooter_Score (Score,Date,UserID) VALUES (?,?,(SELECT UserID FROM Users WHERE username=?))';
 
+
+$sql = 'INSERT INTO shooter_score (Score,Date,UserID,Tier) VALUES (?,?,(SELECT UserID FROM users WHERE username=?),?)';
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("iss",$score,$date,$username);
+
+$stmt->bind_param("issi",$score,$date,$user,$tier);
 
 $stmt->execute();
 $stmt->close();
