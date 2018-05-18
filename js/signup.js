@@ -18,7 +18,7 @@ $('document').ready(function(){
                             $('#submit').attr('disabled',false);
                         }
                     }
-                });
+                        });
             });
           $('#email').keyup(function(){
                var email= $(this).val();
@@ -42,7 +42,7 @@ $('document').ready(function(){
                 });
             });
             
-            $('input[type=submit]').click(function(){
+            $('button[type=submit]').click(function(){
                 makeCookie();
             })
     
