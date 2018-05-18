@@ -1,14 +1,20 @@
-var game = new Phaser.Game(500, 800, Phaser.AUTO, 'tap-game');
+ var game = new Phaser.Game(500, 800, Phaser.AUTO, 'tap-game');
 
 var newWidth;
 var newHeight;
 var paused = false;
 var gameLength = 45;
 var tapArray = [];
+var tapTimers = [];
+var dripSounds = [];
+var faucetSounds = [];
 var kills = 0;
 var score = 0;
+var scoreText;
+var timeText;
+var faucet;
 
-var dripFreq = 3;
+var dripFreq = 2;
 var showDripFreq = 1;
 
 var font = {
@@ -45,12 +51,17 @@ var loadState = {
         game.load.audio('drip3', "assets/drip3.mp3");
         game.load.audio('drip4', "assets/drip4.mp3");
         game.load.audio('drip5', "assets/drip5.mp3");
+        game.load.audio('faucet0', "assets/faucet1.mp3");
+        game.load.audio('faucet1', "assets/faucet2.mp3");
+        
+       
+        
         //TODO: more graphics
     },
     create: function () {
         game.state.start('menu');
     }
-}
+};
 
 //men
 var menuState = {
@@ -62,11 +73,23 @@ var menuState = {
 
 
     }
-}
+};
 
 //PLAY that funky music white boy
 var playState = {
     create: function () {
+        
+        
+        for(var a = 0; a < 6; a++){
+            var sound = game.add.audio('drip' + a);
+            sound.allowMultiple = true;
+            dripSounds[a] = sound;
+        }
+        for(var b = 0; b < 2; b++){
+            var fsound = game.add.audio('faucet' + b);
+            fsound.allowMultiple = true;
+            faucetSounds[b] = fsound;
+        }
 
             //create
             var topBarY = newHeight / 6;
@@ -79,6 +102,8 @@ var playState = {
                 button.dripping = false;
                 tapArray.push(button);
             }
+            
+            scoreText = game.add.text(10, 10, "SCORE: " + kills);
 
             //start drip timers
              game.time.events.loop(dripFreq * 999, startDrip, this);
@@ -89,16 +114,29 @@ var playState = {
             game.time.events.add(1000 * gameLength, endGame, this);
 
 
+            //ADD ALL FILES TO DRIPSOUND
+            var drip1 = game.add.audio('drip1');
+            dripSounds.push(drip1);
+
 
     },
     update: function() {
         //TODO: if at any time more than 5 taps dripping, loss condition
+        var count = 0;
+        for(var g = 0; g < tapArray.length; g++){
+            if(tapArray[g].dripping){
+                count++;
+            }
+        }
+        if(3 < count){
+            endGame();
+        }
 
     },
     render: function () {
-        var scoreText = game.add.text(10, 10, "SCORE: " + kills, font);
+       scoreText.setText("SCORE: " + kills);
     }
-}
+};
 
 //Done
 var doneState = {
@@ -107,11 +145,12 @@ var doneState = {
 
         var score = kills;
 
-        var titleMain = game.add.text(newWidth/10, newHeight/5, 'YOURE DONE KID', font);
-        var titleTwo = game.add.text(newWidth/10, 2*newWidth/5, kills + ' VALVES GOTTEN', font);
-        var titleTwo = game.add.text(newWidth/10, 3*newWidth/5, 'congrats... bro.. ', font);
-        var titleThree = game.add.text(newWidth/10, 4*newWidth/5, 'U SAVED WOTER', font);
+        var titleMain = game.add.text(newWidth/10, newHeight/5, 'Game Over', font);
+        var titleTwo = game.add.text(newWidth/10, 2*newWidth/5, kills + ' turned off', font);
+        var titleThree = game.add.text(newWidth/10, 4*newWidth/5, 'Way to go!', font);
         var tweetbutton = game.add.button(newWidth/10, newWidth, 'twitter', tweetMe(score), this);
+        
+        var tier = 1;
 
         var username = getCookie("username");
 
@@ -120,7 +159,7 @@ var doneState = {
             method: "POST",
             url: "tapphp.php",
             data: {username: username,
-                score: score},
+                score: score, tier: tier},
             dataType: "text",
             success:function(data){
                 console.log(data);
@@ -129,13 +168,13 @@ var doneState = {
         });
 
     }
-}
+};
 
 function startDrip() {
     //chose a random one to start dripping.
     var randNum = Math.floor(Math.random() * tapArray.length);
     tapArray[randNum].dripping = true;
-    //TODO: start timer
+    //TODO: start tap timer
 
 }
 
@@ -144,7 +183,9 @@ function buttonEvent() {
     if (button.dripping) {
     button.dripping = false;
     kills++;
-    //TODO: stop timer, add score
+    var rand = Math.floor(Math.random() * faucetSounds.length);
+    faucetSounds[rand].play();
+    //TODO: stop timer
     }
 }
 
@@ -169,9 +210,7 @@ function makeDrops() {
 function hitWorldBounds() {
     arguments[0].destroy();
     var randNum = Math.floor(Math.random() * 5);
-    var drippy = game.add.audio('drip' + randNum);
-    drippy.allowMultiple = true;
-    drippy.play();
+    dripSounds[randNum].play();
 }
 
 function endGame() {
