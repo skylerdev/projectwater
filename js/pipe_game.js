@@ -31,21 +31,22 @@ var loadState = {
     game.load.image('Round_Complete', 'assets/images/Round_Complete.png');
 		game.load.image('Tweet', 'assets/images/Twitter_Bird_v2.png');
 		game.load.image('Continue', 'assets/images/Continue.png');
-		game.load.audio('click', 'assets/sounds/click.mp3');
-		game.load.audio('flip', 'assets/sounds/flip_trim.mp3');
-		game.load.audio('click_voice', 'assets/sounds/click_voice.mp3');
-		game.load.audio('swoosh', 'assets/sounds/swoosh.mp3');
-		game.load.audio('eEgg', 'assets/sounds/egg_active.mp3');
-		game.load.audio('bgMusic', 'assets/sounds/bensound-scifi.mp3');
+		game.load.audio('click', 'assets/sounds/click (3).mp3');
+		game.load.audio('flip', 'assets/sounds/flip_trim (2).mp3');
+		game.load.audio('click_voice', 'assets/sounds/click_voice (1).mp3');
+		game.load.audio('swoosh', 'assets/sounds/swoosh (3).mp3');
+		game.load.audio('eEgg', 'assets/sounds/egg_active (3).mp3');
+		game.load.audio('bgMusic', 'assets/sounds/bensound-scifi (1).mp3');
 	}
 	, create: function () {
+	    game.add.audio('bgMusic').play();
 		game.state.start('menu');
 	}
 }
 var menuState = {
 	create: function () {
 		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		game.add.audio('bgMusic').play();
+		
 		game.add.tileSprite(0,0,384,576,'Start_Page');
 		eEgg = game.add.audio('eEgg');
 		/*game.add.text(game.world.centerX - 110, 150, 'Swapping Pipes', {
@@ -92,8 +93,8 @@ var howToState = {
         image = game.add.image(game.world.centerX -32, 250, 'Bad_Pipe');
       }else if(howToCounter == 3){
 				image.destroy();
-        howToText.setText("Try to divert the flow\nover the bonus tiles for\nbonus points!\nYou also won't be able to\nswap them out.");
-        image = game.add.image(game.world.centerX -32, 320, 'Bonus_Pipe');
+        howToText.setText("Try to divert the flow\nover the bonus tiles for\nbonus points!");
+        image = game.add.image(game.world.centerX -32, 250, 'Bonus_Pipe');
       }else if(howToCounter == 4){
         image.destroy();
         image = game.add.image(game.world.centerX -32, 325, 'Start_Pipe');
@@ -112,7 +113,8 @@ var playCounter = 0
 	, score = 0
 	, coveredTileCount = 0
 	, moves = 0
-	, bonus = 0;
+	, bonus = 0
+	, threshold = 0;
 var time = 0;
 var animateTimer, flowTimer, timeIncrementer;
 //For loop variables
@@ -238,11 +240,19 @@ var completeState = {
     game.add.tileSprite(0,0,384,576,'Round_Complete');
 		calculateScore();
 		var username = getCookie("username");
+		console.log("Before AJax");
 		$.ajax({
       method: "POST",
       url: "PipePHP.php",
-      data: {username: username, score: score},
+      data: {username: username, score: score, tier: threshold},
       dataType: "text",
+      success: function(data){
+          console.log(data);
+          console.log("Ajax Success");
+      },
+      error: function(data){
+          console.log("Ajax Error");
+      }
     });
 		game.add.text(game.world.centerX - 110, 100, 'Game Complete', {
 			font: '30px Comic Sans MS'
@@ -267,11 +277,15 @@ var completeState = {
 		});
 		*/
 		
+		if(!getCookie("username")){
+     game.time.events.add(Phaser.Timer.SECOND * 0.2, function() {alert("You aren't signed in! Your score will not be saved.")}, this);
+    }
+		
 		game.add.button(256, 448, 'Tweet', tweetMe, this)/*.scale.setTo(0.205, 0.205)*/;
 		game.add.button(64, 448, 'Continue' ,this.return , this);
 	},
 	return: function () {
-		window.location.href = '/';
+		window.location.href = 'http://project-water.ca/TESTING/ShooterGame/scores.html';
 	}
 }
 
@@ -341,11 +355,7 @@ function render() {
 function randomizeBoard() {
 	for (xCo = 0; xCo < 6; xCo++) {
 		for (yCo = 2; yCo < 8; yCo++) {
-			if(playCounter == 0){
 				map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index = Math.floor(Math.random() * 7) + 1;
-			}else {
-				map.getTile(layer1.getTileX(xCo * 64), layer1.getTileY(yCo * 64), 'Tile Layer 1').index = Math.floor(Math.random() * 6) + 1;
-			}
 		}
 	}
 	for(let i = 0; i <= playCounter; i++){
@@ -722,6 +732,14 @@ function gameLose() {
 
 function calculateScore() {
 	score = winCount * 100 + loseCount * -50 + (coveredTileCount * 2) + (100 - time) + (50 - moves) * 2;
+	if (score > 425){threshold = 5}
+    else if(score > 300){threshold = 4}
+    else if (score > 250){threshold = 3}
+    else if ( score > 200) {threshold = 2}
+    else if ( score > 100) {threshold = 1}
+    else {threshold = 0}
+    console.log(threshold);
+    makeCookie3("threshold", threshold);
 }
 
 function fastFlow() {
@@ -742,6 +760,15 @@ function fastFlow() {
 }
 }
 
+function makeCookie3(name, content) {
+
+  var d = new Date();
+  d.setTime(d.getTime() + (5 * 24 * 60 * 60 * 1000));
+
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = name + "=" + content + ";" + expires + ";path=/";
+}
+
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);
@@ -757,8 +784,9 @@ function getCookie(cname) {
   }
 	return "";
 }
+
 function tweetMe() {
-	var twittertext = 'My Piping Paths score today was ' + score + '! Try to beat me at www.project-water.ca.';
+	var twittertext = 'My Piping Paths score today was ' + score + '! Try to beat me at www.project-water.ca. %23projectwaterapp';
 	var outTweet = 'http://twitter.com/home?status=' + twittertext;
 	window.open(outTweet, '_blank');
 }
