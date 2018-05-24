@@ -1,21 +1,21 @@
- var game = new Phaser.Game(500, 800, Phaser.AUTO, 'tap-game');
+var game = new Phaser.Game(500, 800, Phaser.AUTO, 'tap-game');
+
+const gameLength = 45;
+const dripFreq = 2;
+const showDripFreq = 1;
 
 var newWidth;
 var newHeight;
 var paused = false;
-var gameLength = 45;
 var tapArray = [];
-var tapTimers = [];
 var dripSounds = [];
 var faucetSounds = [];
 var kills = 0;
 var score = 0;
 var scoreText;
-var timeText;
-var faucet;
-
-var dripFreq = 2;
-var showDripFreq = 1;
+var tier;
+var tapsOn = 0;
+const maxTapsRunning = 4;
 
 var font = {
     font: '50px Times New Roman',
@@ -37,7 +37,7 @@ var bootState = {
 //load
 var loadState = {
     preload: function () {
-        var loadingLabel = game.add.text(newWidth / 2, newHeight / 2, 'LOADING...', font);
+        let loadingLabel = game.add.text(newWidth / 2, newHeight / 2, 'LOADING...', font);
 
         //ALL ASSETS LOADED HERE
         game.load.image("valve", "assets/valve.png");
@@ -53,9 +53,7 @@ var loadState = {
         game.load.audio('drip5', "assets/drip5.mp3");
         game.load.audio('faucet0', "assets/faucet1.mp3");
         game.load.audio('faucet1', "assets/faucet2.mp3");
-        
-       
-        
+
         //TODO: more graphics
     },
     create: function () {
@@ -63,14 +61,13 @@ var loadState = {
     }
 };
 
-//men
+//menu
 var menuState = {
     create: function () {
         game.stage.backgroundColor = "#2F95AA";
 
-        var titleMain = game.add.text(10, 100, 'WHACK A TAP', font);
-        var playButton = game.add.button(0, 2*newHeight/5, 'play', pressedPlay, this);
-
+        let titleMain = game.add.text(10, 100, 'WHACK A TAP', font);
+        let playButton = game.add.button(0, 2*newHeight/5, 'play', pressedPlay, this);
 
     }
 };
@@ -78,63 +75,70 @@ var menuState = {
 //PLAY that funky music white boy
 var playState = {
     create: function () {
-        
-        
-        for(var a = 0; a < 6; a++){
-            var sound = game.add.audio('drip' + a);
+
+        game.stage.backgroundColor = "#2F95AA";
+
+        //add audio
+        for(let a = 0; a < 6; a++){
+            let sound = game.add.audio('drip' + a);
             sound.allowMultiple = true;
             dripSounds[a] = sound;
         }
-        for(var b = 0; b < 2; b++){
-            var fsound = game.add.audio('faucet' + b);
-            fsound.allowMultiple = true;
-            faucetSounds[b] = fsound;
+
+        for(let b = 0; b < 2; b++){
+            let sound = game.add.audio('faucet' + b);
+            sound.allowMultiple = true;
+            faucetSounds[b] = sound;
         }
 
-            //create
-            var topBarY = newHeight / 6;
-            var rest = newHeight - topBarY;
+        //create
+            let topHeight = newHeight / 6;
+            let playHeight = newHeight - topHeight;
 
-            for(var i = 0; i < 3; i++) for (var j = 0; j < 4; j++) {
-                var x = (i * newWidth/3) + 10;
-                var y = (j * rest / 4) + topBarY;
-                var button = game.add.button(x, y, 'valve', buttonEvent, this);
+            for(let i = 0; i < 3; i++) for (let j = 0; j < 4; j++) {
+                let x = (i * newWidth/3) + 10;
+                let y = (j * playHeight / 4) + topHeight;
+                //50 offset for the anchor point being set in middle
+                let button = game.add.button(x+70, y+70, 'valve', buttonEvent, this);
+                button.anchor.setTo(0.5, 0.5);
+
+                //create the buttons time
+                button.timer = game.time.create(false);
+
                 button.dripping = false;
+                button.tween = game.add.tween(button).to({angle: 0}, 1000);
                 tapArray.push(button);
             }
-            
-            scoreText = game.add.text(10, 10, "SCORE: " + kills);
 
             //start drip timers
              game.time.events.loop(dripFreq * 999, startDrip, this);
              game.time.events.loop(showDripFreq * 1000, makeDrops, this);
-            game.stage.backgroundColor = "#2F95AA";
 
             //end condition
-            game.time.events.add(1000 * gameLength, endGame, this);
+            endtimer = game.time.events.add(1000 * gameLength, endGame, this);
 
-
-            //ADD ALL FILES TO DRIPSOUND
-            var drip1 = game.add.audio('drip1');
-            dripSounds.push(drip1);
-
+            scoreText = game.add.text(newWidth/3, 10, "SCORE: " + score);
+            tapsText = game.add.text(10, 10, "TAPS: " + tapsOn + "/5");
 
     },
     update: function() {
-        //TODO: if at any time more than 5 taps dripping, loss condition
-        var count = 0;
-        for(var g = 0; g < tapArray.length; g++){
+        //if at any time more than 5 taps dripping, loss condition
+        let tapsOn = 0;
+        for(let g = 0; g < tapArray.length; g++){
             if(tapArray[g].dripping){
-                count++;
+                tapArray[g].angle += 1;
+                tapsOn++;
             }
         }
-        if(3 < count){
+        if(maxTapsRunning == tapsOn){
             endGame();
         }
 
     },
     render: function () {
-       scoreText.setText("SCORE: " + kills);
+       scoreText.setText("SCORE: " + score);
+       tapsText.setText("TAPS: " + tapsOn + "/5");
+
     }
 };
 
@@ -143,16 +147,14 @@ var doneState = {
     create: function() {
         game.stage.backgroundColor = "#2F95AA";
 
-        var score = kills;
-
-        var titleMain = game.add.text(newWidth/10, newHeight/5, 'Game Over', font);
-        var titleTwo = game.add.text(newWidth/10, 2*newWidth/5, kills + ' turned off', font);
-        var titleThree = game.add.text(newWidth/10, 4*newWidth/5, 'Way to go!', font);
-        var tweetbutton = game.add.button(newWidth/10, newWidth, 'twitter', tweetMe(score), this);
+        let titleMain = game.add.text(newWidth/10, newHeight/5, 'Game Over', font);
+        let titleTwo = game.add.text(newWidth/10, 2*newWidth/5, score + ' score gained', font);
+        let titleThree = game.add.text(newWidth/10, 4*newWidth/5, 'Way to go!', font);
+        let tweetButton = game.add.button(newWidth/10, newWidth, 'twitter', tweetMe);
         
-        var tier = 1;
+        //TODO: SCORE TIER CODE
 
-        var username = getCookie("username");
+        let username = getCookie("username");
 
         //highscore
         $.ajax({
@@ -170,24 +172,47 @@ var doneState = {
     }
 };
 
+function scoreTimerEnd() {
+    if(score >= 1000){
+        score-= 1000;
+    }
+
+}
+
+function tweetMe() {
+    let twittertext = 'My Whack a Tap score today was ' + score + '! Try to beat me at http://project-water.ca.';
+    let outTweet = 'http://twitter.com/home?status=' + twittertext;
+    window.open(outTweet, '_blank');
+}
+
 function startDrip() {
-    //chose a random one to start dripping.
+    //chose a random one to start dripping
     var randNum = Math.floor(Math.random() * tapArray.length);
     tapArray[randNum].dripping = true;
-    //TODO: start tap timer
+    //add an event
 
+    tapArray[randNum].timer.add(3000, scoreTimerEnd, this);
+    tapArray[randNum].timer.start();
 }
 
 function buttonEvent() {
     var button = arguments[0];
     if (button.dripping) {
-    button.dripping = false;
-    kills++;
-    var rand = Math.floor(Math.random() * faucetSounds.length);
-    faucetSounds[rand].play();
-    //TODO: stop timer
+         kills++;
+         button.dripping = false;
+
+
+        //add remaining time on tap to score
+        score = score + button.timer.duration;
+        button.timer.stop(true);
+        //TODO: show score gained
+
+        faucetSounds[randomInt(faucetSounds.length)].play();
+        button.tween.start();
     }
 }
+
+
 
 function makeDrops() {
     var i;
@@ -207,9 +232,13 @@ function makeDrops() {
     }
 }
 
+function scoreDecrement() {
+    //score--;
+}
+
 function hitWorldBounds() {
     arguments[0].destroy();
-    var randNum = Math.floor(Math.random() * 5);
+    var randNum = randomInt(5);
     dripSounds[randNum].play();
 }
 
@@ -233,12 +262,6 @@ function resize() {
     }
 }
 
-function tweetMe(score) {
-    var twittertext = 'My Whack a Tap score today was ' + score + '! Try to beat me at http://project-water.ca.';
-    var outTweet = 'http://twitter.com/home?status=' + twittertext;
-    window.open(outTweet, '_blank');
-}
-
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -255,21 +278,22 @@ function getCookie(cname) {
     return "";
 }
 
-//TODO: fadeblack effect
-
+function randomInt(max) {
+    return Math.floor(Math.random() * max);
+}
 
 
 var pressedPlay = function () {
     game.state.start('play');
-}
+};
 
 var pressedPause = function() {
     paused = true;
-}
+};
 
 var pressedMenu = function() {
     game.state.start('menu');
-}
+};
 
 game.state.add('boot', bootState);
 game.state.add('load', loadState);
