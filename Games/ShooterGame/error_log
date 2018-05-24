@@ -1,0 +1,549 @@
+[11-May-2018 14:14:14 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 17
+[11-May-2018 14:21:58 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:24:39 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:24:54 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:25:32 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 22
+[11-May-2018 14:26:16 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 22
+[11-May-2018 14:28:20 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:28:28 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:29:12 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:29:29 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:30:29 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:31:32 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:31:46 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 21
+[11-May-2018 14:33:02 America/New_York] PHP Fatal error:  Call to a member function close() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 19
+[11-May-2018 14:35:52 America/New_York] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 10
+[11-May-2018 14:36:43 America/New_York] PHP Catchable fatal error:  Object of class mysqli could not be converted to string in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 10
+[11-May-2018 14:37:24 America/New_York] PHP Fatal error:  Call to a member function close() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 17
+[11-May-2018 14:37:48 America/New_York] PHP Catchable fatal error:  Object of class mysqli_stmt could not be converted to string in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 18
+[15-May-2018 01:42:00 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:42:00 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 33
+[14-May-2018 22:42:00 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[15-May-2018 01:42:29 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:42:30 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 33
+[14-May-2018 22:42:30 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[15-May-2018 01:42:30 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[15-May-2018 01:42:30 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:42:30 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 376
+[14-May-2018 22:42:30 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 377
+[15-May-2018 01:42:30 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:42:30 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 99
+[15-May-2018 01:42:30 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:42:30 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 161
+[14-May-2018 22:42:30 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 162
+[14-May-2018 22:42:30 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 302
+[14-May-2018 22:42:30 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 303
+[15-May-2018 01:42:30 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:42:30 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 100
+[14-May-2018 22:42:30 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 225
+[14-May-2018 22:42:30 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 226
+[15-May-2018 01:43:02 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:43:02 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 33
+[14-May-2018 22:43:02 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[15-May-2018 01:43:23 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:43:23 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 33
+[14-May-2018 22:43:23 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[15-May-2018 01:43:25 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:43:25 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 33
+[14-May-2018 22:43:25 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[15-May-2018 01:43:27 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 9
+[14-May-2018 22:43:27 America/Vancouver] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 33
+[14-May-2018 22:43:27 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[14-May-2018 22:45:35 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 34
+[14-May-2018 22:51:07 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 34
+[14-May-2018 22:51:07 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 99
+[14-May-2018 22:51:07 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 376
+[14-May-2018 22:51:08 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 161
+[14-May-2018 22:51:08 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 302
+[14-May-2018 22:51:09 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 225
+[14-May-2018 22:52:07 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 34
+[14-May-2018 22:52:07 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 99
+[14-May-2018 22:52:08 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 302
+[14-May-2018 22:52:08 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 376
+[14-May-2018 22:52:08 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 161
+[14-May-2018 22:52:08 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 225
+[14-May-2018 22:52:58 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 34
+[14-May-2018 22:53:00 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 376
+[14-May-2018 22:53:00 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 99
+[14-May-2018 22:53:00 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 302
+[14-May-2018 22:53:00 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 225
+[14-May-2018 22:53:00 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 161
+[14-May-2018 22:54:49 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 34
+[14-May-2018 22:54:50 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 99
+[14-May-2018 22:54:50 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 161
+[14-May-2018 22:54:50 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 376
+[14-May-2018 22:54:51 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 225
+[14-May-2018 22:54:51 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 302
+[14-May-2018 23:00:06 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 34
+[14-May-2018 23:00:07 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 302
+[14-May-2018 23:00:07 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 225
+[14-May-2018 23:00:07 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 376
+[14-May-2018 23:00:07 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 161
+[14-May-2018 23:00:07 America/Vancouver] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 99
+[14-May-2018 23:02:34 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 36
+[14-May-2018 23:02:34 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 102
+[14-May-2018 23:02:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 305
+[14-May-2018 23:02:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 379
+[14-May-2018 23:02:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 228
+[14-May-2018 23:02:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 164
+[15-May-2018 11:27:18 America/Vancouver] PHP Fatal error:  Call to a member function execute() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 34
+[15-May-2018 11:27:18 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 11:27:18 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 11:27:18 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 11:27:18 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 11:27:18 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 11:29:10 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 56
+[15-May-2018 11:29:11 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 166
+[15-May-2018 11:29:11 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 307
+[15-May-2018 11:29:11 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 381
+[15-May-2018 11:29:11 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 104
+[15-May-2018 11:29:11 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 230
+[15-May-2018 11:31:33 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 106
+[15-May-2018 11:31:34 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 383
+[15-May-2018 11:31:34 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 309
+[15-May-2018 11:31:34 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 168
+[15-May-2018 11:31:34 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 232
+[15-May-2018 13:46:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 106
+[15-May-2018 13:46:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::fetchAll() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 37
+[15-May-2018 13:46:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 383
+[15-May-2018 13:46:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 309
+[15-May-2018 13:46:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 232
+[15-May-2018 13:46:35 America/Vancouver] PHP Fatal error:  Call to undefined method mysqli_stmt::get_result() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 168
+[15-May-2018 16:46:59 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/projectw/public_html/TESTING/ShooterGame/score.php:8
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(8): PDO->__construct('mysql:host=loca...', NULL, '9s4F1HWkgjqxpMn...')
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 8
+[15-May-2018 16:46:59 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/projectw/public_html/TESTING/ShooterGame/score.php:8
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(8): PDO->__construct('mysql:host=loca...', NULL, '9s4F1HWkgjqxpMn...')
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 8
+[15-May-2018 16:46:59 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/projectw/public_html/TESTING/ShooterGame/score.php:8
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(8): PDO->__construct('mysql:host=loca...', NULL, '9s4F1HWkgjqxpMn...')
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 8
+[15-May-2018 16:46:59 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/projectw/public_html/TESTING/ShooterGame/score.php:8
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(8): PDO->__construct('mysql:host=loca...', NULL, '9s4F1HWkgjqxpMn...')
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 8
+[15-May-2018 16:46:59 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/projectw/public_html/TESTING/ShooterGame/score.php:8
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(8): PDO->__construct('mysql:host=loca...', NULL, '9s4F1HWkgjqxpMn...')
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 8
+[15-May-2018 16:46:59 America/New_York] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /home/projectw/public_html/TESTING/ShooterGame/score.php:8
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(8): PDO->__construct('mysql:host=loca...', NULL, '9s4F1HWkgjqxpMn...')
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 8
+[15-May-2018 13:47:21 America/Vancouver] PHP Fatal error:  Call to undefined method PDO::close() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 448
+[15-May-2018 13:47:21 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 13:47:21 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 13:47:21 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 13:47:21 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 13:47:22 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 13:48:17 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 13:48:17 America/Vancouver] PHP Fatal error:  Call to undefined method PDO::close() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 448
+[15-May-2018 13:48:17 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 13:48:17 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 13:48:17 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 13:48:17 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 13:48:19 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 13:48:19 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 13:48:19 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 13:48:19 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 13:48:19 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 13:48:19 America/Vancouver] PHP Fatal error:  Call to undefined method PDO::close() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 448
+[15-May-2018 13:49:02 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 13:49:02 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 13:49:03 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 13:49:03 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 13:49:03 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 14:00:36 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 14:00:36 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 14:00:36 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 14:00:36 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 14:00:36 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 14:00:39 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 14:00:39 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 14:00:39 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 14:00:39 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 14:00:39 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 14:00:46 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 14:00:46 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 14:00:46 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 14:00:46 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 14:00:46 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 15:09:04 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 15:09:05 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 15:09:05 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 15:09:05 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[15-May-2018 15:09:05 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 18:24:08 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[15-May-2018 18:24:08 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[15-May-2018 18:24:08 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[15-May-2018 18:24:08 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[15-May-2018 18:24:08 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[16-May-2018 12:02:14 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 12:02:14 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 229
+[16-May-2018 12:02:14 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 165
+[16-May-2018 12:02:14 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 306
+[16-May-2018 12:02:15 America/Vancouver] PHP Fatal error:  Call to undefined method PDOStatement::bind_param() in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 380
+[16-May-2018 12:03:11 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 12:03:11 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 12:03:11 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 12:03:32 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 12:03:32 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 12:03:32 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 12:12:25 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 12:12:25 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= '' AND DATE = '2018-05-16'  ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 12:12:25 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 12:12:25 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 12:12:25 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 12:12:25 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 12:14:12 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 12:14:12 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= '' AND DATE = '2018-05-16'  ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 12:14:12 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 12:14:12 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 12:14:12 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 12:14:12 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 12:14:15 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 12:14:15 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 12:14:15 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 12:14:15 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 12:14:15 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 12:14:15 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= '' AND DATE = '2018-05-16'  ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 12:14:27 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 12:14:27 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 12:14:27 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= '' AND DATE = '2018-05-16'  ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 12:14:27 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 12:14:27 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 12:14:27 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 12:30:29 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 12:30:29 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 12:30:29 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 12:30:29 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 12:30:29 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= '' AND DATE = '2018-05-16'  ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 12:30:29 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 13:42:35 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 13:53:54 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 13:53:54 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = 'fdsfsdfsd' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 13:53:54 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 13:53:55 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 13:53:55 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= 'fdsfsdfsd' AND DATE = '2018-05-16'  ORDER BY score' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 13:53:56 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 13:55:22 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 13:55:22 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = 'fdsfsdfsd' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 13:55:22 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 13:55:22 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 13:55:23 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 13:55:23 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= 'fdsfsdfsd' AND DATE = '2018-05-16'  ORDER BY score' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 13:58:18 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 13:58:19 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= 'fdsfsdfsd' AND DATE = '2018-05-16'  ORDER BY score' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 13:58:19 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 13:58:19 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 13:58:19 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 13:58:19 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = 'fdsfsdfsd' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 14:01:08 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:35
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 35
+[16-May-2018 14:01:08 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:167
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(167): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 167
+[16-May-2018 14:01:08 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = 'fdsfsdfsd' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:103
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(103): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 103
+[16-May-2018 14:01:08 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= 'fdsfsdfsd' AND DATE = '2018-05-16'  ORDER BY score' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 319
+[16-May-2018 14:01:08 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname= 'Werter' AND DATE = '2018-05-16'  ORDER BY score DE' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 398
+[16-May-2018 14:01:08 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 237
+[16-May-2018 14:13:46 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username = 'fdsfsdfsd' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:108
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(108): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 108
+[16-May-2018 14:13:46 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:40
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(40): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 40
+[16-May-2018 14:13:46 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Username= 'fdsfsdfsd' AND DATE = '2018-05-16'  ORDER BY score' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:324
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(324): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 324
+[16-May-2018 14:13:46 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE Teamname = '' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:172
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(172): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 172
+[16-May-2018 14:13:46 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'users.UserID WHERE DATE = '2018-05-16' ORDER BY score DESC' at line 1' in /home/projectw/public_html/TESTING/ShooterGame/score.php:242
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/score.php(242): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/score.php on line 242
+[17-May-2018 17:01:01 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 23
+[17-May-2018 17:02:21 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 23
+[17-May-2018 17:04:06 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 19
+[17-May-2018 17:05:15 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 19
+[17-May-2018 17:05:44 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 19
+[17-May-2018 17:05:59 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 19
+[17-May-2018 17:07:01 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 22
+[17-May-2018 17:07:52 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 22
+[17-May-2018 17:08:31 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 20
+[17-May-2018 17:08:50 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/ShooterGame/shooterphp.php on line 20
+[20-May-2018 16:17:50 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php:319
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php(319): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php on line 319
+[20-May-2018 16:17:50 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php:237
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php(237): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php on line 237
+[20-May-2018 16:17:50 America/Vancouver] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'projectw_test.Users' doesn't exist' in /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php:398
+Stack trace:
+#0 /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php(398): PDOStatement->execute()
+#1 {main}
+  thrown in /home/projectw/public_html/TESTING/ShooterGame/scorePersonal.php on line 398

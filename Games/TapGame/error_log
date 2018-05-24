@@ -1,0 +1,4 @@
+[17-May-2018 17:11:26 America/New_York] PHP Warning:  mysqli::mysqli() [<a href='mysqli.mysqli'>mysqli.mysqli</a>]: (42000/1044): Access denied for user 'projectw'@'localhost' to database 'projectwater_test' in /home/projectw/public_html/TESTING/TapGame/tapphp.php on line 8
+[17-May-2018 17:11:26 America/New_York] PHP Warning:  mysqli::prepare() [<a href='mysqli.prepare'>mysqli.prepare</a>]: Couldn't fetch mysqli in /home/projectw/public_html/TESTING/TapGame/tapphp.php on line 16
+[17-May-2018 17:11:26 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/TapGame/tapphp.php on line 17
+[17-May-2018 17:13:17 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/TapGame/tapphp.php on line 17
