@@ -41,7 +41,7 @@ var bootState = {
 //load
 var loadState = {
     preload: function () {
-        let loadingLabel = game.add.text(newWidth / 2, newHeight / 2, 'LOADING...', font);
+        let loadingLabel = game.add.text(newWidth / 3, newHeight / 3, 'LOADING...', font);
 
         //ALL ASSETS LOADED HERE
         game.load.image("valve", "assets/valve.png");
@@ -49,6 +49,7 @@ var loadState = {
         game.load.image("play", "assets/play.png");
         game.load.image('black', "assets/black.png");
         game.load.image('twitter', "assets/tweet.png");
+        game.load.image('pipe', "assets/vertipipe.png")
         game.load.audio('drip0', "assets/drip6.mp3");
         game.load.audio('drip1', "assets/drip1.mp3");
         game.load.audio('drip2', "assets/drip2.mp3");
@@ -82,6 +83,8 @@ var playState = {
 
         game.stage.backgroundColor = "#2F95AA";
 
+        var graphics = game.add.graphics(0,0);
+
         //add audio
         for(let a = 0; a < 6; a++){
             let sound = game.add.audio('drip' + a);
@@ -103,6 +106,7 @@ var playState = {
                 let x = (i * newWidth/3) + 10;
                 let y = (j * playHeight / 4) + topHeight;
                 //50 offset for the anchor point being set in middle
+                let pipe = game.add.sprite(x, y, 'pipe');
                 let button = game.add.button(x+70, y+70, 'valve', buttonEvent, this);
                 button.anchor.setTo(0.5, 0.5);
 
@@ -114,7 +118,14 @@ var playState = {
                 tapArray.push(button);
             }
 
-            //start drip timers
+          graphics.lineStyle(3, 0x003366, 1);
+
+             graphics.drawRect(0, topHeight, newWidth, newHeight);
+
+
+
+
+        //start drip timers
              game.time.events.loop(dripFreq * 999, startDrip, this);
              game.time.events.loop(showDripFreq * 1000, makeDrops, this);
 
@@ -156,8 +167,8 @@ var doneState = {
         let titleThree = game.add.text(newWidth/10, 4*newWidth/5, 'Way to go!', font);
         let tweetButton = game.add.button(newWidth/10, newWidth, 'twitter', tweetMe);
 
-        //score tiers are in increments of 12000, with 60,000 being theoretical max score (0.3 second reaction time!)
-        let tier = Math.floor(score/12000);
+        //score tiers are in increments of 10000, with 60,000 being theoretical max score (0.5 second reaction time!)
+        let tier = Math.floor(score/10000);
 
         let username = getCookie("username");
 
