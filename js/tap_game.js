@@ -1,8 +1,11 @@
+//Tap Game (Tap Turner)
+
 var game = new Phaser.Game(500, 800, Phaser.AUTO, 'tap-game');
 
 const gameLength = 45;
 const dripFreq = 2;
 const showDripFreq = 1;
+const maxTapsRunning = 4;
 
 var newWidth;
 var newHeight;
@@ -15,7 +18,7 @@ var score = 0;
 var scoreText;
 var tier;
 var tapsOn = 0;
-const maxTapsRunning = 4;
+
 
 var font = {
     font: '50px Times New Roman',
@@ -25,6 +28,7 @@ var font = {
 //boot
 var bootState = {
     create: function () {
+        //resize, arcade physics
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         resize();
         game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -72,7 +76,7 @@ var menuState = {
     }
 };
 
-//PLAY that funky music white boy
+//PLAY
 var playState = {
     create: function () {
 
@@ -151,8 +155,9 @@ var doneState = {
         let titleTwo = game.add.text(newWidth/10, 2*newWidth/5, score + ' score gained', font);
         let titleThree = game.add.text(newWidth/10, 4*newWidth/5, 'Way to go!', font);
         let tweetButton = game.add.button(newWidth/10, newWidth, 'twitter', tweetMe);
-        
-        //TODO: SCORE TIER CODE
+
+        //score tiers are in increments of 12000, with 60,000 being theoretical max score (0.3 second reaction time!)
+        let tier = Math.floor(score/12000);
 
         let username = getCookie("username");
 
@@ -173,8 +178,8 @@ var doneState = {
 };
 
 function scoreTimerEnd() {
-    if(score >= 1000){
-        score-= 1000;
+    if(score >= 3000){
+        score-= 3000;
     }
 
 }
@@ -200,7 +205,6 @@ function buttonEvent() {
     if (button.dripping) {
          kills++;
          button.dripping = false;
-
 
         //add remaining time on tap to score
         score = score + button.timer.duration;
