@@ -7,13 +7,17 @@
 $conn = new mysqli($servername,$username,$password,$dbname);
 
 if($conn->connect_error){
+    echo "Nope";
     die("Connection failed");
+    
 }
-$sql = "SELECT * FROM capilano_reservoir";
+$sql = "SELECT * FROM capilano_reservoir ORDER BY ID ASC";
 $data = mysqli_query($conn, $sql); 
-$date[] = array('date','level');
+$date[] = array('Date','Reservoir','Virtual Reservoir');
 while($row = mysqli_fetch_assoc($data)){
-    $date[]= array($row['date'], (float) $row['level']);
+    $dat = $row['date'];
+    $dat = substr($dat,-5);
+    $date[]= array($dat, (float) $row['reservoir'],(float) $row['virtual_reservoir']);
 }
 echo json_encode($date);
 ?>

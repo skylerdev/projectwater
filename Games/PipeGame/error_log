@@ -1,0 +1,1 @@
+[11-May-2018 14:58:53 America/New_York] PHP Fatal error:  Call to a member function bind_param() on a non-object in /home/projectw/public_html/TESTING/PipeGame/PipePHP.php on line 26

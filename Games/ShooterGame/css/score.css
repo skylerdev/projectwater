@@ -1,0 +1,58 @@
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+     zoom:1; /* hasLayout ie7 trigger */
+}
+
+.nav-tabs, .nav-pills {
+    text-align:center;
+}
+
+
+body{
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-image: url(/images/reservoir.jpg);
+  background-size: 100%;
+ 
+}
+
+.center-block {
+  
+  background-color: rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-device-width: 480px) 
+{
+ 
+ body{
+     margin: 0;
+     padding: 0;
+    background: url(/images/reservoir.jpg) no-repeat;
+    background-position: 50% 35%;
+   
+ }
+  
+  .navbar-brand{
+  font-size: 16px;
+  padding-left: 10px;
+  font-weight: bolder;
+}
+    
+}
+    
+
+@media only screen and (min-device-width : 768px) and (max-device-width: 1024px)
+{
+ 
+ 
+ body{
+    background: url(/images/reservoir.jpg) no-repeat;
+    background-size: cover;
+    min-width: 600px;
+    min-height: 1800px;
+    background-position: 45% 45%;
+    
+}
